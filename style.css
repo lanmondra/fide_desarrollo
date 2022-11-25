@@ -1,0 +1,35 @@
+/*
+Theme Name: FIDE 2019
+Theme URI: https://www.fide.es
+Author: David Sánchez
+Author URI: https://www.google.com
+Description: Tema WordPress para FIDE Tax & Legal
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Tags: white, red, dark gray, responsive
+Text Domain: fide
+*/
+
+/* import stylesheets */
+
+@import url("css/normalize.css");
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,600,600i|IBM+Plex+Serif:600&display=swap");
+
+@import url("css/master.css?v=012");
+@import url("css/home.css?v=012");
+@import url("css/footer.css?v=012");
+@import url("css/actualidad.css?v=012");
+@import url("css/category.css?v=012");
+@import url("css/pagination.css?v=012");
+@import url("css/newsletter.css?v=012");
+@import url("css/search.css?v=012");
+@import url("css/single.css?v=012");
+@import url("css/contacto.css?v=012");
+@import url("css/servicios.css?v=012");
+@import url("css/news.css?v=012");
+@import url("css/printable.css?v=012");
+
+/* end import */
+
+

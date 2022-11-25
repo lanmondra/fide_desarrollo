@@ -1,0 +1,286 @@
+
+
+
+/* --------------------------
+-----------------------------
+SERVICIOS - HERO IMG & TAGS
+-----------------------------
+---------------------------*/
+
+
+
+.sections-hero-image {
+	width: 100%;
+	height: 384px;
+	margin-top: -120px;
+}
+
+.sections-gradient-multiply-div {
+	width: 100%;
+	height: 384px;
+	margin-top: -120px;
+	background-image: linear-gradient(rgba(20,20,20,1), rgba(255,255,255,0));
+	background-blend-mode: multiply;
+}
+
+.sections-hero-image-up {
+	position: relative;
+	top: -384px;
+	z-index: -100;
+}
+
+.highlighted-tags-container {
+	text-align: right;
+	margin: -204px 0 0 0;
+}
+
+.highlighted-tag {
+/*	height: 48px;
+    padding: 12px 24px;
+	background-color: #AB2520;
+	margin-bottom: 12px;
+	color: white;*/
+}
+
+.tag-text {
+	height: 48px;
+    padding: 12px 24px;
+	background-color: #AC0600;
+	margin-bottom: 12px;
+	color: white;
+	display: inline-block;
+}
+
+
+
+/* --------------------------
+-----------------------------
+SERVICIOS BODY
+-----------------------------
+---------------------------*/
+
+
+
+.service-01, .proof-01 {
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 5;
+	-ms-grid-row: 1;
+	grid-column: 1 / span 5;
+	grid-row: 1 / span 1;
+}
+
+.service-02, .proof-02 {
+	-ms-grid-column: 7;
+	-ms-grid-column-span: 5;
+	-ms-grid-row: 1;
+	grid-column: 7 / span 5;
+	grid-row: 1 / span 1;
+}
+
+.service-03, .proof-03 {
+	-ms-grid-column: 13;
+	-ms-grid-column-span: 5;
+	-ms-grid-row: 1;
+	grid-column: 13 / span 5;
+	grid-row: 1 / span 1;
+}
+
+.service-04, .proof-04 {
+	-ms-grid-column: 19;
+	-ms-grid-column-span: 5;
+	-ms-grid-row: 1;
+	grid-column: 19 / span 5;
+	grid-row: 1 / span 1;
+}
+
+.service-01, .service-02, .service-03, .service-04 {
+	margin: 12px 0 0 0;
+}
+
+.service-01 h2, .service-02 h2, .service-03 h2, .service-04 h2 {
+	padding-right: 40px;
+}
+
+.service-cta {
+	height: 32px;
+	border-radius: 4px;
+	background-color: #AC0600;
+	padding: 8px 24px;
+	color: white;
+    margin: 24px 0;
+    display: inline-block;
+}
+
+.service-cta:hover {
+	text-decoration: none;
+	background-color: #C70700;
+}
+
+.img-fide-office img {
+	width: 100%;
+	display: block;
+	margin: 64px 0 48px;
+}
+
+.after-img-copy {
+	column-count: 2;
+    column-gap: 48px;
+    margin-bottom: 72px;
+}
+
+
+
+@media all and (max-width: 950px) {
+
+	.service-01, .proof-01 {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 11;
+		-ms-grid-row: 1;
+		grid-column: 1 / span 11;
+		grid-row: 1 / span 1;
+	}
+
+	.service-02, .proof-02 {
+		-ms-grid-column: 13;
+		-ms-grid-column-span: 11;
+		-ms-grid-row: 1;
+		grid-column: 13 / span 11;
+		grid-row: 1 / span 1;
+	}
+
+	.service-03, .proof-03 {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 11;
+		-ms-grid-row: 2;
+		grid-column: 1 / span 11;
+		grid-row: 2 / span 1;
+	}
+
+	.service-04, .proof-04 {
+		-ms-grid-column: 13;
+		-ms-grid-column-span: 11;
+		-ms-grid-row: 2;
+		grid-column: 13 / span 11;
+		grid-row: 2 / span 1;
+	}
+
+	.service-01 h2, .service-02 h2, .service-03 h2, .service-04 h2 {
+		padding-right: 0;
+	}
+
+}
+
+
+
+@media all and (max-width: 575px) {
+
+	.service-01, .proof-01 {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 23;
+		-ms-grid-row: 1;
+		grid-column: 1 / span 23;
+		grid-row: 1 / span 1;
+	}
+
+	.service-02, .proof-02 {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 23;
+		-ms-grid-row: 2;
+		grid-column: 1 / span 23;
+		grid-row: 2 / span 1;
+	}
+
+	.service-03, .proof-03 {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 23;
+		-ms-grid-row: 3;
+		grid-column: 1 / span 23;
+		grid-row: 3 / span 1;
+	}
+
+	.service-04, .proof-04 {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 23;
+		-ms-grid-row: 4;
+		grid-column: 1 / span 23;
+		grid-row: 4 / span 1;
+	}
+
+	.service-01 h2, .service-02 h2, .service-03 h2, .service-04 h2 {
+		padding-right: 0;
+	}
+
+	.service-cta { margin: 24px 0 0; }
+
+	.img-fide-office {
+		margin: 0 -16px;
+	}
+
+	.after-img-copy {
+	    column-count: auto;
+	    column-gap: 0;
+	    margin-bottom: 60px;
+	}
+
+	.services-copy {
+	    column-count: auto;
+	    column-gap: 0;
+	}
+
+}
+
+
+
+/* --------------------------
+-----------------------------
+PROOF BAND
+-----------------------------
+---------------------------*/
+
+
+
+.proof-band {
+	background-color: #F2F2F2;
+	text-align: center;
+}
+
+.proof-01, .proof-02, .proof-03, .proof-04 {
+	padding: 50px 0 60px;
+}
+
+
+
+/* --------------------------
+-----------------------------
+INDIVIDUAL PAGES
+-----------------------------
+---------------------------*/
+
+
+
+.servicios-h2 {
+	padding: 14px 0;
+}
+
+.services-individual-copy {
+	column-count: 2;
+    column-gap: 48px;
+	margin-bottom: 60px;
+    margin-top: 20px;
+}
+
+@media all and (max-width: 575px) {
+
+	.hero-img-services-and-special-singles {
+		margin-top: -280px;
+	}
+
+	.services-individual-copy {
+	    column-count: auto;
+	    column-gap: 0;
+	    margin-bottom: 48px;
+	    margin-top: 20px;
+	}
+
+}
+

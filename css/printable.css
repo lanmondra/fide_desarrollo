@@ -1,0 +1,32 @@
+
+
+
+/* --------------------------
+-----------------------------
+PRINTABLE OPTIONS
+-----------------------------
+---------------------------*/
+
+
+
+.only-printable {
+	display: none;
+}
+
+
+
+@media print {
+	
+	.only-printable {
+		display: block;
+	}
+
+	.non-printable {
+		display: none;
+	}
+
+	.printable {
+		display: block;
+	}
+
+}

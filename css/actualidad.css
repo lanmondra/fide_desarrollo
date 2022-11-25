@@ -1,0 +1,504 @@
+
+
+
+/* --------------------------
+-----------------------------
+ACTUALIDAD - FEATURED POST
+-----------------------------
+---------------------------*/
+
+
+
+.actualidad-featured-image {
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 15;
+	grid-column: 1 / span 15;
+	/* height: 432px; */ /* Fluid height depending on amount of text */
+}
+
+@media all and (min-width: 1400px) {
+	.actualidad-featured-image { margin-left: -120px; }
+}
+
+@media all and (max-width: 1240px) {
+	.actualidad-featured-image { height: auto; }
+}
+
+.actualidad-featured-text {
+	-ms-grid-column: 17;
+	-ms-grid-column-span: 7;
+	grid-column: 17 / span 7;
+}
+
+@media all and (max-width: 1000px) {
+
+	.actualidad-featured-image {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 23;
+		grid-column: 1 / span 23;
+		grid-row: 1 / span 1;
+		margin: 0 -48px;
+	}
+
+	.actualidad-featured-text {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 23;
+		grid-column: 1 / span 23;
+		grid-row: 2 / span 1;
+	}
+
+}
+
+@media all and (max-width: 575px) {
+
+	.actualidad-featured-image {
+	    margin: 0 -16px;
+	    height: 192px;
+	}
+
+}
+
+
+
+/* --------------------------
+-----------------------------
+ACTUALIDAD - NOTAS INFORM.
+-----------------------------
+---------------------------*/
+
+
+
+.actualidad-notas-informativas {
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 7;
+	grid-column: 1 / span 7;
+	background-color: #F2F2F2;
+	padding: 96px 24px 72px;
+}
+
+@media all and (max-width: 1000px) {
+	.actualidad-notas-informativas {
+		grid-column: 1 / span 23;
+		grid-row: 2 / span 1;
+		padding: 48px 48px 24px;
+		margin: 0 -48px;
+	}
+}
+
+@media all and (max-width: 575px) {
+	.actualidad-notas-informativas {
+		grid-column: 1 / span 23;
+		grid-row: 3 / span 1;
+		padding: 48px 16px 16px;
+		margin: 48px -16px 0;
+	}
+}
+
+.actualidad-notas-informativas a {
+	text-decoration: none;
+    padding: 16px 0;
+    display: block;
+}
+
+.actualidad-notas-informativas a:hover {
+	text-decoration: underline;
+}
+
+.actualidad-notas-informativas p {
+	margin: 8px 0;
+}
+
+
+
+/* --------------------------
+-----------------------------
+ACTUALIDAD - 2nd & 3rf FEAT.
+-----------------------------
+---------------------------*/
+
+
+
+.actualidad-second-featured {
+	-ms-grid-column: 9;
+	-ms-grid-column-span: 7;
+	grid-column: 9 / span 7;
+}
+
+.article-module-padding { padding: 96px 0 72px; }
+
+@media all and (max-width: 1000px) {
+	.actualidad-second-featured {
+		grid-column: 1 / span 11;
+		grid-row: 1 / span 1;
+	}
+	.article-module-padding { padding: 48px 0; }
+}
+
+.article-image {
+	height: 192px;
+}
+
+.actualidad-third-featured {
+	-ms-grid-column: 17;
+	-ms-grid-column-span: 7;
+	grid-column: 17 / span 7;
+}
+
+@media all and (max-width: 1000px) {
+	.actualidad-third-featured {
+		grid-column: 13 / span 11;
+		grid-row: 1 / span 1;
+	}
+}
+
+@media all and (max-width: 575px) {
+
+	.actualidad-second-featured {
+		grid-column: 1 / span 23;
+		grid-row: 1 / span 1;
+	}
+
+	.article-image {
+		margin: 0 -16px;
+	}
+
+	.actualidad-third-featured {
+		grid-column: 1 / span 23;
+		grid-row: 2 / span 1;
+	}
+
+	.article-module-padding { padding: 36px 0 0; }
+
+}
+
+
+
+/* --------------------------
+-----------------------------
+ACTUALIDAD - NOTICIAS FIDE
+-----------------------------
+---------------------------*/
+
+
+
+.category-first-featured.news-media-featured-container,
+.category-second-featured.news-media-featured-container,
+.category-third-featured.news-media-featured-container {
+	padding: 24px 0;
+}
+
+.news-media-image img {
+	width: 100%;
+	position: relative;
+	left: -32px;
+}
+
+.news-media-h3 {
+	margin-top: 0;
+}
+
+.section-title.noticias-fide-section-title {
+	height: auto;
+	padding: 37px 0 12px;
+}
+
+@media all and (max-width: 575px) {
+
+	.category-first-featured.news-media-featured-container,
+	.category-second-featured.news-media-featured-container,
+	.category-third-featured.news-media-featured-container {
+		padding: 0;
+	}
+
+	.section-title.noticias-fide-section-title {
+		padding: 37px 0;
+	}
+
+}
+
+
+
+/* --------------------------
+-----------------------------
+ACTUALIDAD - NORMATIVA
+-----------------------------
+---------------------------*/
+
+
+
+.section-title {
+    height: 120px;
+    padding: 37px 0;
+    hyphens: auto;
+}
+
+.actualidad-normativa-text {
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 15;
+	grid-column: 1 / span 15;
+	column-count: 2;
+	column-gap: 48px;
+}
+
+.actualidad-normativa-image {
+	-ms-grid-column: 17;
+	-ms-grid-column-span: 7;
+	grid-column: 17 / span 7;
+}
+
+@media all and (min-width: 1400px) {
+	.actualidad-normativa-image { margin-right: -120px; }
+}
+
+@media all and (max-width: 1240px) {
+	.actualidad-normativa-image { height: auto; }
+}
+
+@media all and (max-width: 980px) {
+
+	.actualidad-normativa-text {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 23;
+		grid-column: 1 / span 23;
+		grid-row: 2 / span 1;
+		column-count: auto;
+		column-gap: auto;
+	}
+
+	.actualidad-normativa-image {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 23;
+		grid-column: 1 / span 23;
+		grid-row: 1 / span 1;
+	}
+
+}
+
+@media all and (max-width: 575px) {
+
+	.actualidad-normativa-image {
+		margin: 0 -16px;
+		height: 192px;
+	}
+
+	.section-title {
+	    padding: 24px 0;
+	    height: auto;
+	}
+
+}
+
+
+
+/* --------------------------
+-----------------------------
+ACTUALIDAD - JURISPRUDENCIA
+-----------------------------
+---------------------------*/
+
+
+
+.jurisprudencia-featured-text {
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 15;
+	-ms-grid-row: 2;
+	-ms-grid-row-span: 1;
+	grid-column: 1 / span 15;
+	grid-row: 2 / span 1;
+}
+
+.two-columns-text {
+	column-count: 2;
+	column-gap: 48px;
+}
+
+.jurisprudencia-breves {
+	-ms-grid-column: 17;
+	-ms-grid-column-span: 7;
+	-ms-grid-row: 1;
+	-ms-grid-row-span: 2;
+	grid-column: 17 / span 7;
+	grid-row: 1 / span 2;
+}
+
+.jurisprudencia-breves hr {
+    padding: 12px;
+    margin-top: 28px;
+}
+
+.jurisprudencia-bottom-margin { height: 96px; }
+
+@media all and (max-width: 1000px) {
+
+	.jurisprudencia-featured-text {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 23;
+		grid-column: 1 / span 23;
+	}
+
+	.jurisprudencia-breves {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 23;
+		grid-column: 1 / span 23;
+		grid-row: 3 / span 1;
+		margin-top: 96px;
+	}
+
+}
+
+@media all and (max-width: 575px) {
+
+	.two-columns-text {
+		column-count: auto;
+		column-gap: auto;
+	}
+
+	.jurisprudencia-breves {
+		margin-top: 24px;
+	}
+
+	.jurisprudencia-bottom-margin { height: 48px; }
+
+}
+
+
+
+/* --------------------------
+-----------------------------
+ACTUALIDAD - LEGISLACIÓN
+-----------------------------
+---------------------------*/
+
+
+
+.legislacion-first-featured {
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 7;
+	grid-column: 1 / span 7;
+}
+
+.legislacion-second-featured {
+	-ms-grid-column: 9;
+	-ms-grid-column-span: 7;
+	grid-column: 9 / span 7;
+}
+
+.legislacion-third-featured {
+	-ms-grid-column: 17;
+	-ms-grid-column-span: 7;
+	grid-column: 17 / span 7;
+}
+
+.legislacion-bottom-margin { height: 96px; }
+
+@media all and (max-width: 1000px) {
+
+	.legislacion-first-featured {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 11;
+		grid-column: 1 / span 11;
+	}
+
+	.legislacion-second-featured {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 13;
+		grid-column: 13 / span 11;
+	}
+
+	.legislacion-third-featured {
+		display: none;
+	}
+
+}
+
+@media all and (max-width: 575px) {
+
+	.legislacion-first-featured {
+		grid-column: 1 / span 23;
+		grid-row: 1 / span 1;
+		margin-bottom: 48px;
+	}
+
+	.legislacion-second-featured {
+		grid-column: 1 / span 23;
+		grid-row: 2 / span 1;
+		margin-bottom: 48px;
+	}
+
+	.legislacion-third-featured {
+		grid-column: 1 / span 23;
+		grid-row: 3 / span 1;
+		margin-bottom: 48px;
+	}
+
+	.legislacion-bottom-margin { height: 0; }
+
+}
+
+
+
+/* --------------------------
+-----------------------------
+ACTUALIDAD - INTERNACIONAL
+-----------------------------
+---------------------------*/
+
+
+
+.internacional-featured-text {
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 7;
+	grid-column: 1 / span 7;
+}
+
+.internacional-featured-image {
+	-ms-grid-column: 9;
+	-ms-grid-column-span: 15;
+	grid-column: 9 / span 15;
+	/* height: 432px; */ /* Fluid height depending on amount of text */
+}
+
+.internacional-bottom-margin { height: 96px; }
+
+@media all and (min-width: 1400px) {
+	.internacional-featured-image { margin-right: -120px; }
+}
+
+/*@media all and (max-width: 1240px) {
+	.internacional-featured-image { height: auto; }
+}*/
+
+@media all and (max-width: 1000px) {
+
+	.internacional-featured-image {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 23;
+		grid-column: 1 / span 23;
+		grid-row: 1 / span 1;
+		margin: 0 -48px;
+	}
+
+	.internacional-featured-text {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 23;
+		grid-column: 1 / span 23;
+		grid-row: 2 / span 1;
+	}
+
+}
+
+@media all and (max-width: 575px) {
+
+	.internacional-featured-image {
+	    margin: 0 -16px;
+	    height: 192px;
+	}
+
+	.internacional-bottom-margin { height: 48px; }
+
+}
+
+
+
+
+

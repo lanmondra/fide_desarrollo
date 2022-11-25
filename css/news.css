@@ -1,0 +1,38 @@
+
+
+
+/* --------------------------
+-----------------------------
+NEWS
+-----------------------------
+---------------------------*/
+
+
+
+.table-row-padding-news {
+	padding: 8px 0;
+}
+
+.table-news-media-logo {
+    grid-column: 1 / span 4;
+}
+
+.table-news-media-logo img {
+    width: 140px;
+}
+
+.table-article-date-news, .table-article-container-news {
+	padding: 22px 0;	
+}
+
+@media all and (max-width: 800px) {
+
+	.table-row-padding-news {
+		padding: 14px 0 15px 0;
+	}
+
+	.table-article-date-news, .table-article-container-news {
+		padding: 0;	
+	}
+
+}
