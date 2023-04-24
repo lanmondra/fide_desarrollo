@@ -417,7 +417,9 @@ ACTUALIDAD - LEGISLACIÓN
 	grid-column: 17 / span 7;
 }
 
-.legislacion-bottom-margin { height: 96px; }
+.legislacion-bottom-margin { 
+	height: 54px; 
+}
 
 @media all and (max-width: 1000px) {
 
@@ -486,7 +488,7 @@ ACTUALIDAD - INTERNACIONAL
 	/* height: 432px; */ /* Fluid height depending on amount of text */
 }
 
-.internacional-bottom-margin { height: 96px; }
+.internacional-bottom-margin { height: 54px; }
 
 @media all and (min-width: 1400px) {
 	.internacional-featured-image { margin-right: -45px; }
@@ -496,6 +498,7 @@ ACTUALIDAD - INTERNACIONAL
 	.internacional-featured-image { height: auto; }
 }*/
 
+/*  */
 @media all and (max-width: 1000px) {
 
 	.internacional-featured-image {
