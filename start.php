@@ -40,8 +40,41 @@
             $actualidad_featured_image_3 = wp_get_attachment_image_src ( get_post_thumbnail_id($actualidad_featured[2]), array('1024','576') );
         ?>
 
+            <script type="text/javascript">
 
 
+                // document.addEventListener("DOMContentLoaded", () => {
+                //     resizeText() 
+                // });
+                // function resizeText() {
+                //     console.log('Inicio');
+                //     let titleMain = document.getElementsByClassName('title_main');
+                //     let main = document.getElementsByClassName('main');  
+                                              
+                //     for(let i = 0; i < titleMain.length; i++) {                      
+                //         const size = titleMain[i].clientHeight;
+                //         const sizeTextBody = 390 - size;
+                //         const textElement = main[i].getElementsByClassName('line24')[0].clientHeight;
+
+                //         if (sizeTextBody < textElement) {
+                //             main[i].style.height = `${ textElement }px`;
+                //         }  else {
+                //             main[i].style.height = `${ sizeTextBody }px`;
+                //         }
+
+                //     }
+                // }
+            </script>
+
+            <style>
+                .main {
+                    position: relative;
+                    overflow: hidden;                                      
+                }             
+            </style>
+
+
+                <!-- Primera columna de la HOME-->
         <section>
             <div class="grid-container">
                 <div class="grid">
@@ -53,16 +86,18 @@
                             </div>
                         </a>
                     </div>
-
                     <div class="actualidad-featured-text">
                         <?php fide_list_cats_links($actualidad_featured[0]); ?>
-                        <h1><?php fide_title_link($actualidad_featured[0]); ?></h1>
+                        <h1 class="title_main"><?php fide_title_link($actualidad_featured[0]); ?></h1>
+                        <div class = "main">
                         <span class="gray-9"><?php echo get_the_date("d M 'y", $actualidad_featured[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                         <span class="line24">
-                            <?php fide_excerpt($actualidad_featured[0], 240) ?>
-                            <br>
-                            <?php fide_read_more_link($actualidad_featured[0]); ?>
+                            <?php fide_excerpt($actualidad_featured[0], 800) ?>
+                            
                         </span>
+                        </div>
+                        <div class="prueba" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
+                        <?php fide_read_more_link($actualidad_featured[0]); ?>
                     </div>
                 
                 </div>
@@ -72,9 +107,7 @@
 
 
         <?php
-
             # GET THE LAST THREE NOTAS INFORMATIVAS
-
             $args_notas_informativas = array(
                 "post_type" => "post",
                 "category__and" => array( 1004, 1041 ),
@@ -85,14 +118,43 @@
                     ),
                 "posts_per_page" => 3,
                 );
-
             $loop = new WP_Query( $args_notas_informativas );
             while ( $loop->have_posts() ) : $loop->the_post();
             $notas_informativas[] = $post->ID;
             endwhile; wp_reset_postdata();
 
         ?>
+        <!-- Jaava Script-->
+         <SCRIPT type="text/javascript">
+                window.addEventListener("resize", () => {
+                    resizeText();
+                })
+                document.addEventListener("DOMContentLoaded", () => {
+                    resizeText();
+                });
+                function resizeText() {
+                    let titleNoteInformat = document.getElementsByClassName('title_note_informative');
+                    let notaInfo = document.getElementsByClassName('nota-info');  
+                                                 
+                    for(let i = 0; i < titleNoteInformat.length; i++) {                      
+                        const size = titleNoteInformat[i].clientHeight;
+                                            
+                        notaInfo[i].style.height = `${ 280 - size }px`;  
+                        const sizeTextBody = 280 - size;
+                                          
+                    }
+                }
 
+            </SCRIPT>
+
+            <style>
+                .nota-info {
+                    position: relative;
+                    overflow: hidden;                                       
+                }              
+            </style>
+
+            <!-- NOTAS INFORMATIVAS -->
         <section>
             <div class="grid-container">
                 <div class="grid">
@@ -103,16 +165,14 @@
                         <a class="px14 weight600" href="<?php echo site_url(); ?>/actualidad/notas-informativas">NOTAS INFORMATIVAS</a>
                         <hr class="generic-hr">
 
-                        <p><?php fide_notas_title_and_excerpt($notas_informativas[0], 180) ?></p>
+                        <p><?php fide_notas_title_and_excerpt($notas_informativas[0], 210) ?></p>
                         <hr class="generic-hr">
-                        <p><?php fide_notas_title_and_excerpt($notas_informativas[1], 180) ?></p>
+                        <p><?php fide_notas_title_and_excerpt($notas_informativas[1], 210) ?></p>
                         <hr class="generic-hr">
-                        <p><?php fide_notas_title_and_excerpt($notas_informativas[2], 180) ?></p>
-
+                        <p><?php fide_notas_title_and_excerpt($notas_informativas[2], 210) ?></p>
                     </div>
 
                     <div class="actualidad-second-featured article-module-padding">
-
                         <div class="article-image">
                             <a href="<?php echo esc_url(get_permalink($actualidad_featured[1])); ?>">
                                 <div class="crop">
@@ -122,13 +182,15 @@
                         </div>
           
                         <?php fide_list_cats_links($actualidad_featured[1]); ?>
-                        <h3><?php fide_title_link($actualidad_featured[1]); ?></h3>
-                        <span class="gray-9"><?php echo get_the_date("d M 'y", $actualidad_featured[1]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                        <span class="line24">
-                            <?php fide_excerpt($actualidad_featured[1], 200) ?>
-                            <br>
-                            <?php fide_read_more_link($actualidad_featured[1]); ?>
+                        <h3 class="title_note_informative"><?php fide_title_link($actualidad_featured[1]); ?></h3>
+                        <div class="nota-info">
+                            <span class="gray-9"><?php echo get_the_date("d M 'y", $actualidad_featured[1]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                            <span class="line24">
+                            <?php fide_excerpt($actualidad_featured[1], 500) ?>                           
                         </span>
+                        </div>
+                        <div class="difuminacion-informative" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
+                        <?php fide_read_more_link($actualidad_featured[1]); ?>
 
                     </div>
 
@@ -143,199 +205,189 @@
                         </div>
           
                         <?php fide_list_cats_links($actualidad_featured[2]); ?>
-                        <h3><?php fide_title_link($actualidad_featured[2]); ?></h3>
-                        <span class="gray-9"><?php echo get_the_date("d M 'y", $actualidad_featured[2]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                        <span class="line24">
-                            <?php fide_excerpt($actualidad_featured[2], 200) ?>
-                            <br>
-                            <?php fide_read_more_link($actualidad_featured[2]); ?>
+                        <h3 class="title_note_informative"><?php fide_title_link($actualidad_featured[2]); ?></h3>
+                        <div class="nota-info">
+                            <span class="gray-9"><?php echo get_the_date("d M 'y", $actualidad_featured[2]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                            <span class="line24">
+                            <?php fide_excerpt($actualidad_featured[2], 500) ?>
+                           
                         </span>
-
+                    </div>
+                    <div class="difuminacion-informative" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
+                    <?php fide_read_more_link($actualidad_featured[2]); ?>
                     </div>
 
                 </div>
             </div>
 
             <hr class="generic-hr hr-up mobile-hide">
-
         </section>
+         <!-- FIN NOTAS INFORMATIVAS -->
 
+        <!-- CATEGORIA NUEVA INFORMES  -->
+         <?php
 
+            # GET THE LAST 6 LEGISLACIÓN POSTS
+            $args_informes = array(
+                "post_type" => "post",
+                "category__in" => array( 1046, 1052 ),
+                "category__not_in" => array( 11, 1002, 1003, 1004, 1041, 1012, 1004, 1017, 1018, 1019 ),
+                "post__not_in" => $posts_already_shown,
+                "post_status" => "publish",
+                "orderby" => array(
+                    "menu_order"    => "ASC",
+                    "post_date"     =>  "DESC",
+                    ),
+                "posts_per_page" => 5,
+                );
+
+            $loop = new WP_Query( $args_informes );
+            while ( $loop->have_posts() ) : $loop->the_post();
+            $informes[] = $post->ID;
+            endwhile; wp_reset_postdata();
+
+            $posts_already_shown = array_merge($posts_already_shown, $informes);
+
+            # GET THE IMAGES FOR THE FIRST THREE POSTS
+            $legislacion_image_1 = wp_get_attachment_image_src ( get_post_thumbnail_id($informes[0]), array('1024','576') );
+            $legislacion_image_2 = wp_get_attachment_image_src ( get_post_thumbnail_id($informes[1]), array('1024','576') );
+            $legislacion_image_3 = wp_get_attachment_image_src ( get_post_thumbnail_id($informes[2]), array('1024','576') );
+
+        ?>
+        <SCRIPT type="text/javascript">
+                window.addEventListener("resize", () => {
+                    resizeText2();
+                })
+                document.addEventListener("DOMContentLoaded", () => {
+                    resizeText2();
+                });
+                function resizeText2() {
+                    let titleInformes = document.getElementsByClassName('title_informes');
+                    let informes = document.getElementsByClassName('informes');  
+                    let lineBetween = document.getElementsByClassName('line-between-informes');                              
+                    for(let i = 0; i < titleInformes.length; i++) {                      
+                        const size = titleInformes[i].clientHeight;
+                        console.log(300 - size);                        
+                        informes[i].style.height = `${ 300 - size }px`;  
+                        const sizeTextBody = 300 - size;
+                       
+                        console.log('Informes '+size);
+                        console.log(i);
+
+                        if((sizeTextBody == 228 ) || (sizeTextBody == 264 ) ){
+                            lineBetween[i].style.lineHeight = `${ 25.8 }px`;                        
+                        }else if (sizeTextBody == 192){
+                            lineBetween[i].style.lineHeight = `${ 24.5 }px`;                         
+                        }else if (sizeTextBody == 264){
+                            lineBetween[i].style.lineHeight = `${ 24.5 }px`;                         
+                        }else if (sizeTextBody == 156){
+                            lineBetween[i].style.lineHeight = `${ 25.8 }px`;                         
+                        }else {
+                            lineBetween[i].style.lineHeight = `${ 25.5 }px`;                        
+                        } 
+                                                  
+                    }
+                }
+            </SCRIPT>
+
+            <style>
+                .informes {
+                    position: relative;
+                    overflow: hidden;                                      
+                }               
+            </style>
 
         <section>
 
+            <hr class="generic-hr hr-up">
             <div class="grid-container">
                 <div class="grid">
-                    <div class="section-title px40 ibm-serif weight600 col-1-1 noticias-fide-section-title">
-                        <span>FIDE en los Medios </span>
+                    <div class="section-title px40 ibm-serif weight600 col-1-1">
+                        <span>Informes</span>
                     </div>
                 </div>
             </div>
 
-
-
-            <?php
-
-                # GET THE CATEGORY POSTS, SAVE THEIR IDs ON "$noticias_destacadas[]"
-
-                $args_noticias_destacadas = array(
-                    "post_type" => "post",
-                    "category__and" => array( 1003, 363 ),
-                    "post_status" => "publish",
-                    "orderby" => array(
-                        "post_date"     =>  "DESC",
-                        ),
-                    "posts_per_page" => 3,
-                    );                       
-
-                $loop = new WP_Query( $args_noticias_destacadas );
-
-                while ( $loop->have_posts() ) : $loop->the_post();
-                    $noticias_destacadas[] = $post->ID;
-                endwhile;
-
-                // ELSE and END IF at the end of the highlighted posts div
-
-            ?>
-
-
-
             <div class="grid-container">
                 <div class="grid">
 
-                    <?php if ($noticias_destacadas[0]) : ?>
-                    <div class="category-first-featured news-media-featured-container">
+                    <div class="legislacion-first-featured">
 
-                        <div class="news-media-image unselectable">
-                            <a href="<?php echo esc_url(get_permalink($noticias_destacadas[0])); ?>">
-                                <img src="<?php echo fide_news_media_img_url($noticias_destacadas[0]); ?>">
-                            </a>
-                        </div>
-          
-                        <h3 class="news-media-h3"><?php fide_title_link_shortened($noticias_destacadas[0], 60); ?></h3>
-                        <span class="gray-9"><?php echo get_the_date("d M 'y", $noticias_destacadas[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                        <span class="line24">
-                            <?php fide_excerpt($noticias_destacadas[0], 190) ?>
-                            <br>
-                            <?php fide_read_more_link($noticias_destacadas[0]); ?>
-                        </span>
-
-                    </div>
-                    <?php endif; ?>   
-
-                    <?php if ($noticias_destacadas[1]) : ?>
-                    <div class="category-second-featured news-media-featured-container">
-
-                        <div class="news-media-image unselectable">
-                            <a href="<?php echo esc_url(get_permalink($noticias_destacadas[1])); ?>">
-                                <img src="<?php echo fide_news_media_img_url($noticias_destacadas[1]); ?>">
-                            </a>
-                        </div>
-          
-                        <h3 class="news-media-h3"><?php fide_title_link_shortened($noticias_destacadas[1], 60); ?></h3>
-                        <span class="gray-9"><?php echo get_the_date("d M 'y", $noticias_destacadas[1]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                        <span class="line24">
-                            <?php fide_excerpt($noticias_destacadas[1], 190) ?>
-                            <br>
-                            <?php fide_read_more_link($noticias_destacadas[1]); ?>
-                        </span>
-
-                    </div>
-                    <?php endif; ?>   
-
-                    <?php if ($noticias_destacadas[2]) : ?>
-                    <div class="category-third-featured news-media-featured-container">
-
-                        <div class="news-media-image unselectable">
-                            <a href="<?php echo esc_url(get_permalink($noticias_destacadas[2])); ?>">
-                                <img src="<?php echo fide_news_media_img_url($noticias_destacadas[2]); ?>">
-                            </a>
-                        </div>
-          
-                        <h3 class="news-media-h3"><?php fide_title_link_shortened($noticias_destacadas[2], 60); ?></h3>
-                        <span class="gray-9"><?php echo get_the_date("d M 'y", $noticias_destacadas[2]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                        <span class="line24">
-                            <?php fide_excerpt($noticias_destacadas[2], 190) ?>
-                            <br>
-                            <?php fide_read_more_link($noticias_destacadas[2]); ?>
-                        </span>
-
-                    </div>
-                    <?php endif; ?>   
-
-                </div>
-            </div>        
-
-
-
-            <?php
-
-                # GET THE CATEGORY POSTS, SAVE THEIR IDs ON "$noticias_archive[]"
-
-                $args_noticias_archive = array(
-                    "post_type" => "post",
-                    "category__in" => 1003,
-                    "post__not_in" => $noticias_destacadas,
-                    "post_status" => "publish",
-                    "orderby" => array(
-                        "post_date"     =>  "DESC",
-                        ),
-                    "posts_per_page" => 10,
-                    "paged" => $paged,
-                    );                       
-
-                $loop = new WP_Query( $args_noticias_archive );
-
-                while ( $loop->have_posts() ) : $loop->the_post();
-                    $noticias_archive[] = $post->ID;
-                endwhile;
-
-            ?>
-
-
-
-            <div class="grid-container">
-                <div class="newsletter-table-title">
-                    
-                    Archivo de noticias publicadas
-
-                </div>
-
-                    <?php 
-
-                        for ($i = 0; $i <= 9; $i++) {
-
-                            $noticias_medio = get_post_meta( $noticias_archive[$i], 'medio', false );
-                            $noticias_date = get_the_date("M. 'y", $noticias_archive[$i]);
-                            $noticias_link = get_post_meta( $noticias_archive[$i], 'link', false );
-
-                            print '
-                                <div class="grid table-row-padding table-row-padding-news">
-
-                                    <span class="table-category-link table-news-media-logo">
-                                        <img src="' . fide_news_media_img_alpha_url($noticias_archive[$i]) . '">
-                                    </span>
-
-                                    <div class="table-article-date table-article-date-news gray-9">' . $noticias_date . '</div>
-
-                                    <div class="table-article-container table-article-container-news">
-                                        <a class="table-article-title weight600 red-hover" target="_blank" href="' . esc_url($noticias_link[0]) . '">' . get_the_title($noticias_archive[$i]) . '</a>
-                                    </div>
+                        <div class="article-image">
+                            <a href="<?php echo esc_url(get_permalink($informes[0])); ?>">
+                                <div class="crop">
+                                    <img class="cropped" src="<?php echo $legislacion_image_1[0] ?>">
                                 </div>
-                            ';
+                            </a>
+                        </div>
+          
+                        <?php fide_list_cats_links($informes[0]); ?>
+                        <h3 class="title_informes"><?php fide_title_link($informes[0]); ?></h3>
+                        <div class="informes">
+                            <span class="gray-9"><?php echo get_the_date("d M 'y", $informes[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                            <span class="line-between-informes" >
+                            <?php fide_excerpt($informes[0], 600) ?>                           
+                            </span>
+                        </div>
+                        <div class="difuminacion-informes" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
+                        <?php fide_read_more_link($informes[0]); ?>
+                    </div>
 
-                            if ($i==9) { print '<div class="table-bottom-margin"></div>'; } else { print '<hr class="table-hr-line">';}
+                    <div class="legislacion-second-featured">
 
-                        }
+                        <div class="article-image">
+                            <a href="<?php echo esc_url(get_permalink($informes[1])); ?>">
+                                <div class="crop">
+                                    <img class="cropped" src="<?php echo $legislacion_image_2[0] ?>">
+                                </div>
+                            </a>
+                        </div>
+          
+                        <?php fide_list_cats_links($informes[1]); ?>
+                        <h3 class="title_informes"><?php fide_title_link($informes[1]); ?></h3>
+                        <div class="informes">
+                            <span class="gray-9"><?php echo get_the_date("d M 'y", $informes[1]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                            <span class="line-between-informes" >
+                            <?php fide_excerpt($informes[1], 600) ?>                          
+                            </span>
+                        </div>
+                        <div class="difuminacion-informes" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
+                        <?php fide_read_more_link($informes[1]); ?>
 
-                    ?>
+                    </div>
 
+                    <div class="legislacion-third-featured">
+
+                        <div class="article-image">
+                            <a href="<?php echo esc_url(get_permalink($informes[2])); ?>">
+                                <div class="crop">
+                                    <img class="cropped" src="<?php echo $legislacion_image_3[0] ?>">
+                                </div>
+                            </a>
+                        </div>
+          
+                        <?php fide_list_cats_links($informes[2]); ?>
+                        <h3 class="title_informes"><?php fide_title_link($informes[2]); ?></h3>
+                        <div class="informes">
+                            <span class="gray-9"><?php echo get_the_date("d M 'y", $informes[2]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                            <span class="line-between-informes" >
+                            <?php fide_excerpt($informes[2], 600) ?>                           
+                            </span>
+                        </div>
+                        <div class="difuminacion-informes" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
+                        <?php fide_read_more_link($informes[2]); ?>
+                    </div>
+                
+                </div>
             </div>
-
+            
+            <div class="jurisprudencia-bottom-margin"></div>
+           
         </section>
+         <!-- FIN CATEGORIA NUEVA INFORMES  -->
 
-
-
+  
+       <!-- CATEGORIA NORMATIVA -->
         <?php
 
             # GET THE LAST NORMATIVA POST
@@ -362,10 +414,41 @@
             $normativa_img = wp_get_attachment_image_src ( get_post_thumbnail_id($normativa[0]), array('1024','576') );
 
         ?>
+         <SCRIPT type="text/javascript">
+                window.addEventListener("resize", () => {
+                    resizeText3();
+                })
+                document.addEventListener("DOMContentLoaded", () => {
+                    resizeText3();
+                });
+                function resize3() {
+                    let titleNormativa = document.getElementsByClassName('title_normativa');
+                    let normativa = document.getElementsByClassName('normativa');                                                 
+                    for(let i = 0; i < titleNormativa.length; i++) {                      
+                        const size = titleNormativa[i].clientHeight;
+                        console.log(390 - size);                        
+                        normativa[i].style.height = `${ 390 - size }px`;  
+                        const sizeTextBody = 390 - size;
+                       
+                        console.log('normativa '+size);
+                        console.log(i);
 
-        <section>
+                        
+                                                  
+                    }
+                };
 
-            <hr class="generic-hr hr-up">
+            </SCRIPT>
+
+            <style>
+                .normativa {
+                    position: relative;
+                    overflow: hidden;                                     
+                }             
+            </style>
+
+    <section>
+        <hr class="generic-hr hr-up">
 
             <div class="grid-container">
                 <div class="grid">
@@ -375,38 +458,67 @@
                 </div>
             </div>
 
-            <div class="grid-container">
-                <div class="grid margin-bottom">
+        <div class="grid-container">
+            <div class="grid">
 
-                    <div class="actualidad-normativa-text">
-                        <?php fide_list_cats_links($normativa[0]); ?>
-                        <h1><?php fide_title_link($normativa[0]); ?></h2>
-                        <span class="gray-9"><?php echo get_the_date("d M 'y", $normativa[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                        <span class="line24">
-                            <?php fide_excerpt($normativa[0], 800) ?>
-                            <br>
-                            <?php fide_read_more_link($normativa[0]); ?>
-                        </span>
+                <div class="internacional-featured-text">
+                    <?php fide_list_cats_links($normativa[0]); ?>
+                    <h1 class="title_normativa"><?php fide_title_link($normativa[0]); ?></h1>
+                    <div class="normativa">
+                    <span class="gray-9"><?php echo get_the_date("d M 'y", $normativa[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <span class="line24">
+                        <?php fide_excerpt($normativa[0], 1000) ?>                         
+                    </span>
                     </div>
-
-                    <div class="actualidad-normativa-image">
-                        <a href="<?php echo esc_url(get_permalink($normativa[0])); ?>">
-                            <div class="crop">
-                                <img class="cropped" src="<?php echo $normativa_img[0]; ?>">
-                            </div>
-                        </a>
-                    </div>
-
+                    <div class="difuminacion-normativa" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
+                    <?php fide_read_more_link($normativa[0]); ?>
                 </div>
+            
+                <div class="internacional-featured-image">
+                    <a href="<?php echo esc_url(get_permalink($normativa[0])); ?>">
+                        <div class="crop">
+                            <img class="cropped" src="<?php echo $normativa_img[0] ?>">
+                        </div>
+                    </a>
+                </div>
+
             </div>
+        </div>
 
-        </section>
-
-
+  
+        <!-- FIN CATEGORIA NORMATIVA -->
 
         <?php
 
-        # GET LAST POSTS FOR "NORMATIVA-EST/INT/AUT", SAVE THEIR IDs ON "$last_news[]"
+            # GET THE CATEGORY POSTS, SAVE THEIR IDs ON "$noticias_destacadas[]"
+
+            $args_noticias_destacadas = array(
+            "post_type" => "post",
+            "category__and" => array( 1003, 363 ),
+            "post_status" => "publish",
+            "orderby" => array(
+            "post_date"     =>  "DESC",
+            ),
+            "posts_per_page" => 3,
+            );                       
+
+            $loop = new WP_Query( $args_noticias_destacadas );
+
+            while ( $loop->have_posts() ) : $loop->the_post();
+                $noticias_destacadas[] = $post->ID;
+            endwhile;
+
+            // ELSE and END IF at the end of the highlighted posts div
+
+        ?>
+       
+
+    </section>
+        <!-- FIN CATEGORIA NORMATIVA -->
+
+        <?php
+
+            # GET LAST POSTS FOR "NORMATIVA-EST/INT/AUT", SAVE THEIR IDs ON "$last_news[]"
 
             $args_last_normativa = array(
                 "post_type" => "post",
@@ -587,6 +699,42 @@
             $legislacion_image_3 = wp_get_attachment_image_src ( get_post_thumbnail_id($legislacion[2]), array('1024','576') );
 
         ?>
+        <SCRIPT type="text/javascript">
+                document.addEventListener("DOMContentLoaded", () => {
+                    let titleLegislacion = document.getElementsByClassName('title_legislacion');
+                    let legislacion = document.getElementsByClassName('legislacion');     
+                    let lineBetweenLegislacion = document.getElementsByClassName('line-between-legislacion');                           
+                    for(let i = 0; i < titleLegislacion.length; i++) {                      
+                        const size = titleLegislacion[i].clientHeight;
+                        console.log(300 - size);                        
+                        legislacion[i].style.height = `${ 300 - size }px`;  
+                        const sizeTextBody = 300 - size;
+                       
+                        console.log('legislacion '+size);
+                        console.log(i);
+                        if(sizeTextBody == 228 ){
+                            lineBetweenLegislacion[i].style.lineHeight = `${ 25.8 }px`;                        
+                        }else if (sizeTextBody == 192){
+                            lineBetweenLegislacion[i].style.lineHeight = `${ 24.5 }px`;                         
+                        }else if (sizeTextBody == 264){
+                            lineBetweenLegislacion[i].style.lineHeight = `${ 24.5 }px`;                         
+                        }else if (sizeTextBody == 156){
+                            lineBetweenLegislacion[i].style.lineHeight = `${ 25.8 }px`;                         
+                        }else {
+                            lineBetweenLegislacion[i].style.lineHeight = `${ 25.5 }px`;                        
+                        } 
+                                                  
+                    }
+                });
+
+            </SCRIPT>
+
+            <style>
+                .legislacion {
+                    position: relative;
+                    overflow: hidden;                                      
+                }             
+            </style>
 
         <section>
 
@@ -614,13 +762,15 @@
                         </div>
           
                         <?php fide_list_cats_links($legislacion[0]); ?>
-                        <h3><?php fide_title_link($legislacion[0]); ?></h3>
+                        <h3 class="title_legislacion"><?php fide_title_link($legislacion[0]); ?></h3>
+                        <div class ="legislacion">
                         <span class="gray-9"><?php echo get_the_date("d M 'y", $legislacion[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                        <span class="line24">
-                            <?php fide_excerpt($legislacion[0], 200) ?>
-                            <br>
-                            <?php fide_read_more_link($legislacion[0]); ?>
+                        <span class="line-between-legislacion">
+                            <?php fide_excerpt($legislacion[0], 600) ?>                           
                         </span>
+                        </div>
+                        <div class="difuminacion-legislacion" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
+                        <?php fide_read_more_link($legislacion[0]); ?>
 
                     </div>
 
@@ -635,14 +785,15 @@
                         </div>
           
                         <?php fide_list_cats_links($legislacion[1]); ?>
-                        <h3><?php fide_title_link($legislacion[1]); ?></h3>
-                        <span class="gray-9"><?php echo get_the_date("d M 'y", $legislacion[1]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                        <span class="line24">
-                            <?php fide_excerpt($legislacion[1], 200) ?>
-                            <br>
-                            <?php fide_read_more_link($legislacion[1]); ?>
-                        </span>
-
+                        <h3 class="title_legislacion"><?php fide_title_link($legislacion[1]); ?></h3>
+                        <div class ="legislacion">
+                            <span class="gray-9"><?php echo get_the_date("d M 'y", $legislacion[1]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                            <span class="line-between-legislacion">
+                            <?php fide_excerpt($legislacion[1], 600) ?>                           
+                            </span>
+                         </div>
+                    <div class="difuminacion-legislacion" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
+                    <?php fide_read_more_link($legislacion[1]); ?>
                     </div>
 
                     <div class="legislacion-third-featured">
@@ -656,20 +807,22 @@
                         </div>
           
                         <?php fide_list_cats_links($legislacion[2]); ?>
-                        <h3><?php fide_title_link($legislacion[2]); ?></h3>
-                        <span class="gray-9"><?php echo get_the_date("d M 'y", $legislacion[2]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                        <span class="line24">
-                            <?php fide_excerpt($legislacion[2], 200) ?>
-                            <br>
-                            <?php fide_read_more_link($legislacion[2]); ?>
+                        <h3 class="title_legislacion"><?php fide_title_link($legislacion[2]); ?></h3>
+                        <div class ="legislacion">
+                            <span class="gray-9"><?php echo get_the_date("d M 'y", $legislacion[2]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                            <span class="line-between-legislacion">
+                            <?php fide_excerpt($legislacion[2], 600) ?>                           
                         </span>
+                        </div>
+                        <div class="difuminacion-legislacion" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
+                        <?php fide_read_more_link($legislacion[2]); ?>
 
                     </div>
                 
                 </div>
             </div>
 
-            <div class="legislacion-bottom-margin"></div>
+            <div class="legislacion-bottom-margin"></div> 
 
         </section>
 
@@ -701,7 +854,37 @@
             $internacional_img = wp_get_attachment_image_src ( get_post_thumbnail_id($internacional[0]), array('1024','576') );
 
         ?>
+        <!--JAVA SCRIPT Y CSS PARA LA SECCION INTERNATION-->
+        <SCRIPT type="text/javascript">
+                document.addEventListener("DOMContentLoaded", () => {
+                    let titleInternational = document.getElementsByClassName('title_international');
+                    let international = document.getElementsByClassName('international');                       
+                    let imgsize =    document.getElementsByClassName('cropped');                       
+                    for(let i = 0; i < titleInternational.length; i++) {                      
+                        const size = titleInternational[i].clientHeight;
+                        const sizeImg = imgsize[i].clientHeight;
+                        console.log(450 - size);      
+                        console.log('imagen inter '+sizeImg);                   
+                        //international[i].style.height = `${ 450 - size }px`;  
+                        const sizeTextBody = 450 - size;
+                       
+                        console.log('international '+size);
+                        console.log(i);
+                         lineBetweenInternational[i].style.lineHeight = `${ 25.5 }px`;
+                                                  
+                    }
+                });
 
+            </SCRIPT>
+
+            <style>
+                .international {
+                    position: relative;
+                    overflow: hidden;                                      
+                }
+               
+            </style>
+         <!--FIN JAVA SCRIPT Y CSS PARA LA SECCION INTERNATION-->
 
 
         <section>
@@ -721,13 +904,15 @@
 
                     <div class="internacional-featured-text">
                         <?php fide_list_cats_links($internacional[0]); ?>
-                        <h1><?php fide_title_link($internacional[0]); ?></h1>
+                        <h1 class="title_international"><?php fide_title_link($internacional[0]); ?></h1>
+                        <div class="international">
                         <span class="gray-9"><?php echo get_the_date("d M 'y", $internacional[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                         <span class="line24">
-                            <?php fide_excerpt($internacional[0], 280) ?>
-                            <br>
-                            <?php fide_read_more_link($internacional[0]); ?>
+                            <?php fide_excerpt($internacional[0], 800) ?>                         
                         </span>
+                        </div>
+                        <div class="difuminacion-international" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
+                        <?php fide_read_more_link($internacional[0]); ?>
                     </div>
                 
                     <div class="internacional-featured-image">
@@ -794,7 +979,7 @@
                         $news_link = get_post_meta( $last_news[$i], 'link', false );
 
                         print '
-                            <div class="grid table-row-padding">
+                            <div class="grid table-row-padding-news">
                                 <span class="table-category-link weight600">' . end($news_channel) . '</span>
 
                                 <div class="table-article-date gray-9">' . get_the_date("d M. 'y", $last_news[$i]) . '</div>

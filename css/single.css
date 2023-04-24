@@ -200,6 +200,11 @@ SINGLE POST SIDEBAR
 		grid-column: 1 / span 23;
 		grid-row: 2 / span 1;
 	}
+
+	.first-figure {
+		margin-top: -90px !important;
+
+	}
 }
 
 

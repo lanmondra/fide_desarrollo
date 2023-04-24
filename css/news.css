@@ -10,7 +10,8 @@ NEWS
 
 
 .table-row-padding-news {
-	padding: 8px 0;
+	/*padding: 8px 0; */
+	padding: 12px 0;
 }
 
 .table-news-media-logo {
@@ -34,5 +35,36 @@ NEWS
 	.table-article-date-news, .table-article-container-news {
 		padding: 0;	
 	}
+
+	.table-row-padding-news{
+		margin-left: -30px;
+	}
+
+}
+
+@media all and (max-width: 750px) {
+	.table-row-padding-news {
+		padding: 14px 0 5px 0;
+	}
+
+	.table-row-padding-news{
+		margin-left: 0px;
+	}
+
+}
+
+@media all and (max-width: 500px) {
+	
+
+}
+
+@media all and (max-width: 375px) { 
+
+	.table-row-padding-news{
+		margin-left: 9px;
+	}
+
+
+	
 
 }
