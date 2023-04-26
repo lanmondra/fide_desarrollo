@@ -57,6 +57,19 @@
 
         ?>
 
+            <script type="text/javascript">
+                document.addEventListener("DOMContentLoaded", () => {
+                    let titleCategory = document.getElementsByClassName('category_1003_title');
+                    let category = document.getElementsByClassName('category_1003');                             
+                    for(let i = 0; i < titleCategory.length; i++) {                      
+                        const size = titleCategory[i].clientHeight;                      
+                        category[i].style.height = `${ 200 - size }px`;  
+                        const sizeTextBody = 300 - size;                                                                   
+                    }
+                });
+
+            </script>
+
 
 
         <div class="grid-container">
@@ -71,13 +84,15 @@
                         </a>
                     </div>
       
-                    <h3 class="news-media-h3"><?php fide_title_link_shortened($noticias_destacadas[0], 60); ?></h3>
-                    <span class="gray-9"><?php echo get_the_date("d M 'y", $noticias_destacadas[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                    <span class="line24">
-                        <?php fide_excerpt($noticias_destacadas[0], 190) ?>
-                        <br>
-                        <?php fide_read_more_link($noticias_destacadas[0]); ?>
+                    <h3 class="news-media-h3 category_1003_title"><?php fide_title_link_shortened($noticias_destacadas[0], 300); ?></h3>
+                    <div class ="category_1003 categorys-default">
+                        <span class="gray-9"><?php echo get_the_date("d M 'y", $noticias_destacadas[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                        <span class="line24">
+                        <?php fide_excerpt($noticias_destacadas[0], 700) ?>                       
                     </span>
+                    </div>
+                        <div class="difuminado-default"></div>
+                        <?php fide_read_more_link($noticias_destacadas[0]); ?>
 
                 </div>
                 <?php endif; ?>   
@@ -91,13 +106,15 @@
                         </a>
                     </div>
       
-                    <h3 class="news-media-h3"><?php fide_title_link_shortened($noticias_destacadas[1], 60); ?></h3>
-                    <span class="gray-9"><?php echo get_the_date("d M 'y", $noticias_destacadas[1]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                    <span class="line24">
-                        <?php fide_excerpt($noticias_destacadas[1], 190) ?>
-                        <br>
-                        <?php fide_read_more_link($noticias_destacadas[1]); ?>
+                    <h3 class="news-media-h3 category_1003_title"><?php fide_title_link_shortened($noticias_destacadas[1], 300); ?></h3>
+                    <div class ="category_1003 categorys-default">
+                        <span class="gray-9"><?php echo get_the_date("d M 'y", $noticias_destacadas[1]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                        <span class="line24">
+                        <?php fide_excerpt($noticias_destacadas[1], 700) ?>                        
                     </span>
+                    </div>
+                        <div class="difuminado-default"></div>
+                        <?php fide_read_more_link($noticias_destacadas[1]); ?>
 
                 </div>
                 <?php endif; ?>   
@@ -111,13 +128,15 @@
                         </a>
                     </div>
       
-                    <h3 class="news-media-h3"><?php fide_title_link_shortened($noticias_destacadas[2], 60); ?></h3>
+                    <h3 class="news-media-h3 category_1003_title"><?php fide_title_link_shortened($noticias_destacadas[2], 300); ?></h3>
+                    <div class ="category_1003 categorys-default">
                     <span class="gray-9"><?php echo get_the_date("d M 'y", $noticias_destacadas[2]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                     <span class="line24">
-                        <?php fide_excerpt($noticias_destacadas[2], 190) ?>
-                        <br>
-                        <?php fide_read_more_link($noticias_destacadas[2]); ?>
+                        <?php fide_excerpt($noticias_destacadas[2], 700) ?>                       
                     </span>
+                    </div>
+                        <div class="difuminado-default"></div>
+                        <?php fide_read_more_link($noticias_destacadas[2]); ?>
 
                 </div>
                 <?php endif; ?>   
