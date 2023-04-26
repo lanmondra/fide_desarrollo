@@ -75,6 +75,8 @@ body {
 .col-2-4 { -ms-grid-column: 7; -ms-grid-column-span: 5; grid-column: 7 / span 5; }
 .col-3-4 { -ms-grid-column: 13; -ms-grid-column-span: 5; grid-column: 13 / span 5; }
 .col-4-4 { -ms-grid-column: 19; -ms-grid-column-span: 5; grid-column: 19 / span 5; }
+.col-5-4 { -ms-grid-column: 27; -ms-grid-column-span: 5; grid-column: 27 / span 5; }
+
 
 .col-1-3 { -ms-grid-column: 1; -ms-grid-column-span: 7; grid-column: 1 / span 7; }
 .col-2-3 { -ms-grid-column: 9; -ms-grid-column-span: 7; grid-column: 9 / span 7; }
@@ -123,10 +125,8 @@ header {
 }
 
 .top-nav-container {
-    max-width: 1200px;
+	max-width: 1304px;
     margin: 0 auto;
-    padding: 0 48px;
-    font-size: 20px;
 }
 
 .fide-logo { margin-right: 24px; }
@@ -556,7 +556,7 @@ EXTRA STUFF
 
 .cropped {
 	width: 100%;
-    height: 100%;
+	height: 100%;
     object-fit: cover;
     display: block;
 }
@@ -611,7 +611,7 @@ h3 {
 .weight400 {font-weight: 400;}
 .weight600 {font-weight: 600;}
 
-.line24 {line-height: 24px;}
+.line24 {line-height: 25px;}
 .line32 {line-height: 32px;}
 .line36 {line-height: 36px;}
 .line48 {line-height: 48px;}
@@ -749,7 +749,7 @@ BASIC RESPONSIVE CSS
     /*ul.rootmenu > li:hover span.hover-border { display: block; }*/
     .js-active-border { display: block; }
 
-    ul.rootmenu li a { color: #222222; }
+    ul.rootmenu li a { color: #222222; font-size: 20px; }
 
     .nav-bullet { display: none; }
 
@@ -794,6 +794,7 @@ TABLET AND MEDIUM SIZES
     ul.rootmenu > li {
         float: none;
         border-bottom: solid 1px #111111;
+		background-color: #AC0600;
     }
 
     ul.rootmenu > li:first-child {

@@ -20,16 +20,22 @@
 
 
         <div class="grid-container mobile-hide">
+
             <div class="highlighted-tags-container">
+                <br/> <br/> <br/> 
+                <div class="highlighted-tag px20 line24 weight600">
+
+                    <span  class="tag-text">IMPUESTO ESPECIAL SOBRE ENVASES DE PLÁSTICO NO REUTILIZABLES</span></div>
 
                 <div class="highlighted-tag px20 line24 weight600">
                     <span class="tag-text">GASES FLUORADOS DE EFECTO INVERNADERO</span></div>
+                    
                 <div class="highlighted-tag px20 line24 weight600">
                     <span class="tag-text">VALOR DE LA PRODUCCIÓN DE LA ENERGÍA ELÉCTRICA</span></div>
                 <div class="highlighted-tag px20 line24 weight600">
-                    <span class="tag-text">COMBUSTIBLE NUCLEAR GASTADO</span></div>
-                <div class="highlighted-tag px20 line24 weight600">
-                    <span class="tag-text">RESIDUOS RADIOACTIVOS</span></div>
+                    
+                </div>
+                               
 
             </div>
         </div> <!-- End of grid container -->

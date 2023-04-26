@@ -66,6 +66,19 @@
 
             ?>
 
+            <script type="text/javascript">
+                document.addEventListener("DOMContentLoaded", () => {
+                    let titleCategory = document.getElementsByClassName('category_2_title');
+                    let category = document.getElementsByClassName('category_2');                             
+                    for(let i = 0; i < titleCategory.length; i++) {                      
+                        const size = titleCategory[i].clientHeight;                      
+                        category[i].style.height = `${ 300 - size }px`;  
+                        const sizeTextBody = 300 - size;                                                                   
+                    }
+                });
+
+            </script>
+
 
 
             <div class="grid-container">
@@ -83,14 +96,15 @@
                         </div>
           
                         <?php fide_list_cats_links($posts_cat_archive[0]); ?>
-                        <h3><?php fide_title_link_full_length($posts_cat_archive[0], 60); ?></h3>
+                        <h3 class="category_2_title"><?php fide_title_link_full_length($posts_cat_archive[0], 450); ?></h3>
+                        <div class ="category_2 categorys-default">
                         <span class="gray-9"><?php echo get_the_date("d M 'y", $posts_cat_archive[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                         <span class="line24">
-                            <?php fide_excerpt($posts_cat_archive[0], 190) ?>
-                            <br>
-                            <?php fide_read_more_link($posts_cat_archive[0]); ?>
+                            <?php fide_excerpt($posts_cat_archive[0], 900) ?>                           
                         </span>
-
+                        </div>
+                        <div class="difuminado-default"></div>
+                        <?php fide_read_more_link($posts_cat_archive[0]); ?>
                     </div>
                     <?php endif; ?>   
 
@@ -106,13 +120,15 @@
                         </div>
           
                         <?php fide_list_cats_links($posts_cat_archive[1]); ?>
-                        <h3><?php fide_title_link_full_length($posts_cat_archive[1], 60); ?></h3>
+                        <h3 class="category_2_title"><?php fide_title_link_full_length($posts_cat_archive[1], 300); ?></h3>
+                        <div class ="category_2 categorys-default">
                         <span class="gray-9"><?php echo get_the_date("d M 'y", $posts_cat_archive[1]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                         <span class="line24">
-                            <?php fide_excerpt($posts_cat_archive[1], 190) ?>
-                            <br>
-                            <?php fide_read_more_link($posts_cat_archive[1]); ?>
+                            <?php fide_excerpt($posts_cat_archive[1], 900) ?>                                                     
                         </span>
+                        </div>
+                        <div class="difuminado-default"></div>
+                        <?php fide_read_more_link($posts_cat_archive[1]); ?>
 
                     </div>
                     <?php endif; ?>   
@@ -129,13 +145,15 @@
                         </div>
           
                         <?php fide_list_cats_links($posts_cat_archive[2]); ?>
-                        <h3><?php fide_title_link_full_length($posts_cat_archive[2], 60);?></h3>
+                        <h3 class="category_2_title"><?php fide_title_link_full_length($posts_cat_archive[2], 300);?></h3>
+                        <div class ="category_2 categorys-default">
                         <span class="gray-9"><?php echo get_the_date("d M 'y", $posts_cat_archive[2]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                         <span class="line24">
-                            <?php fide_excerpt($posts_cat_archive[2], 190) ?>
-                            <br>
-                            <?php fide_read_more_link($posts_cat_archive[2]); ?>
+                            <?php fide_excerpt($posts_cat_archive[2], 900) ?>                          
                         </span>
+                        </div>
+                        <div class="difuminado-default"></div>                        
+                        <?php fide_read_more_link($posts_cat_archive[2]); ?>
 
                     </div>
                     <?php endif; ?>   
@@ -160,13 +178,15 @@
                         </div>
           
                         <?php fide_list_cats_links($posts_cat_archive[3]); ?>
-                        <h3><?php fide_title_link_full_length($posts_cat_archive[3], 60); ?></h3>
+                        <h3 class="category_2_title"><?php fide_title_link_full_length($posts_cat_archive[3], 300); ?></h3>
+                        <div class ="category_2 categorys-default">
                         <span class="gray-9"><?php echo get_the_date("d M 'y", $posts_cat_archive[3]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                         <span class="line24">
-                            <?php fide_excerpt($posts_cat_archive[3], 190) ?>
-                            <br>
-                            <?php fide_read_more_link($posts_cat_archive[3]); ?>
+                            <?php fide_excerpt($posts_cat_archive[3], 900) ?>                           
                         </span>
+                        </div>
+                        <div class="difuminado-default"></div>                                              
+                        <?php fide_read_more_link($posts_cat_archive[3]); ?>
 
                     </div>
                     <?php endif; ?>   
@@ -183,14 +203,15 @@
                         </div>
           
                         <?php fide_list_cats_links($posts_cat_archive[4]); ?>
-                        <h3><?php fide_title_link_full_length($posts_cat_archive[4], 60); ?></h3>
+                        <h3 class="category_2_title"><?php fide_title_link_full_length($posts_cat_archive[4], 300); ?></h3>
+                        <div class ="category_2 categorys-default">
                         <span class="gray-9"><?php echo get_the_date("d M 'y", $posts_cat_archive[4]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                         <span class="line24">
-                            <?php fide_excerpt($posts_cat_archive[4], 190) ?>
-                            <br>
-                            <?php fide_read_more_link($posts_cat_archive[4]); ?>
+                            <?php fide_excerpt($posts_cat_archive[4], 900) ?>                          
                         </span>
-
+                        </div>
+                        <div class="difuminado-default"></div>                                              
+                        <?php fide_read_more_link($posts_cat_archive[4]); ?>
                     </div>
                     <?php endif; ?>   
 
@@ -206,14 +227,15 @@
                         </div>
           
                         <?php fide_list_cats_links($posts_cat_archive[5]); ?>
-                        <h3><?php fide_title_link_full_length($posts_cat_archive[5], 60); ?></h3>
+                        <h3 class="category_2_title"><?php fide_title_link_full_length($posts_cat_archive[5], 300); ?></h3>
+                        <div class ="category_2 categorys-default">
                         <span class="gray-9"><?php echo get_the_date("d M 'y", $posts_cat_archive[5]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                         <span class="line24">
-                            <?php fide_excerpt($posts_cat_archive[5], 190) ?>
-                            <br>
-                            <?php fide_read_more_link($posts_cat_archive[5]); ?>
+                            <?php fide_excerpt($posts_cat_archive[5], 900) ?>                           
                         </span>
-
+                        </div>
+                        <div class="difuminado-default"></div>                                                                     
+                        <?php fide_read_more_link($posts_cat_archive[5]); ?>
                     </div>
                     <?php endif; ?>   
 
@@ -237,14 +259,15 @@
                         </div>
           
                         <?php fide_list_cats_links($posts_cat_archive[6]); ?>
-                        <h3><?php fide_title_link_full_length($posts_cat_archive[6], 60); ?></h3>
+                        <h3 class="category_2_title"><?php fide_title_link_full_length($posts_cat_archive[6], 300); ?></h3>
+                        <div class ="category_2 categorys-default">
                         <span class="gray-9"><?php echo get_the_date("d M 'y", $posts_cat_archive[6]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                         <span class="line24">
-                            <?php fide_excerpt($posts_cat_archive[6], 190) ?>
-                            <br>
-                            <?php fide_read_more_link($posts_cat_archive[6]); ?>
+                            <?php fide_excerpt($posts_cat_archive[6], 900) ?>                           
                         </span>
-
+                        </div>
+                        <div class="difuminado-default"></div>                                                                                           
+                        <?php fide_read_more_link($posts_cat_archive[6]); ?>
                     </div>
                     <?php endif; ?>   
 
@@ -260,13 +283,15 @@
                         </div>
           
                         <?php fide_list_cats_links($posts_cat_archive[7]); ?>
-                        <h3><?php fide_title_link_full_length($posts_cat_archive[7], 60); ?></h3>
+                        <h3 class="category_2_title"><?php fide_title_link_full_length($posts_cat_archive[7], 300); ?></h3>
+                        <div class ="category_2 categorys-default">
                         <span class="gray-9"><?php echo get_the_date("d M 'y", $posts_cat_archive[7]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                         <span class="line24">
-                            <?php fide_excerpt($posts_cat_archive[7], 190) ?>
-                            <br>
-                            <?php fide_read_more_link($posts_cat_archive[7]); ?>
+                            <?php fide_excerpt($posts_cat_archive[7], 900) ?>                 
                         </span>
+                        </div>
+                        <div class="difuminado-default"></div>                                                                                                         
+                        <?php fide_read_more_link($posts_cat_archive[7]); ?>
 
                     </div>
                     <?php endif; ?>   
@@ -283,13 +308,16 @@
                         </div>
           
                         <?php fide_list_cats_links($posts_cat_archive[8]); ?>
-                        <h3><?php fide_title_link_full_length($posts_cat_archive[8], 60); ?></h3>
+                        <h3 class="category_2_title"><?php fide_title_link_full_length($posts_cat_archive[8], 300); ?></h3>
+                        <div class ="category_2 categorys-default">
                         <span class="gray-9"><?php echo get_the_date("d M 'y", $posts_cat_archive[8]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                         <span class="line24">
-                            <?php fide_excerpt($posts_cat_archive[8], 190) ?>
-                            <br>
-                            <?php fide_read_more_link($posts_cat_archive[8]); ?>
+                            <?php fide_excerpt($posts_cat_archive[8], 900) ?>
+                           
                         </span>
+                        </div>
+                        <div class="difuminado-default"></div>                                                                                                         
+                        <?php fide_read_more_link($posts_cat_archive[8]); ?>
 
                     </div>
                     <?php endif; ?>   

@@ -17,7 +17,13 @@ ACTUALIDAD - FEATURED POST
 }
 
 @media all and (min-width: 1400px) {
-	.actualidad-featured-image { margin-left: -120px; }
+	/*Cover de la imagen */
+	.actualidad-featured-image { 
+		margin-left: -0px; 
+		
+	} 
+
+	
 }
 
 @media all and (max-width: 1240px) {
@@ -32,12 +38,16 @@ ACTUALIDAD - FEATURED POST
 
 @media all and (max-width: 1000px) {
 
+
+	.table-row-padding-news{
+		margin-left: -190px;
+	}
+
 	.actualidad-featured-image {
 		-ms-grid-column: 1;
 		-ms-grid-column-span: 23;
 		grid-column: 1 / span 23;
 		grid-row: 1 / span 1;
-		margin: 0 -48px;
 	}
 
 	.actualidad-featured-text {
@@ -49,13 +59,21 @@ ACTUALIDAD - FEATURED POST
 
 }
 
+@media all and (max-width: 800px) {
+	.main{
+		height: 250px;
+	}
+
+	
+}
+
 @media all and (max-width: 575px) {
 
 	.actualidad-featured-image {
-	    margin: 0 -16px;
 	    height: 192px;
 	}
 
+	
 }
 
 
@@ -73,7 +91,10 @@ ACTUALIDAD - NOTAS INFORM.
 	-ms-grid-column-span: 7;
 	grid-column: 1 / span 7;
 	background-color: #F2F2F2;
-	padding: 96px 24px 72px;
+	/*padding: 96px 24px 72px;
+	margin-top : 23%; */
+	padding: 22px 23px 23px;
+    margin-top: 13%;
 }
 
 @media all and (max-width: 1000px) {
@@ -81,7 +102,10 @@ ACTUALIDAD - NOTAS INFORM.
 		grid-column: 1 / span 23;
 		grid-row: 2 / span 1;
 		padding: 48px 48px 24px;
-		margin: 0 -48px;
+		margin-top: 7%;
+	}
+	.normativa{
+		height: 160px;
 	}
 }
 
@@ -124,7 +148,10 @@ ACTUALIDAD - 2nd & 3rf FEAT.
 	grid-column: 9 / span 7;
 }
 
-.article-module-padding { padding: 96px 0 72px; }
+.article-module-padding { 
+	padding: 96px 0 72px; 
+	margin-top: -10%;
+}
 
 @media all and (max-width: 1000px) {
 	.actualidad-second-featured {
@@ -158,16 +185,15 @@ ACTUALIDAD - 2nd & 3rf FEAT.
 		grid-row: 1 / span 1;
 	}
 
-	.article-image {
-		margin: 0 -16px;
-	}
 
 	.actualidad-third-featured {
 		grid-column: 1 / span 23;
 		grid-row: 2 / span 1;
 	}
 
-	.article-module-padding { padding: 36px 0 0; }
+	.article-module-padding { 
+		/* padding: 36px 0 0;  */
+	}
 
 }
 
@@ -213,6 +239,7 @@ ACTUALIDAD - NOTICIAS FIDE
 	.section-title.noticias-fide-section-title {
 		padding: 37px 0;
 	}
+	
 
 }
 
@@ -277,7 +304,6 @@ ACTUALIDAD - NORMATIVA
 @media all and (max-width: 575px) {
 
 	.actualidad-normativa-image {
-		margin: 0 -16px;
 		height: 192px;
 	}
 
@@ -326,7 +352,9 @@ ACTUALIDAD - JURISPRUDENCIA
     margin-top: 28px;
 }
 
-.jurisprudencia-bottom-margin { height: 96px; }
+.jurisprudencia-bottom-margin { 
+	height: 54px; 
+}
 
 @media all and (max-width: 1000px) {
 
@@ -389,7 +417,9 @@ ACTUALIDAD - LEGISLACIÓN
 	grid-column: 17 / span 7;
 }
 
-.legislacion-bottom-margin { height: 96px; }
+.legislacion-bottom-margin { 
+	height: 54px; 
+}
 
 @media all and (max-width: 1000px) {
 
@@ -458,16 +488,17 @@ ACTUALIDAD - INTERNACIONAL
 	/* height: 432px; */ /* Fluid height depending on amount of text */
 }
 
-.internacional-bottom-margin { height: 96px; }
+.internacional-bottom-margin { height: 54px; }
 
 @media all and (min-width: 1400px) {
-	.internacional-featured-image { margin-right: -120px; }
+	.internacional-featured-image { margin-right: -45px; }
 }
 
 /*@media all and (max-width: 1240px) {
 	.internacional-featured-image { height: auto; }
 }*/
 
+/*  */
 @media all and (max-width: 1000px) {
 
 	.internacional-featured-image {
@@ -475,7 +506,6 @@ ACTUALIDAD - INTERNACIONAL
 		-ms-grid-column-span: 23;
 		grid-column: 1 / span 23;
 		grid-row: 1 / span 1;
-		margin: 0 -48px;
 	}
 
 	.internacional-featured-text {
@@ -490,7 +520,6 @@ ACTUALIDAD - INTERNACIONAL
 @media all and (max-width: 575px) {
 
 	.internacional-featured-image {
-	    margin: 0 -16px;
 	    height: 192px;
 	}
 
