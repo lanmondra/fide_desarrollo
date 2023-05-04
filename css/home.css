@@ -453,6 +453,10 @@ HOME - TABLE
 		grid-column: 9 / span 18;
 	}
 
+	.table-article-container-home {		
+		grid-column: 7 / span 18;
+	}
+
 }
 
 

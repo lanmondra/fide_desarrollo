@@ -40,34 +40,34 @@
             $actualidad_featured_image_3 = wp_get_attachment_image_src ( get_post_thumbnail_id($actualidad_featured[2]), array('1024','576') );
         ?>
 
-            <script type="text/javascript">
+            <script type="text/javascript">     
+            
+            document.addEventListener("DOMContentLoaded", () => {
+                console.log('Inicio');
+                    let titleMain = document.getElementsByClassName('title_main');                  
+                    let main = document.getElementsByClassName('main');                                      
 
+                    for(let i = 0; i < titleMain.length; i++) {      
+                        console.log('Inicio', i);                
+                        const size = titleMain[i].clientHeight;
+                        const sizeTextBody = 370 - size;
+                        const textElement = main[i].getElementsByClassName('line24')[0].clientHeight;
+                        main[i].style.height = `${ sizeTextBody}px`;
+                        console.log('Inicio', category);
+                        if (sizeTextBody < textElement) {
+                            main[i].style.height = `${ sizeTextBody }px`;
+                        }  else {
+                            main[i].style.height = `${ sizeTextBody }px`;
+                        }
 
-                // document.addEventListener("DOMContentLoaded", () => {
-                //     resizeText() 
-                // });
-                // function resizeText() {
-                //     console.log('Inicio');
-                //     let titleMain = document.getElementsByClassName('title_main');
-                //     let main = document.getElementsByClassName('main');  
-                                              
-                //     for(let i = 0; i < titleMain.length; i++) {                      
-                //         const size = titleMain[i].clientHeight;
-                //         const sizeTextBody = 390 - size;
-                //         const textElement = main[i].getElementsByClassName('line24')[0].clientHeight;
-
-                //         if (sizeTextBody < textElement) {
-                //             main[i].style.height = `${ textElement }px`;
-                //         }  else {
-                //             main[i].style.height = `${ sizeTextBody }px`;
-                //         }
-
-                //     }
-                // }
+                    }
+                });
+                   
+                
             </script>
 
             <style>
-                .main {
+                .main{
                     position: relative;
                     overflow: hidden;                                      
                 }             
@@ -90,11 +90,10 @@
                         <?php fide_list_cats_links($actualidad_featured[0]); ?>
                         <h1 class="title_main"><?php fide_title_link($actualidad_featured[0]); ?></h1>
                         <div class = "main">
-                        <span class="gray-9"><?php echo get_the_date("d M 'y", $actualidad_featured[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                        <span class="line24">
-                            <?php fide_excerpt($actualidad_featured[0], 800) ?>
-                            
-                        </span>
+                            <span class="gray-9"><?php echo get_the_date("d M 'y", $actualidad_featured[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                            <span class="line24">
+                            <?php fide_excerpt($actualidad_featured[0], 800) ?>                           
+                            </span>
                         </div>
                         <div class="prueba" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
                         <?php fide_read_more_link($actualidad_featured[0]); ?>
@@ -249,9 +248,9 @@
             $posts_already_shown = array_merge($posts_already_shown, $informes);
 
             # GET THE IMAGES FOR THE FIRST THREE POSTS
-            $legislacion_image_1 = wp_get_attachment_image_src ( get_post_thumbnail_id($informes[0]), array('1024','576') );
-            $legislacion_image_2 = wp_get_attachment_image_src ( get_post_thumbnail_id($informes[1]), array('1024','576') );
-            $legislacion_image_3 = wp_get_attachment_image_src ( get_post_thumbnail_id($informes[2]), array('1024','576') );
+            $informe_image_1 = wp_get_attachment_image_src ( get_post_thumbnail_id($informes[0]), array('1024','576') );
+            $informe_image_2 = wp_get_attachment_image_src ( get_post_thumbnail_id($informes[1]), array('1024','576') );
+            $informe_image_3 = wp_get_attachment_image_src ( get_post_thumbnail_id($informes[2]), array('1024','576') );
 
         ?>
         <SCRIPT type="text/javascript">
@@ -316,7 +315,7 @@
                         <div class="article-image">
                             <a href="<?php echo esc_url(get_permalink($informes[0])); ?>">
                                 <div class="crop">
-                                    <img class="cropped" src="<?php echo $legislacion_image_1[0] ?>">
+                                    <img class="cropped" src="<?php echo $informe_image_1[0] ?>">
                                 </div>
                             </a>
                         </div>
@@ -338,7 +337,7 @@
                         <div class="article-image">
                             <a href="<?php echo esc_url(get_permalink($informes[1])); ?>">
                                 <div class="crop">
-                                    <img class="cropped" src="<?php echo $legislacion_image_2[0] ?>">
+                                    <img class="cropped" src="<?php echo $informe_image_2[0] ?>">
                                 </div>
                             </a>
                         </div>
@@ -361,7 +360,7 @@
                         <div class="article-image">
                             <a href="<?php echo esc_url(get_permalink($informes[2])); ?>">
                                 <div class="crop">
-                                    <img class="cropped" src="<?php echo $legislacion_image_3[0] ?>">
+                                    <img class="cropped" src="<?php echo $informe_image_2[0] ?>">
                                 </div>
                             </a>
                         </div>
@@ -421,7 +420,7 @@
                 document.addEventListener("DOMContentLoaded", () => {
                     resizeText3();
                 });
-                function resize3() {
+                function resizeText3() {
                     let titleNormativa = document.getElementsByClassName('title_normativa');
                     let normativa = document.getElementsByClassName('normativa');                                                 
                     for(let i = 0; i < titleNormativa.length; i++) {                      
@@ -483,6 +482,7 @@
                 </div>
 
             </div>
+           
         </div>
 
   
@@ -538,7 +538,8 @@
 
         ?>
 
-        <section>
+        <section class="margin-top">
+        <hr class="generic-hr hr-up">
             <div class="grid-container">
                 <div class="table-title">Normativa reciente</div>
 
@@ -564,7 +565,7 @@
 
                                     <div class="table-article-date gray-9">' . get_the_date("d M. 'y", $last_normativa[$i]) . '</div>
 
-                                    <div class="table-article-container">
+                                    <div class="table-article-container table-article-container-home">
                                         <a class="table-article-title weight600 red-hover" href="' . esc_url(get_permalink($last_normativa[$i])) . '">' . get_the_title($last_normativa[$i]) . '</a>
                                         <span class="table-article-excerpt gray-9 weight400">&nbsp;&nbsp;' . substr(get_the_excerpt($last_normativa[$i]), 0, 100) . '</span>
                                     </div>
@@ -591,7 +592,7 @@
 
             $args_jurisprudencia = array(
                 "post_type" => "post",
-                "category__in" => array( 1015 ),
+                "category__in" => array( 1015),
                 "category__not_in" => array( 11, 1002, 1003, 1004, 1041, 1012, 1004, 1017, 1018, 1019 ),
                 "post__not_in" => $posts_already_shown,
                 "post_status" => "publish",
@@ -641,23 +642,27 @@
                         <div class="two-columns-text">
                             
                             <span class="gray-9"><?php echo get_the_date("d M 'y", $jurisprudencia[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                            <a href="<?php echo esc_url(get_permalink($jurisprudencia[0])); ?>">
                             <span class="line24">
-                                <?php fide_excerpt($jurisprudencia[0], 590) ?>
+                                <?php fide_excerpt($jurisprudencia[0], 610) ?>
                                 <br>
-                                <?php fide_read_more_link($jurisprudencia[0]); ?>
-                            </span>
+                                <div class="difuminacion-legislacion" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
+                                <!-- <?php fide_read_more_link($jurisprudencia[0]); ?> -->
+                            </span></a>
                         </div>
                     </div>
 
                     <div class="jurisprudencia-breves">
                         <hr class="generic-hr mobile-only">
-                        <p><?php fide_jurisprudencia_shorts($jurisprudencia[1], 200) ?></p>
+                        <p><?php fide_jurisprudencia_shorts($jurisprudencia[1], 250) ?></p>
                         <hr class="generic-hr">
-                        <p><?php fide_jurisprudencia_shorts($jurisprudencia[2], 200) ?></p>
+                        <p><?php fide_jurisprudencia_shorts($jurisprudencia[2], 250) ?></p>
                         <hr class="generic-hr">
-                        <p><?php fide_jurisprudencia_shorts($jurisprudencia[3], 200) ?></p>
+                        <p><?php fide_jurisprudencia_shorts($jurisprudencia[3], 250) ?></p>
                         <hr class="generic-hr">
-                        <p><?php fide_jurisprudencia_shorts($jurisprudencia[4], 200) ?></p>
+                        <p><?php fide_jurisprudencia_shorts($jurisprudencia[4], 250) ?></p>
+                        <hr class="generic-hr">
+                        <p><?php fide_jurisprudencia_shorts($jurisprudencia[4], 250) ?></p>
                     </div>
                 
                 </div>
@@ -700,32 +705,24 @@
 
         ?>
         <SCRIPT type="text/javascript">
+            window.addEventListener("resize", () => {
+                    resizeText4();
+                })
                 document.addEventListener("DOMContentLoaded", () => {
+                    resizeText4();
+                });
+                function resizeText4() {
                     let titleLegislacion = document.getElementsByClassName('title_legislacion');
-                    let legislacion = document.getElementsByClassName('legislacion');     
-                    let lineBetweenLegislacion = document.getElementsByClassName('line-between-legislacion');                           
+                    let legislacion = document.getElementsByClassName('legislacion');                                                  
                     for(let i = 0; i < titleLegislacion.length; i++) {                      
-                        const size = titleLegislacion[i].clientHeight;
-                        console.log(300 - size);                        
+                        const size = titleLegislacion[i].clientHeight;                       
                         legislacion[i].style.height = `${ 300 - size }px`;  
-                        const sizeTextBody = 300 - size;
-                       
-                        console.log('legislacion '+size);
-                        console.log(i);
-                        if(sizeTextBody == 228 ){
-                            lineBetweenLegislacion[i].style.lineHeight = `${ 25.8 }px`;                        
-                        }else if (sizeTextBody == 192){
-                            lineBetweenLegislacion[i].style.lineHeight = `${ 24.5 }px`;                         
-                        }else if (sizeTextBody == 264){
-                            lineBetweenLegislacion[i].style.lineHeight = `${ 24.5 }px`;                         
-                        }else if (sizeTextBody == 156){
-                            lineBetweenLegislacion[i].style.lineHeight = `${ 25.8 }px`;                         
-                        }else {
-                            lineBetweenLegislacion[i].style.lineHeight = `${ 25.5 }px`;                        
-                        } 
+                        const sizeTextBody = 300 - size;   
+                        console.log('imagen legislacion ', size);                        
+
                                                   
                     }
-                });
+                }
 
             </SCRIPT>
 
@@ -765,13 +762,12 @@
                         <h3 class="title_legislacion"><?php fide_title_link($legislacion[0]); ?></h3>
                         <div class ="legislacion">
                         <span class="gray-9"><?php echo get_the_date("d M 'y", $legislacion[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                        <span class="line-between-legislacion">
+                            <span class="line24">
                             <?php fide_excerpt($legislacion[0], 600) ?>                           
-                        </span>
+                            </span>
                         </div>
                         <div class="difuminacion-legislacion" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
                         <?php fide_read_more_link($legislacion[0]); ?>
-
                     </div>
 
                     <div class="legislacion-second-featured">
@@ -788,7 +784,7 @@
                         <h3 class="title_legislacion"><?php fide_title_link($legislacion[1]); ?></h3>
                         <div class ="legislacion">
                             <span class="gray-9"><?php echo get_the_date("d M 'y", $legislacion[1]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                            <span class="line-between-legislacion">
+                            <span class="line24">
                             <?php fide_excerpt($legislacion[1], 600) ?>                           
                             </span>
                          </div>
@@ -810,7 +806,7 @@
                         <h3 class="title_legislacion"><?php fide_title_link($legislacion[2]); ?></h3>
                         <div class ="legislacion">
                             <span class="gray-9"><?php echo get_the_date("d M 'y", $legislacion[2]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                            <span class="line-between-legislacion">
+                            <span class="line24">
                             <?php fide_excerpt($legislacion[2], 600) ?>                           
                         </span>
                         </div>
@@ -865,12 +861,12 @@
                         const sizeImg = imgsize[i].clientHeight;
                         console.log(450 - size);      
                         console.log('imagen inter '+sizeImg);                   
-                        //international[i].style.height = `${ 450 - size }px`;  
+                        international[i].style.height = `${ 410 - size }px`;  
                         const sizeTextBody = 450 - size;
                        
                         console.log('international '+size);
                         console.log(i);
-                         lineBetweenInternational[i].style.lineHeight = `${ 25.5 }px`;
+                        
                                                   
                     }
                 });
@@ -991,7 +987,9 @@
                             </div>
                         ';
 
-                        if ($i==9) { print '<div class="table-bottom-margin"></div>'; } else { print '<hr class="table-hr-line">';}
+                        if ($i==9) {
+                             print '<div class="table-bottom-margin"></div>'; 
+                            } else { print '<hr class="table-hr-line">';}
 
                         ++$i;
 
