@@ -41,7 +41,7 @@
         ?>
 
             <script type="text/javascript">     
-            
+            /*
             document.addEventListener("DOMContentLoaded", () => {
                 console.log('Inicio');
                     let titleMain = document.getElementsByClassName('title_main');                  
@@ -62,8 +62,38 @@
 
                     }
                 });
-                   
+                */
                 
+                window.addEventListener("resize", () => {
+                    resizeTextMain();
+                })
+                document.addEventListener("DOMContentLoaded", () => {
+                    resizeTextMain();
+                });
+                   
+                function resizeTextMain() {
+                    //let titleNoteInformat = document.getElementsByClassName('title_note_informative');
+                    //let notaInfo = document.getElementsByClassName('nota-info');  
+                    let titleMain = document.getElementsByClassName('title_main');                  
+                    let main = document.getElementsByClassName('main');
+
+                    let img = document.getElementsByClassName('cropped');
+                    
+                                                 
+                    for(let i = 0; i < titleMain.length; i++) {                      
+                        const size = titleMain[i].clientHeight;
+                        const sizeImg = img[i].clientHeight;
+                        const sizeTextBody = 390 - size;     
+                        main[i].style.height = `${390- size}px`;    
+                        console.log('ancho ',sizeImg )
+                        console.log('titulo ',size)
+                        console.log('texto ',sizeImg - size)
+                        
+                                          
+                    }
+                    
+                }
+               
             </script>
 
             <style>
@@ -92,7 +122,7 @@
                         <div class = "main">
                             <span class="gray-9"><?php echo get_the_date("d M 'y", $actualidad_featured[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                             <span class="line24">
-                            <?php fide_excerpt($actualidad_featured[0], 800) ?>                           
+                            <?php fide_excerpt($actualidad_featured[0], 900) ?>                           
                             </span>
                         </div>
                         <div class="prueba" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
@@ -219,7 +249,7 @@
                 </div>
             </div>
 
-            <hr class="generic-hr hr-up mobile-hide">
+            <!--<hr class="generic-hr hr-up mobile-hide"> -->
         </section>
          <!-- FIN NOTAS INFORMATIVAS -->
 
@@ -360,7 +390,7 @@
                         <div class="article-image">
                             <a href="<?php echo esc_url(get_permalink($informes[2])); ?>">
                                 <div class="crop">
-                                    <img class="cropped" src="<?php echo $informe_image_2[0] ?>">
+                                    <img class="cropped" src="<?php echo $informe_image_3[0] ?>">
                                 </div>
                             </a>
                         </div>
@@ -639,16 +669,15 @@
                     <div class="jurisprudencia-featured-text">
                         <?php fide_list_cats_links($jurisprudencia[0]); ?>
                         <h1><?php fide_title_link($jurisprudencia[0]); ?></h1>
-                        <div class="two-columns-text">
+                        <div class="one-columns-text ">
                             
-                            <span class="gray-9"><?php echo get_the_date("d M 'y", $jurisprudencia[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                            <a href="<?php echo esc_url(get_permalink($jurisprudencia[0])); ?>">
+                            <span class="gray-9"><?php echo get_the_date("d M 'y", $jurisprudencia[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>                           
                             <span class="line24">
-                                <?php fide_excerpt($jurisprudencia[0], 610) ?>
+                                <?php fide_excerpt($jurisprudencia[0], 450) ?>
                                 <br>
                                 <div class="difuminacion-legislacion" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
-                                <!-- <?php fide_read_more_link($jurisprudencia[0]); ?> -->
-                            </span></a>
+                                 <?php fide_read_more_link($jurisprudencia[0]); ?> 
+                            </span>
                         </div>
                     </div>
 
@@ -661,8 +690,10 @@
                         <p><?php fide_jurisprudencia_shorts($jurisprudencia[3], 250) ?></p>
                         <hr class="generic-hr">
                         <p><?php fide_jurisprudencia_shorts($jurisprudencia[4], 250) ?></p>
+                        <!-- 
                         <hr class="generic-hr">
                         <p><?php fide_jurisprudencia_shorts($jurisprudencia[4], 250) ?></p>
+                         -->
                     </div>
                 
                 </div>
