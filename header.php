@@ -284,6 +284,11 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                         <a href="<?php echo site_url(); ?>/actualidad/impuestos-medioambientales">Impuestos medioambientales</a>
                         <span class="hover-border"></span>
                     </li>
+                    <li id="mobile-nav-sections">
+                        <span class="nav-bullet"></span>
+                        <a href="<?php echo site_url(); ?>/actualidad/envases-de-plastico">Plastico</a>
+                        <span class="hover-border"></span>
+                    </li>
 
                 <!-- END OF MOBILE NAV SECTIONS -->
                 <!-- END OF MOBILE NAV SECTIONS -->
@@ -724,7 +729,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
             fide_breadcrumb_code("Fiscalidad medioambiental", null, "white");
         }
          elseif (is_page('asesoria-envases-de-plastico')) {
-            fide_breadcrumb_code("Envases de Plástico", null, "white");
+            fide_breadcrumb_code("Envases de plástico", null, "white");
         } elseif (is_page('asesoria-fiscalidad-del-tabaco')) {
             fide_breadcrumb_code("Fiscalidad del tabaco", null, "white");
 			
