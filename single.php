@@ -363,7 +363,7 @@
             // ELSE and END IF at the end of the page, after the pagination
 
         ?>
-             <!-- JavaScript para degrade -->
+             <!-- JavaScript para degrade de contenido -->
             <SCRIPT type="text/javascript">
                 document.addEventListener("DOMContentLoaded", () => {
                     let titleContent = document.getElementsByClassName('title_content');
