@@ -363,7 +363,37 @@
             // ELSE and END IF at the end of the page, after the pagination
 
         ?>
+             <!-- JavaScript para degrade de contenido -->
+            <SCRIPT type="text/javascript">
+                document.addEventListener("DOMContentLoaded", () => {
+                    let titleContent = document.getElementsByClassName('title_content');
+                    let content = document.getElementsByClassName('content');                             
+                    for(let i = 0; i < titleContent.length; i++) {                      
+                        const size = titleContent[i].clientHeight;
+                        console.log(300 - size);                        
+                        content[i].style.height = `${ 300 - size }px`;  
+                        const sizeTextBody = 300 - size;
+                       
+                        console.log('main '+size);
+                        console.log(i);
 
+                        
+                                                  
+                    }
+                });
+
+            </SCRIPT>
+
+            <style>
+                .content {
+                    position: relative;
+                    overflow: hidden;
+                                      
+                }
+               
+            </style>
+
+           
         <div class="grid-container non-printable">
 
             <div class="related-posts-title px28 weight600">Contenido relacionado</div>
@@ -382,12 +412,15 @@
                     </div>
       
                     <?php fide_list_cats_links($related_posts[0]); ?>
-                    <h3><?php fide_title_link_shortened($related_posts[0], 60); ?></h3>
+                    <h3 class="title_content"><?php fide_title_link_shortened($related_posts[0], 450); ?></h3>
+                    <div class="content">
                     <span class="gray-9"><?php echo get_the_date("d M 'y", $related_posts[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                     <span class="line24">
-                        <?php fide_excerpt($related_posts[0], 190) ?>
-                        <br>
-                        <?php fide_read_more_link($related_posts[0]); ?>
+                        <?php fide_excerpt($related_posts[0], 660) ?>
+                        <br>                       
+                    </div>
+                    <div class="difuminacion-informative" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
+                    <?php fide_read_more_link($related_posts[0]); ?>
                     </span>
 
                 </div>
@@ -405,14 +438,17 @@
                     </div>
       
                     <?php fide_list_cats_links($related_posts[1]); ?>
-                    <h3><?php fide_title_link_shortened($related_posts[1], 60); ?></h3>
+                    <h3 class="title_content"><?php fide_title_link_shortened($related_posts[1], 450); ?></h3>
+                    <div class="content">
                     <span class="gray-9"><?php echo get_the_date("d M 'y", $related_posts[1]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                     <span class="line24">
-                        <?php fide_excerpt($related_posts[1], 190) ?>
+                        <?php fide_excerpt($related_posts[1], 700) ?>
                         <br>
-                        <?php fide_read_more_link($related_posts[1]); ?>
+                        
                     </span>
-
+                    </div>
+                    <div class="difuminacion-informative" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
+                    <?php fide_read_more_link($related_posts[1]); ?>
                 </div>
                 <?php endif; ?>   
 
@@ -428,14 +464,16 @@
                     </div>
       
                     <?php fide_list_cats_links($related_posts[2]); ?>
-                    <h3><?php fide_title_link_shortened($related_posts[2], 60);?></h3>
+                    <h3 class="title_content"><?php fide_title_link_shortened($related_posts[2], 450);?></h3>
+                    <div class="content">
                     <span class="gray-9"><?php echo get_the_date("d M 'y", $related_posts[2]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                     <span class="line24">
-                        <?php fide_excerpt($related_posts[2], 190) ?>
-                        <br>
-                        <?php fide_read_more_link($related_posts[2]); ?>
+                        <?php fide_excerpt($related_posts[2], 900) ?>
+                        <br>                      
                     </span>
-
+                    </div>
+                    <div class="difuminacion-informative" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
+                    <?php fide_read_more_link($related_posts[2]); ?>
                 </div>
                 <?php endif; ?>   
 
