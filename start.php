@@ -720,30 +720,30 @@
                 <div class="jurisprudencia-breves">
                     <!-- BREVE 1 --> 
                     <hr class="generic-hr mobile-only">
-                    <div class="breves" style="height: 120px; overflow: hidden;">
-                        <p><?php fide_jurisprudencia_shorts($jurisprudencia[1]) ?></p>                                              
-                        <div class="difuminacion-legislacion" style=""></div>
+                    <div class="breves" style="height: 120px; overflow: hidden;">                       
+                        <p><?php fide_jurisprudencia_shorts($jurisprudencia[1]) ?></p>                                                                     
                     </div>
+                    <div class="difuminacion-legislacion" style=""></div>
                     <!-- BREVE 2 --> 
                     <hr class="generic-hr">
                     <div style="height: 120px; overflow: hidden;">
-                        <p><?php fide_jurisprudencia_shorts($jurisprudencia[2]) ?></p>                                              
-                        <div class="difuminacion-legislacion" style=""></div>
+                        <p><?php fide_jurisprudencia_shorts($jurisprudencia[2]) ?></p>                                                                     
                     </div>
+                    <div class="difuminacion-legislacion" style=""></div>
                     <!-- BREVE 3 --> 
                     <hr class="generic-hr">
                     <div style="height: 120px; overflow: hidden;">
-                        <p><?php fide_jurisprudencia_shorts($jurisprudencia[3]) ?></p>
-                        <div class="difuminacion-legislacion" style=""></div>
-                    </div>                  
+                        <p><?php fide_jurisprudencia_shorts($jurisprudencia[3]) ?></p>                      
+                    </div>      
+                    <div class="difuminacion-legislacion" style=""></div>            
                     
                     
                     <!-- BREVE 4 --> 
                     <hr class="generic-hr">
                     <div style="height: 120px; overflow: hidden;">
-                        <p><?php fide_jurisprudencia_shorts($jurisprudencia[4]) ?>  </p>                           
-                        <div class="difuminacion-legislacion" style=""></div>
+                        <p><?php fide_jurisprudencia_shorts($jurisprudencia[4]) ?>  </p>                                                  
                     </div>
+                    <div class="difuminacion-legislacion" style=""></div>
                     
                 </div>
 
