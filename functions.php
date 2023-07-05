@@ -466,14 +466,30 @@ function fide_notas_title_and_excerpt($post_id, $length) {
 
 // GET THE TITLE AND SHORT INTRO FOR JURISPRUDENCIA SHORT MODULES
 
-function fide_jurisprudencia_shorts($post_id, $length) {
+function fide_jurisprudencia_shorts($post_id) {
     $title = get_the_title($post_id);
     $content = get_the_excerpt($post_id);
+    $length = 310 - strlen($title);
     print '
         <a class="red-hover weight600" href="' . esc_url(get_permalink($post_id)) . '">' . $title . '.</a>
         <span class="gray-9">&nbsp;&nbsp;|&nbsp;&nbsp;' . get_the_date("d M 'y", $post_id) . '&nbsp;&nbsp;|&nbsp;&nbsp;</span>
         <span>' . mb_substr($content, 0, $length) . '...</span>
     ';
+}
+
+// GET THE TITLE AND SHORT INTRO FOR JURISPRUDENCIA SHORT MODULES
+
+function fide_de_cerca__shorts($post_id) {
+    $title = get_the_title($post_id);
+    $content = get_the_excerpt($post_id);
+    $length = 310 - strlen($title);
+    print '
+        <a class="red-hover weight600" href="' . esc_url(get_permalink($post_id)) . '">' . $title . '.</a>
+        <span class="gray-9">&nbsp;&nbsp;|&nbsp;&nbsp;' . get_the_date("d M 'y", $post_id) . '&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <span>' . mb_substr($content, 0, $length) . '...</span>
+        
+    ';
+    
 }
 
 

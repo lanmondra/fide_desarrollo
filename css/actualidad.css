@@ -349,7 +349,10 @@ ACTUALIDAD - JURISPRUDENCIA
 
 .jurisprudencia-breves hr {
     padding: 12px;
-    margin-top: 28px;
+	margin-top: 20px;
+}
+.de-cerca-breves-hr {
+	margin-top: 20px;
 }
 
 .jurisprudencia-bottom-margin { 
@@ -370,6 +373,10 @@ ACTUALIDAD - JURISPRUDENCIA
 		grid-column: 1 / span 23;
 		grid-row: 3 / span 1;
 		margin-top: 96px;
+	}
+
+	.de-cerca-breves-hr{
+		margin-top: 20px;
 	}
 
 }

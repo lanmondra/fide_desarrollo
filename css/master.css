@@ -569,7 +569,7 @@ img.cropped {
 
 a div.crop img.cropped:hover { opacity: 0.9; }
 
-.margin-top { margin-top: 50px }
+/* .margin-top { margin-top: 50px } */
 .margin-bottom { margin-bottom: 40px }
 
 @media all and (max-width: 575px) {
