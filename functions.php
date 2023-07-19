@@ -478,16 +478,16 @@ function fide_jurisprudencia_shorts($post_id) {
 }
 
 // GET THE TITLE AND SHORT INTRO FOR JURISPRUDENCIA SHORT MODULES
-
+//width: 100%;height: 62px;margin-top: -125px;background: linear-gradient(0deg, rgb(242 242 243) 0%, rgb(242 242 242 / 61%) 100%);filter: blur(1px);
 function fide_de_cerca__shorts($post_id) {
     $title = get_the_title($post_id);
     $content = get_the_excerpt($post_id);
-    $length = 310 - strlen($title);
+    $length = 350 - strlen($title);
     print '
-        <a class="red-hover weight600" href="' . esc_url(get_permalink($post_id)) . '">' . $title . '.</a>
-        <span class="gray-9">&nbsp;&nbsp;|&nbsp;&nbsp;' . get_the_date("d M 'y", $post_id) . '&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <a class=" weight600" href="' . esc_url(get_permalink($post_id)) . '">' . $title . '.</a>                 
+        <span class="gray-9">' . get_the_date("d M 'y", $post_id) . '</span> 
         <span>' . mb_substr($content, 0, $length) . '...</span>
-        
+        <div class="difuminacion-de-cerca" style=""></div>              
     ';
     
 }

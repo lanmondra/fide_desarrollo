@@ -103,18 +103,21 @@ ACTUALIDAD - NOTAS INFORM.
 		grid-row: 2 / span 1;
 		padding: 48px 48px 24px;
 		margin-top: 7%;
+		
 	}
 	.normativa{
 		height: 160px;
 	}
 }
 
+/* MOVILES  */
 @media all and (max-width: 575px) {
 	.actualidad-notas-informativas {
 		grid-column: 1 / span 23;
 		grid-row: 3 / span 1;
 		padding: 48px 16px 16px;
 		margin: 48px -16px 0;
+		/* background-color: aquamarine; */
 	}
 }
 
@@ -281,6 +284,7 @@ ACTUALIDAD - NORMATIVA
 	.actualidad-normativa-image { height: auto; }
 }
 
+/* TABLETS */
 @media all and (max-width: 980px) {
 
 	.actualidad-normativa-text {
@@ -290,6 +294,18 @@ ACTUALIDAD - NORMATIVA
 		grid-row: 2 / span 1;
 		column-count: auto;
 		column-gap: auto;
+	}
+
+	.breves{
+		/* background-color: rgb(55, 55, 117); */
+	}
+	
+	.difuminacion-de-cerca {
+		width: 100%;
+		height: 66px;
+		margin-top: -76px;
+		background: linear-gradient(0deg, rgb(242 242 243) 0%, rgb(242 242 242 / 61%) 100%);
+		filter: blur(1px);
 	}
 
 	.actualidad-normativa-image {

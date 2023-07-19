@@ -95,7 +95,7 @@
                             <?php fide_excerpt($actualidad_featured[0], 900) ?>                           
                             </span>
                         </div>
-                        <div class="prueba" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
+                        <div class="prueba" style=""></div>
                         <?php fide_read_more_link($actualidad_featured[0]); ?>
                     </div>
                 
@@ -171,6 +171,35 @@
         wp_reset_postdata();
     ?>
 
+
+     <?php
+    # GET THE LAST 6 DE CERCA POSTS
+    $args_to_near = array(
+        "post_type" => "post",
+        "category__in" => array(1049),
+        "category__not_in" => array(11, 1002, 1003, 1004, 1041, 1012, 1004, 1017, 1018, 1019),
+        "post__not_in" => $posts_already_shown,
+        "post_status" => "publish",
+        "orderby" => array(
+            "menu_order"    => "ASC",
+            "post_date"     =>  "DESC",
+        ),
+        "posts_per_page" => 5,
+    );
+    
+
+    $loop = new WP_Query($args_to_near);
+    while ($loop->have_posts()) : $loop->the_post();
+        $to_near[] = $post->ID;
+    endwhile;
+    wp_reset_postdata();
+
+    $to_near_lent = $to_near;
+    $posts_already_shown = array_merge($posts_already_shown, $to_near);
+    $to_near_img = wp_get_attachment_image_src(get_post_thumbnail_id($to_near[0]), array('1049', '576'));
+
+    ?>
+
     <!-- Jaava Script Notas informativas -->
     <SCRIPT type="text/javascript">
         window.addEventListener("resize", () => {
@@ -202,22 +231,86 @@
     </style>
 
     <!-- NOTAS INFORMATIVAS -->
+
+    <?php
+
+    
+   
+    ?>
+
     <section>
         <div class="grid-container">
-            <div class="grid">
-
-                <div class="actualidad-notas-informativas">
-
+            <div class="grid">       
+                
+            <?php if(count($to_near_lent) == 0 ) :?>                      
+                <div class="actualidad-notas-informativas">                                    
+                    <br/>
                     <hr class="generic-hr">
-                    <a class="px14 weight600" href="<?php echo site_url(); ?>/actualidad/notas-informativas">NOTAS INFORMATIVAS</a>
+                    <a class="px14 weight600" style="text-align: center; background-color: #AC0600; color: white; white; font-size: 20px; font-weight: bold;" href="<?php echo site_url(); ?>/actualidad/notas-informativas">NOTAS INFORMATIVAS</a>
                     <hr class="generic-hr">
-
-                    <p><?php fide_notas_title_and_excerpt($notas_informativas[0], 210) ?></p>
+                    <div class="breves" style="height: 150px; overflow: hidden;">
+                        <p><?php fide_notas_title_and_excerpt($notas_informativas[0], 350) ?></p>                       
+                    </div>
+                    <div class="difuminacion-informative"></div> 
+                     
                     <hr class="generic-hr">
-                    <p><?php fide_notas_title_and_excerpt($notas_informativas[1], 210) ?></p>
+                    <div class="breves" style="height: 150px; overflow: hidden;">
+                        <p><?php fide_notas_title_and_excerpt($notas_informativas[1], 350) ?></p> 
+                    </div>
+                     <div class="difuminacion-informative" ></div> 
                     <hr class="generic-hr">
-                    <p><?php fide_notas_title_and_excerpt($notas_informativas[2], 210) ?></p>
+                    <div class="breves" style="height: 150px; overflow: hidden;">
+                        <p><?php fide_notas_title_and_excerpt($notas_informativas[2], 340) ?></p> 
+                    </div>
+                    <div class="difuminacion-informative" ></div> 
                 </div>
+            <?php elseif(count($to_near_lent) == 1 ) :?>  
+                <div class="actualidad-notas-informativas">                 
+                    <hr class="generic-hr">
+                    <a class="px14 weight600" style="text-align: center; background-color: #AC0600; color: white; font-size: 20px; font-weight: bold;" href="<?php echo site_url(); ?>/actualidad/notas-informativas">DE CERCA</a>
+                    <hr class="generic-hr">
+
+                    <div class="breves" style="height: 155px; overflow: hidden;">
+                        <p><?php fide_de_cerca__shorts($to_near[0]) ?></p>                       
+                    </div>     
+                    <br/>
+                    <hr class="generic-hr">
+                    <a class="px14 weight600" style="text-align: center; background-color: #AC0600; color: white; font-size: 20px; font-weight: bold;" href="<?php echo site_url(); ?>/actualidad/notas-informativas">NOTAS INFORMATIVAS</a>
+                    <hr class="generic-hr">
+
+                    <div class="breves" style="height: 150px; overflow: hidden;">
+                        <p><?php fide_notas_title_and_excerpt($notas_informativas[1], 260) ?></p>                        
+                    </div>
+                    <div class="difuminacion-informative" ></div> 
+                    <div class="breves" style="height: 150px; overflow: hidden;">
+                        <p><?php fide_notas_title_and_excerpt($notas_informativas[2], 260) ?></p>                        
+                    </div>
+                    <div class="difuminacion-informative" ></div> 
+                </div>
+            <?php elseif(count($to_near_lent) >= 2 ) :?> 
+                <div class="actualidad-notas-informativas">                 
+                    <hr class="generic-hr">
+                    <a class="px14 weight600" style="text-align: center; background-color: #AC0600; color: white; white; font-size: 20px; font-weight: bold;" href="<?php echo site_url(); ?>/actualidad/notas-informativas">DE CERCA</a>
+                    <hr class="generic-hr">
+
+                    <div class="breves" style="height: 155px; overflow: hidden;">
+                        <p><?php fide_de_cerca__shorts($to_near[0]) ?></p>                       
+                    </div>     
+                    <div class="breves" style="height: 155px; overflow: hidden;">
+                        <p><?php fide_de_cerca__shorts($to_near[1]) ?></p>                       
+                    </div>
+                    <br/>
+                    <hr class="generic-hr">
+                    <a class="px14 weight600" style="text-align: center; background-color: #AC0600; color: white; white; font-size: 20px; font-weight: bold;" href="<?php echo site_url(); ?>/actualidad/notas-informativas">NOTAS INFORMATIVAS</a>
+                    <hr class="generic-hr">
+                    <div class="breves" style="height: 150px; overflow: hidden;">
+                        <p><?php fide_notas_title_and_excerpt($notas_informativas[0], 460) ?></p>
+                    </div>
+                    <div class="difuminacion-informative" ></div>                    
+                </div>
+            <?php endif; ?> 
+
+               
 
                 <div class="actualidad-second-featured article-module-padding">
                     <div class="article-image">
@@ -243,13 +336,13 @@
 
                 <div class="actualidad-third-featured article-module-padding">
 
-                    <div class="article-image">
+                     <div class="article-image">
                         <a href="<?php echo esc_url(get_permalink($actualidad_featured[2])); ?>">
                             <div class="crop">
                                 <img class="cropped" src="<?php echo $actualidad_featured_image_3[0] ?>">
                             </div>
                         </a>
-                    </div>
+                    </div> 
 
                     <?php fide_list_cats_links($actualidad_featured[2]); ?>
                     <h3 class="title_note_informative"><?php fide_title_link($actualidad_featured[2]); ?></h3>
@@ -261,7 +354,11 @@
                         </span>
                     </div>
                     <div class="difuminacion-informative" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
-                    <?php fide_read_more_link($actualidad_featured[2]); ?>
+                    <?php fide_read_more_link($actualidad_featured[2]); ?> 
+
+                    
+                </div>
+               
                 </div>
 
             </div>
