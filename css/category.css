@@ -80,8 +80,8 @@ CATEGORY ARCHIVE
 
 .difuminacion-de-cerca {
 	width: 100%;
-	height: 62px;
-	margin-top: -150px;
+	height: 66px;
+	margin-top: -135px;
 	background: linear-gradient(0deg, rgb(242 242 243) 0%, rgb(242 242 242 / 61%) 100%);
 	filter: blur(1px);
 }
