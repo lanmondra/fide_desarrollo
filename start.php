@@ -269,10 +269,10 @@
                     <hr class="generic-hr">
                     <a class="px14 weight600" style="text-align: center; background-color: #AC0600; color: white; font-size: 20px; font-weight: bold;" href="<?php echo site_url(); ?>/actualidad/notas-informativas">DE CERCA</a>
                     <hr class="generic-hr">
-
-                    <div class="breves" style="height: 155px; overflow: hidden;">
-                        <p><?php fide_de_cerca__shorts($to_near[0]) ?></p>                       
+                    <div class="breves" style="height: 151px; overflow: hidden;">
+                        <p><?php fide_notas_title_and_excerpt($to_near[0], 260) ?></p>                       
                     </div>     
+                    <div class="difuminacion-informative" ></div> 
                     <br/>
                     <hr class="generic-hr">
                     <a class="px14 weight600" style="text-align: center; background-color: #AC0600; color: white; font-size: 20px; font-weight: bold;" href="<?php echo site_url(); ?>/actualidad/notas-informativas">NOTAS INFORMATIVAS</a>
@@ -293,12 +293,15 @@
                     <a class="px14 weight600" style="text-align: center; background-color: #AC0600; color: white; white; font-size: 20px; font-weight: bold;" href="<?php echo site_url(); ?>/actualidad/notas-informativas">DE CERCA</a>
                     <hr class="generic-hr">
 
-                    <div class="breves" style="height: 155px; overflow: hidden;">
-                        <p><?php fide_de_cerca__shorts($to_near[0]) ?></p>                       
+                    <div class="breves" style="height: 151px; overflow: hidden;">
+                        <p><?php fide_notas_title_and_excerpt($to_near[0], 260) ?></p>                       
                     </div>     
-                    <div class="breves" style="height: 155px; overflow: hidden;">
-                        <p><?php fide_de_cerca__shorts($to_near[1]) ?></p>                       
-                    </div>
+                    <div class="difuminacion-informative" ></div> 
+
+                    <div class="breves" style="height: 151px; overflow: hidden;">
+                        <p><?php fide_notas_title_and_excerpt($to_near[1], 260) ?></p>                       
+                    </div>     
+                    <div class="difuminacion-informative" ></div> 
                     <br/>
                     <hr class="generic-hr">
                     <a class="px14 weight600" style="text-align: center; background-color: #AC0600; color: white; white; font-size: 20px; font-weight: bold;" href="<?php echo site_url(); ?>/actualidad/notas-informativas">NOTAS INFORMATIVAS</a>
