@@ -86,13 +86,13 @@
                             </div>
                         </a>
                     </div>
-                    <div class="actualidad-featured-text">
+                    <div class="actualidad-featured-text" >
                         <?php fide_list_cats_links($actualidad_featured[0]); ?>
                         <h1 class="title_main"><?php fide_title_link($actualidad_featured[0]); ?></h1>
                         <div class = "main">
                             <span class="gray-9"><?php echo get_the_date("d M 'y", $actualidad_featured[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                             <span class="line24">
-                            <?php fide_excerpt($actualidad_featured[0], 900) ?>                           
+                            <?php fide_excerpt($actualidad_featured[0], 720) ?>                           
                             </span>
                         </div>
                         <div class="prueba" style=""></div>
@@ -270,7 +270,7 @@
                     <a class="px14 weight600" style="text-align: center; background-color: #AC0600; color: white; font-size: 20px; font-weight: bold;" href="<?php echo site_url(); ?>/actualidad/notas-informativas">DE CERCA</a>
                     <hr class="generic-hr">
                     <div class="breves" style="height: 151px; overflow: hidden;">
-                        <p><?php fide_notas_title_and_excerpt($to_near[0], 260) ?></p>                       
+                        <p><?php fide_notas_title_and_excerpt($to_near[0], 460) ?></p>                       
                     </div>     
                     <div class="difuminacion-informative" ></div> 
                     <br/>
@@ -279,11 +279,11 @@
                     <hr class="generic-hr">
 
                     <div class="breves" style="height: 150px; overflow: hidden;">
-                        <p><?php fide_notas_title_and_excerpt($notas_informativas[1], 260) ?></p>                        
+                        <p><?php fide_notas_title_and_excerpt($notas_informativas[1], 460) ?></p>                        
                     </div>
                     <div class="difuminacion-informative" ></div> 
                     <div class="breves" style="height: 150px; overflow: hidden;">
-                        <p><?php fide_notas_title_and_excerpt($notas_informativas[2], 260) ?></p>                        
+                        <p><?php fide_notas_title_and_excerpt($notas_informativas[2], 460) ?></p>                        
                     </div>
                     <div class="difuminacion-informative" ></div> 
                 </div>
@@ -293,13 +293,13 @@
                     <a class="px14 weight600" style="text-align: center; background-color: #AC0600; color: white; white; font-size: 20px; font-weight: bold;" href="<?php echo site_url(); ?>/actualidad/notas-informativas">DE CERCA</a>
                     <hr class="generic-hr">
 
-                    <div class="breves" style="height: 151px; overflow: hidden;">
-                        <p><?php fide_notas_title_and_excerpt($to_near[0], 260) ?></p>                       
+                    <div class="breves" style="height: 150px; overflow: hidden;">
+                        <p><?php fide_notas_title_and_excerpt($to_near[0], 460) ?></p>                       
                     </div>     
                     <div class="difuminacion-informative" ></div> 
 
-                    <div class="breves" style="height: 151px; overflow: hidden;">
-                        <p><?php fide_notas_title_and_excerpt($to_near[1], 260) ?></p>                       
+                    <div class="breves" style="height: 150px; overflow: hidden;">
+                        <p><?php fide_notas_title_and_excerpt($to_near[1], 460) ?></p>                       
                     </div>     
                     <div class="difuminacion-informative" ></div> 
                     <br/>
@@ -607,10 +607,10 @@
                     <div class="normativa">
                         <span class="gray-9"><?php echo get_the_date("d M 'y", $normativa[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                         <span class="line24">
-                            <?php fide_excerpt($normativa[0], 1000) ?>
+                            <?php fide_excerpt($normativa[0], 830) ?>
                         </span>
                     </div>
-                    <div class="difuminacion-normativa" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
+                    <div class="difuminacion-normativa"></div>
                     <?php fide_read_more_link($normativa[0]); ?>
                 </div>
 
@@ -737,7 +737,7 @@
             for (let i = 0; i < titleJurisprudencia.length; i++) {
                 const size = titleJurisprudencia[i].clientHeight;
                 console.log(390 - size);
-                jurisprudencia[i].style.height = `${ 224 - size }px`;
+                jurisprudencia[i].style.height = `${ 227 - size }px`;
                 const sizeTextBody = 300 - size;
                 console.log('jurisprudencia ' + size);
                 console.log(i);
@@ -810,8 +810,9 @@
                             <span class="gray-9"><?php echo get_the_date("d M 'y", $jurisprudencia[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                             <span class="line24">
                                 <?php fide_excerpt($jurisprudencia[0], 850) ?>
+                                <div class="difuminacion-jurisprudencia" ></div>
                             </span>
-                            <div class="difuminacion-legislacion" style="width: 100%;height: 62px;margin-top: -132px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
+                            
                         </div>
                         <?php fide_read_more_link($jurisprudencia[0]); ?>
                     </div>
@@ -823,19 +824,19 @@
                     <div class="breves" style="height: 120px; overflow: hidden;">                       
                         <p><?php fide_jurisprudencia_shorts($jurisprudencia[1]) ?></p>                                                                     
                     </div>
-                    <div class="difuminacion-legislacion" style=""></div>
+                    <div class="difuminacion-breve-jurisprudencia" ></div>
                     <!-- BREVE 2 --> 
                     <hr class="generic-hr">
                     <div style="height: 120px; overflow: hidden;">
                         <p><?php fide_jurisprudencia_shorts($jurisprudencia[2]) ?></p>                                                                     
                     </div>
-                    <div class="difuminacion-legislacion" style=""></div>
+                    <div class="difuminacion-breve-jurisprudencia" ></div>
                     <!-- BREVE 3 --> 
                     <hr class="generic-hr">
                     <div style="height: 120px; overflow: hidden;">
                         <p><?php fide_jurisprudencia_shorts($jurisprudencia[3]) ?></p>                      
                     </div>      
-                    <div class="difuminacion-legislacion" style=""></div>            
+                    <div class="difuminacion-breve-jurisprudencia"></div>            
                     
                     
                     <!-- BREVE 4 --> 
@@ -843,7 +844,7 @@
                     <div style="height: 120px; overflow: hidden;">
                         <p><?php fide_jurisprudencia_shorts($jurisprudencia[4]) ?>  </p>                                                  
                     </div>
-                    <div class="difuminacion-legislacion" style=""></div>
+                    <div class="difuminacion-breve-jurisprudencia" style=""></div>
                     
                 </div>
 
@@ -1082,7 +1083,7 @@
                             <?php fide_excerpt($internacional[0], 800) ?>
                         </span>
                     </div>
-                    <div class="difuminacion-international" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
+                    <div class="difuminacion-international"></div>
                     <?php fide_read_more_link($internacional[0]); ?>
                 </div>
 
