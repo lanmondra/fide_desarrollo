@@ -46,20 +46,13 @@
                 function resizeTextMain() {                    
                     let titleMain = document.getElementsByClassName('title_main');                  
                     let main = document.getElementsByClassName('main');
-
-                    let img = document.getElementsByClassName('cropped');
-                    
-                                                 
+                    let img = document.getElementsByClassName('cropped');                                                                    
                     for(let i = 0; i < titleMain.length; i++) {                      
                         const size = titleMain[i].clientHeight;
                         const sizeImg = img[i].clientHeight;
                         const sizeTextBody = 390 - size;     
-                        main[i].style.height = `${390- size}px`;    
-                        console.log('ancho ',sizeImg )
-                        console.log('titulo ',size)
-                        console.log('texto ',sizeImg - size)
-                        
-                                          
+                        main[i].style.height = `${ sizeTextBody }px`;                           
+                        console.log('First Notice text: ',sizeTextBody)                                                                                      
                     }
                     
                 }
@@ -92,16 +85,17 @@
                         <div class = "main">
                             <span class="gray-9"><?php echo get_the_date("d M 'y", $actualidad_featured[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                             <span class="line24">
-                            <?php fide_excerpt($actualidad_featured[0], 720) ?>                           
+                            <?php fide_excerpt($actualidad_featured[0], 740) ?>                           
                             </span>
                         </div>
-                        <div class="prueba" style=""></div>
+                        <div class="difuminacion-main"></div>
                         <?php fide_read_more_link($actualidad_featured[0]); ?>
                     </div>
                 
                 </div>
             </div>
         </section>
+        <div class="main-bottom-margin"></div>
     <!-- Fin Primera columna de la HOME-->
 
 
@@ -124,7 +118,7 @@
 
         ?>
         <!-- Jaava Script-->
-         <SCRIPT type="text/javascript">
+         <!-- <SCRIPT type="text/javascript">
                 window.addEventListener("resize", () => {
                     resizeText();
                 })
@@ -136,10 +130,10 @@
                     let notaInfo = document.getElementsByClassName('nota-info');  
                                                  
                     for(let i = 0; i < titleNoteInformat.length; i++) {                      
-                        const size = titleNoteInformat[i].clientHeight;
-                                            
-                        notaInfo[i].style.height = `${ 280 - size }px`;  
-                        const sizeTextBody = 280 - size;
+                        const size = titleNoteInformat[i].clientHeight;   
+                        const sizeTextBody = 280 - size;                                       
+                        notaInfo[i].style.height = `${ sizeTextBody }px`;  
+                        console.log('Notas informativas : ' ,sizeTextBody)
                                           
                     }
                 }
@@ -151,7 +145,7 @@
                     position: relative;
                     overflow: hidden;                                       
                 }              
-            </style>
+            </style> -->
     <?php
         # GET THE LAST THREE NOTAS INFORMATIVAS
         $args_notas_informativas = array(
@@ -212,13 +206,11 @@
         function resizeText() {
             let titleNoteInformat = document.getElementsByClassName('title_note_informative');
             let notaInfo = document.getElementsByClassName('nota-info');
-
             for (let i = 0; i < titleNoteInformat.length; i++) {
                 const size = titleNoteInformat[i].clientHeight;
-
-                notaInfo[i].style.height = `${ 280 - size }px`;
-                const sizeTextBody = 280 - size;
-
+                const sizeTextBody = 305 - size;
+                notaInfo[i].style.height = `${ sizeTextBody }px`;               
+                console.log('Notas informativas 2 : ' ,sizeTextBody)
             }
         }
     </SCRIPT>
@@ -412,12 +404,9 @@
             let lineBetween = document.getElementsByClassName('line-between-informes');
             for (let i = 0; i < titleInformes.length; i++) {
                 const size = titleInformes[i].clientHeight;
-                console.log(300 - size);
-                informes[i].style.height = `${ 300 - size }px`;
                 const sizeTextBody = 300 - size;
-
-                console.log('Informes ' + size);
-                console.log(i);
+                informes[i].style.height = `${ sizeTextBody }px`;               
+                console.log('Informes text size: ',sizeTextBody);
 
                 if ((sizeTextBody == 228) || (sizeTextBody == 264)) {
                     lineBetween[i].style.lineHeight = `${ 25.8 }px`;
@@ -526,7 +515,7 @@
             </div>
         </div>
 
-        <div class="jurisprudencia-bottom-margin"></div>
+        <div class="informe-bottom-margin" style=""></div>
 
     </section>
     <!-- FIN CATEGORIA NUEVA INFORMES  -->
@@ -560,22 +549,21 @@
 
     <script type="text/javascript">
         window.addEventListener("resize", () => {
-            resizeText3();
+            resizeTextNormativa();
         })
         document.addEventListener("DOMContentLoaded", () => {
-            resizeText3();
+            resizeTextNormativa();
         });
 
-        function resizeText3() {
+        function resizeTextNormativa() {
             let titleNormativa = document.getElementsByClassName('title_normativa');
             let normativa = document.getElementsByClassName('normativa');
+
             for (let i = 0; i < titleNormativa.length; i++) {
-                const size = titleNormativa[i].clientHeight;
-                console.log(390 - size);
-                normativa[i].style.height = `${ 390 - size }px`;
-                const sizeTextBody = 390 - size;
-                console.log('normativa ' + size);
-                console.log(i);
+                const size = titleNormativa[i].clientHeight;     
+                const sizeTextBody = 389 - size;      
+                normativa[i].style.height = `${ sizeTextBody }px`;              
+                console.log('normativa text size :' + sizeTextBody);               
             }
         };
     </script>
@@ -607,10 +595,11 @@
                     <div class="normativa">
                         <span class="gray-9"><?php echo get_the_date("d M 'y", $normativa[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                         <span class="line24">
-                            <?php fide_excerpt($normativa[0], 830) ?>
+                            <?php fide_excerpt($normativa[0], 640) ?>
                         </span>
                     </div>
                     <div class="difuminacion-normativa"></div>
+
                     <?php fide_read_more_link($normativa[0]); ?>
                 </div>
 
@@ -625,7 +614,7 @@
             </div>
 
         </div>
-
+    <div class="normativa-bottom-margin" style="height: 54px; "></div>
 
         <!-- FIN CATEGORIA NORMATIVA -->
 
@@ -725,22 +714,20 @@
 
     <script type="text/javascript">
         window.addEventListener("resize", () => {
-            resizeText3();
+            resizeTextJurisprudencia();
         })
         document.addEventListener("DOMContentLoaded", () => {
-            resizeText3();
+            resizeTextJurisprudencia();
         });
 
-        function resizeText3() {
+        function resizeTextJurisprudencia() {
             let titleJurisprudencia = document.getElementsByClassName('title_jurisprudencia');
             let jurisprudencia = document.getElementsByClassName('jurisprudencia');
             for (let i = 0; i < titleJurisprudencia.length; i++) {
                 const size = titleJurisprudencia[i].clientHeight;
-                console.log(390 - size);
-                jurisprudencia[i].style.height = `${ 227 - size }px`;
-                const sizeTextBody = 300 - size;
-                console.log('jurisprudencia ' + size);
-                console.log(i);
+                const sizeTextBody = 227 - size;
+                jurisprudencia[i].style.height = `${ sizeTextBody }px`;               
+                console.log('jurisprudencia text size :', size);
             }
         };
     </script>
@@ -809,7 +796,7 @@
                         <div class="jurisprudencia">
                             <span class="gray-9"><?php echo get_the_date("d M 'y", $jurisprudencia[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                             <span class="line24">
-                                <?php fide_excerpt($jurisprudencia[0], 850) ?>
+                                <?php fide_excerpt($jurisprudencia[0], 550) ?>
                                 <div class="difuminacion-jurisprudencia" ></div>
                             </span>
                             
@@ -897,24 +884,24 @@
 
     <script type="text/javascript">
         window.addEventListener("resize", () => {
-            resizeText4();
+            resizeTextLegislacion();
         })
         document.addEventListener("DOMContentLoaded", () => {
-            resizeText4();
+            resizeTextLegislacion();
         });
 
-        function resizeText4() {
+        function resizeTextLegislacion() {
             let titleLegislacion = document.getElementsByClassName('title_legislacion');
             let legislacion = document.getElementsByClassName('legislacion');
             let line24 = document.getElementsByClassName('difuminacion-legislacion');
             for (let i = 0; i < titleLegislacion.length; i++) {
                 const size = titleLegislacion[i].clientHeight;
-
-                legislacion[i].style.height = `${ 300 - size }px`;
                 const sizeTextBody = 300 - size;
-                console.log('imagen legislacion ', size);
+                legislacion[i].style.height = `${ sizeTextBody }px`;
+                
+                console.log('Legislacion text size ', sizeTextBody);
                 if(size == 36 ){
-                    console.log('entra por el if ')
+                    //console.log('entra por el if ')
                     // line24[i].style.marginTop = `${ -40 }px`;
                 }
 
@@ -1048,8 +1035,10 @@
             for (let i = 0; i < titleInternational.length; i++) {
                 const size = titleInternational[i].clientHeight;
                 const sizeImg = imgsize[i].clientHeight;
-                international[i].style.height = `${ 415 - size }px`;
-                const sizeTextBody = 450 - size;
+                const sizeTextBody = 419 - size;
+                international[i].style.height = `${ sizeTextBody }px`;
+                
+                console.log('internacional text size :', sizeTextBody)
             }
         });
     </script>
@@ -1080,7 +1069,7 @@
                     <div class="international">
                         <span class="gray-9"><?php echo get_the_date("d M 'y", $internacional[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                         <span class="line24">
-                            <?php fide_excerpt($internacional[0], 800) ?>
+                            <?php fide_excerpt($internacional[0], 700) ?>
                         </span>
                     </div>
                     <div class="difuminacion-international"></div>

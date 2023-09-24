@@ -385,6 +385,10 @@ ACTUALIDAD - JURISPRUDENCIA
 	height: 54px; 
 }
 
+.normativa-bottom-margin { 
+	height: 54px; 
+}
+
 @media all and (max-width: 1000px) {
 
 	.jurisprudencia-featured-text {
@@ -523,6 +527,10 @@ ACTUALIDAD - INTERNACIONAL
 
 .internacional-bottom-margin { height: 54px; }
 
+.normativa-bottom-margin { height: 54px; }
+
+.informe-bottom-margin  { height: 54px; }
+
 @media all and (min-width: 1400px) {
 	.internacional-featured-image { margin-right: -45px; }
 }
@@ -557,6 +565,10 @@ ACTUALIDAD - INTERNACIONAL
 	}
 
 	.internacional-bottom-margin { height: 48px; }
+
+	.informe-bottom-margin{
+		height: 48px;
+	}
 
 }
 

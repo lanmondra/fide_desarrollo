@@ -34,6 +34,10 @@ CATEGORY ARCHIVE
 	position: relative;
 	overflow: hidden;
 }
+
+.informe-bottom-margin{
+	height: 54px;
+}
 /* --------------------------
 -----------------------------
 DIFUMINACION DEFAULT
@@ -67,7 +71,7 @@ DIFUMINACION DEFAULT
 .difuminacion-jurisprudencia {
 	width: 100%;
 	height: 62px;
-	margin-top: -132px;
+	margin-top: -58px;
 	background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);
 	filter: blur(1px);
 }
@@ -80,7 +84,7 @@ DIFUMINACION DEFAULT
 	filter: blur(1px);
 }
 
-.prueba {
+.difuminacion-main {
 	width: 100%;
 	height: 62px;
 	margin-top: -50px;
@@ -161,10 +165,10 @@ DIFUMINACION RESPONSIVE
 		filter: blur(1px);
 	}
 
-	.prueba {
+	.difuminacion-main {
 		width: 100%;
 		height: 81px;
-		margin-top: -6177px;
+		margin-top: -177px;
 		background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);
 		filter: blur(1px);
 	}
@@ -199,7 +203,7 @@ DIFUMINACION RESPONSIVE
 RESPONSIVE TABLE  Angel
 ---------------------------*/
 @media only screen and (min-width: 768px) and (max-width: 991px){
-	.prueba {
+	.difuminacion-main {
 		width: 100%;
 		height: 72px;
 		margin-top: -120px;
@@ -218,14 +222,14 @@ RESPONSIVE TABLE  Angel
 	.difuminacion-jurisprudencia {
 		width: 100%;
 		height: 62px;
-		margin-top: -132px;
+		margin-top: -70px;
 		background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);
 		filter: blur(1px);
 	}
 	.difuminacion-normativa {
 		width: 100%;
 		height: 62px;
-		margin-top: -58px;
+		margin-top: -125px;
 		background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);
 		filter: blur(1px);
 	}
@@ -233,12 +237,14 @@ RESPONSIVE TABLE  Angel
 	.difuminacion-international {
 		width: 100%;
 		height: 72px;
-		margin-top: -171px;
+		margin-top: -149px;
 		background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 81%) 100%);
 		filter: blur(1px);
 	}
 
-
+	.main-bottom-margin{
+		height: 48px;
+	}
 	
 }
 /* 
@@ -288,6 +294,8 @@ RESPONSIVE PARA MOVILES  */
 		filter: blur(1px);
 	}
 
+	
+
 }
 
 /* --------------------------
@@ -302,7 +310,7 @@ RESPONSIVE PARA MOVILES  ANGEL
 		filter: blur(1px);
 	}
 
-	.prueba {
+	.difuminacion-main {
 		width: 100%;
 		height: 63px;
 		margin-top: -62px;
@@ -313,7 +321,7 @@ RESPONSIVE PARA MOVILES  ANGEL
 	.difuminacion-jurisprudencia {
 		width: 100%;
 		height: 62px;
-		margin-top: -428px;
+		margin-top: -244px;
 		background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);
 		filter: blur(1px);
 	}
@@ -327,7 +335,17 @@ RESPONSIVE PARA MOVILES  ANGEL
 	}
 
 
+	.normativa-bottom-margin {
+		height: 0px;
+	}
 
+	.informe-bottom-margin{
+		height: 0px;
+	}
+
+	.main-bottom-margin{
+		height: 48px;
+	}
 	
 
 }
