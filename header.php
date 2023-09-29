@@ -442,7 +442,31 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                             <ul class="col-4-4">
                                 <li><a href="<?php echo site_url(); ?>/actualidad/impuestos-medioambientales">Impuestos medioamb.</a></li>
                                 <li><a href="<?php echo site_url(); ?>/actualidad/derechos-de-emision">Derechos de emisión</a></li>
+
                             </ul>
+
+                            <!-- 3 - 2 - 3 - 2 -->
+                            <!-- <ul class="col-1-4">
+                                <li><a href="<?php echo site_url(); ?>/actualidad/aduanas">Aduanas</a></li>
+                                <li><a href="<?php echo site_url(); ?>/actualidad/hidrocarburos-y-energia">Hidrocarburos y energía</a></li>
+                                <li><a href="<?php echo site_url(); ?>/actualidad/alcohol-y-bebidas-alcoholicas">Alcohol y bebidas alcoh.</a></li>
+                            </ul>
+                            <ul class="col-2-4">
+                                <li><a href="<?php echo site_url(); ?>/actualidad/tributacion-indirecta">Tributación indirecta</a></li>
+                                <li><a href="<?php echo site_url(); ?>/actualidad/fiscalidad-general">Fiscalidad general</a></li>
+                                
+
+                            </ul>
+                            <ul class="col-3-4">
+                            <li><a href="<?php echo site_url(); ?>/actualidad/labores-del-tabaco">Labores del tabaco</a></li>
+                                <li><a href="<?php echo site_url(); ?>/actualidad/formacion-y-eventos">Formación y eventos</a></li>
+                                <li><a href="<?php echo site_url(); ?>/actualidad/envases-de-plastico">Envases de plástico</a></li>
+                               
+                            </ul>
+                            <ul class="col-4-4">
+                                <li><a href="<?php echo site_url(); ?>/actualidad/impuestos-medioambientales">Impuestos medioamb.</a></li>
+                                <li><a href="<?php echo site_url(); ?>/actualidad/derechos-de-emision">Derechos de emisión</a></li>                               
+                            </ul> -->
 
                             <!-- 3 - 2 - 3 - 2 -->
                             <!-- <ul class="col-1-4">
@@ -553,9 +577,13 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                                     </a>
                                 </li>
                             </ul>
+
                                <!-- texto comentado es la forma antigua de mostar  -->
                                <!--
                              <ul style="margin-left: 5%;" class="col-4-4">
+
+                            <ul style="margin-left: 5%;" class="col-4-4">
+
                                 <li>
                                     <a href="<?php echo site_url(); ?>/asesoria-fiscalidad-medioambiental">
                                         Fiscalidad medioambiental
@@ -576,7 +604,10 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                                     </a>
                                 </li>
 
-                            </ul> -->
+               </ul> -->
+
+                            
+
 
                         </div>
                     </div>
