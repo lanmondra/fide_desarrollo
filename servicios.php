@@ -24,8 +24,8 @@
 
                 <div class="highlighted-tag px20 line24 weight600">
                     <span class="tag-text">ASESORÍA TRIBUTARIA</span></div>
-                <div class="highlighted-tag px20 line24 weight600">
-                    <span class="tag-text">ASESORÍA JURÍDICA</span></div>
+                <!-- <div class="highlighted-tag px20 line24 weight600">
+                    <span class="tag-text">ASESORÍA JURÍDICA</span></div> -->
                 <div class="highlighted-tag px20 line24 weight600">
                     <span class="tag-text">ECONOMÍA FORENSE</span></div>
                 <div class="highlighted-tag px20 line24 weight600">
@@ -39,25 +39,25 @@
         <div class="grid-container">
             <div class="grid">
 
-                <div class="service-01">
+                <div class="new-service-01">
                     <h2 class="px28 line36">Asesoría tributaria</h2>
                     <p>En FIDE actuamos con plena dedicación al cliente en el ámbito de los tributos que conforman la imposición directa en España, en particular, el impuesto de sociedades, renta de personas físicas, no residentes; y también la imposición indirecta, IVA y trasmisiones patrimoniales.</p>
                     <a class="service-cta px14 weight600" href="<?php echo site_url(); ?>/asesoria-tributaria">VER MÁS</a>
                 </div>
 
-                <div class="service-02">
+                <!-- <div class="service-02">
                     <h2 class="px28 line36">Asesoría jurídica</h2>
                     <p>Actuamos en el marco del derecho mercantil y especialmente el derecho de los negocios de la empresa, comprendiendo todos los ámbitos del derecho societario: sociedades mercantiles, estatutos sociales y formas jurídicas societarias.</p>
                     <a class="service-cta px14 weight600" href="<?php echo site_url(); ?>/asesoria-juridica">VER MÁS</a>
-                </div>
+                </div> -->
 
-                <div class="service-03">
+                <div class="new-service-02">
                     <h2 class="px28 line36">Economía forense</h2>
                     <p>Actuamos como peritos expertos en procesos judiciales, civiles, penales y contenciosos administrativos. La importancia de las cuestiones económicas hace que la labor del perito sea fundamental en la resolución de conflictos, especialmente en los asuntos tributarios.</p>
                     <a class="service-cta px14 weight600" href="<?php echo site_url(); ?>/economia-forense">VER MÁS</a>
                 </div>
 
-                <div class="service-04">
+                <div class="new-service-03">
                     <h2 class="px28 line36">Formación <i>in company</i></h2>
                     <p>Participamos en programas didácticos en el ámbito universitario y empresarial. Ofrecemos formación personalizada en función de los objetivos y necesidades de cada compañía, adaptando los contenidos a la realidad empresarial.</p>
                     <a class="service-cta px14 weight600" href="<?php echo site_url(); ?>/formacion-in-company">VER MÁS</a>

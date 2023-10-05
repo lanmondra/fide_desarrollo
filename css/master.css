@@ -72,6 +72,16 @@ body {
 	
 }
 
+.grid-services {
+    -ms-grid-columns: 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px;
+    grid-template-columns: repeat(11, 1fr 38px) -1fr;
+	display: -ms-grid;
+	display: grid;
+	/* margin-left: 20%; */
+	
+	
+}
+
 .col-1-1 { -ms-grid-column: 1; -ms-grid-column-span: 23; grid-column: 1 / span 23; }
 
 .col-1-6 { -ms-grid-column: 1; -ms-grid-column-span: 3; grid-column: 1 / span 3; }

@@ -496,7 +496,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
 
                 <div class="submenu-servicios">
                     <div class="grid-container">
-                        <div class="grid">
+                        <div class="grid-services">
 
                             <ul class="col-1-4">
                                 <li>
@@ -507,29 +507,32 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                                 </li>
                             </ul>
                             <ul class="col-2-4">
-                                <li>
-                                    <a href="<?php echo site_url(); ?>/asesoria-juridica">
-                                        Asesoría jurídica
-                                        <br><span>En consejos de administración y como letrados asesores</span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <ul class="col-3-4">
-                                <li>
+                            <li>
                                     <a href="<?php echo site_url(); ?>/economia-forense">
                                         Economía forense
                                         <br><span>Peritaje de procesos judiciales, civiles, penales y contenciosos</span>
                                     </a>
                                 </li>
+                                <!-- <li>
+                                    <a href="<?php echo site_url(); ?>/asesoria-juridica">
+                                        Asesoría jurídica
+                                        <br><span>En consejos de administración y como letrados asesores</span>
+                                    </a>
+                                </li> -->
                             </ul>
-                            <ul class="col-4-4">
-                                <li>
+                            <ul class="col-3-4">
+                            <li>
                                     <a href="<?php echo site_url(); ?>/formacion-in-company">
                                         Formación <i>in company</i>
                                         <br><span>Cursos a medida de las necesidades de cada compañía</span>
                                     </a>
                                 </li>
+                                
                             </ul>
+                            <!-- <ul class="col-4-4">
+                                
+                                
+                            </ul> -->
 
                         </div>
                     </div>
