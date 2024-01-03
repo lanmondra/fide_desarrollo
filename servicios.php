@@ -41,8 +41,8 @@
 
                 <div class="new-service-01">
                     <h2 class="px28 line36">Asesoría tributaria</h2>
-                    <p>En FIDE actuamos con plena dedicación al cliente en el ámbito de los tributos que conforman la imposición directa en España, en particular, el impuesto de sociedades, renta de personas físicas, no residentes; y también la imposición indirecta, IVA y trasmisiones patrimoniales.</p>
-                    <a class="service-cta px14 weight600" href="<?php echo site_url(); ?>/asesoria-tributaria">VER MÁS</a>
+                    <p>En FIDE actuamos con plena dedicación al cliente en el ámbito de los tributos que conforman la imposición directa en España y también la imposición indirecta.</p>                  
+                    <a class="service-cta px14 weight600" style="margin-top: 10%;" href="<?php echo site_url(); ?>/asesoria-tributaria">VER MÁS</a>
                 </div>
 
                 <!-- <div class="service-02">

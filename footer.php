@@ -94,14 +94,14 @@
                             Tel. 910 851 756
                         </p>
                     </div>
-					<!-- NUEVA DIRECCION SANTIAGO  -->
+					<!-- NUEVA DIRECCION VIGO  -->
 					
                        <div class="address address-santiago">
-                        <p class="footer-city weight600">Santiago</p>
+                        <p class="footer-city weight600">Vigo</p>
                         <p class="footer-city-address gray-9">
-                            Av. de Montevideo 1, 1º<br>
-                            15706 Santiago de Compostela<br>
-                            Tel. 881 125 995
+                            C/ Marqués de Valladares 14, 6ª Oficinas 7 y 8<br>
+                            36201 Vigo<br>
+                            Tel. 886 035 929
                         </p>
                     </div>
                   

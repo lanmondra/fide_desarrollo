@@ -650,17 +650,17 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                                 </li>
                             </ul>
 
-                            <!-- NUEA DIRECCION santiago  -->
+                            <!-- NUEA DIRECCION VIGO  -->
                             <ul class="col-3-4">
                                 <li>
 
                                     <a href="https://www.fide.es/contacto">
-                                        Oficinas Santiago
-                                        <br><span>Av. de Montevideo 1, 1º<br>15706 Santiago de Compostela</span>
+                                        Oficinas Vigo
+                                        <br><span>C/ Marqués de Valladares 14, 6ª <br>36201 Vigo, Oficinas 7 y 8</span>
                                     </a>
 
                                     <img class="sub-menu-icons" src="<?php print IMAGES; ?>/icons-phone.svg">
-                                    881 125 994
+                                    886 035 929
                                     <br>
                                 </li>
                             </ul>
