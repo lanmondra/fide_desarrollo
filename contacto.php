@@ -67,7 +67,7 @@
 						<p class="px20 line36"><b>Vigo</b></p>
 						<div class="map-img-container">
 							<a class="crop" href="https://maps.app.goo.gl/uE7nnAX5akH2xzdL6" target="_blank">
-								<img class="cropped" src="<?php print IMAGES; ?>/fide-mapa-sant-2x.jpg">
+								<img class="cropped" src="<?php print IMAGES; ?>/mapa-fide-vigo-2x.jpg">
 							</a>
 						</div>						
 						<a href="https://maps.app.goo.gl/uE7nnAX5akH2xzdL6" class="google-maps-button px14" target="_blank">VER EN GOOGLE MAPS</a>
