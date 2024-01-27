@@ -271,11 +271,11 @@
                     <hr class="generic-hr">
 
                     <div class="breves" style="height: 150px; overflow: hidden;">
-                        <p><?php fide_notas_title_and_excerpt($notas_informativas[1], 460) ?></p>                        
+                        <p><?php fide_notas_title_and_excerpt($notas_informativas[0], 460) ?></p>                        
                     </div>
                     <div class="difuminacion-informative" ></div> 
                     <div class="breves" style="height: 150px; overflow: hidden;">
-                        <p><?php fide_notas_title_and_excerpt($notas_informativas[2], 460) ?></p>                        
+                        <p><?php fide_notas_title_and_excerpt($notas_informativas[1], 460) ?></p>                        
                     </div>
                     <div class="difuminacion-informative" ></div> 
                 </div>
