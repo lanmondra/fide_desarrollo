@@ -3,8 +3,6 @@
 
 <?php get_header(); ?>
 
-
-
     <section>
 
         <div class="grid-container">
@@ -51,7 +49,7 @@
                     "orderby" => array(
                         "post_date"     =>  "DESC",
                         ),
-                    "posts_per_page" => 9,
+                    "posts_per_page" => 6,
                     "paged" => $paged,
                     );                       
 
@@ -95,245 +93,52 @@
                
             </style>
 
-
-
+            <style>
+            .g-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 100px 30px;
+            }
+            @media all and (max-width: 980px) {
+                .g-container {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+            @media all and (max-width: 575px) {
+                .g-container {
+                    grid-template-columns: 1fr;
+                }
+            }
+            </style>
             <div class="grid-container">
-                <div class="grid">
-
-                	<?php if ($posts_cat_archive[0]) : ?>
-                    <div class="category-first-featured">
-
-                        <div class="article-image">
-                            <a href="<?php echo esc_url(get_permalink($posts_cat_archive[0])); ?>">
-                                <div class="crop">
-                                    <img class="cropped" src="<?php fide_feat_img_url($posts_cat_archive[0]) ?>">
-                                </div>
-                            </a>
-                        </div>
-          
-                        <?php fide_list_cats_links($posts_cat_archive[0]); ?>
-                        <h3 class="title_category"><?php fide_title_link_shortened($posts_cat_archive[0], 250); ?></h3>
-                        <div class="category">
-                        <span class="gray-9"><?php echo get_the_date("d M 'y", $posts_cat_archive[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                        <span class="line24">
-                            <?php fide_excerpt($posts_cat_archive[0], 700) ?>                          
-                        </span>
-                        </div>   
-                        <div class="prueba" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
-                        <?php fide_read_more_link($posts_cat_archive[0]); ?> 
-                    </div>
-                    <?php endif; ?>   
-
-                	<?php if ($posts_cat_archive[1]) : ?>
-                    <div class="category-second-featured">
-
-                        <div class="article-image">
-                            <a href="<?php echo esc_url(get_permalink($posts_cat_archive[1])); ?>">
-                                <div class="crop">
-                                    <img class="cropped" src="<?php fide_feat_img_url($posts_cat_archive[1]) ?>">
-                                </div>
-                            </a>
-                        </div>
-          
-                        <?php fide_list_cats_links($posts_cat_archive[1]); ?>
-                        <h3 class="title_category"><?php fide_title_link_shortened($posts_cat_archive[1], 250); ?></h3>
-                        <div class="category">
-                        <span class="gray-9"><?php echo get_the_date("d M 'y", $posts_cat_archive[1]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                        <span class="line24">
-                            <?php fide_excerpt($posts_cat_archive[1], 700) ?>                           
-                        </span>                       
-                        </div> 
-                        <div class="prueba" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
-                        <?php fide_read_more_link($posts_cat_archive[1]); ?>
-                    </div>
-                    <?php endif; ?>   
-
-                	<?php if ($posts_cat_archive[2]) : ?>
-                    <div class="category-third-featured">
-
-                        <div class="article-image">
-                            <a href="<?php echo esc_url(get_permalink($posts_cat_archive[2])); ?>">
-                                <div class="crop">
-                                    <img class="cropped" src="<?php fide_feat_img_url($posts_cat_archive[2]) ?>">
-                                </div>
-                            </a>
-                        </div>
-          
-                        <?php fide_list_cats_links($posts_cat_archive[2]); ?>
-                        <h3 class="title_category"><?php fide_title_link_shortened($posts_cat_archive[2], 250);?></h3>
-                        <div class="category">
-                            <span class="gray-9"><?php echo get_the_date("d M 'y", $posts_cat_archive[2]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <div class="g-container"> 
+                    <?php 
+                    for ($i = 0; $i <= 8; $i++) {
+                        if ($posts_cat_archive[$i]) : 
+                        ?>
+                        <div class="element">
+                            <div class="article-image">
+                                <a href="<?php echo esc_url(get_permalink($posts_cat_archive[$i])); ?>">
+                                    <div class="crop">
+                                        <img class="cropped" src="<?php fide_feat_img_url($posts_cat_archive[$i]) ?>">
+                                    </div>
+                                </a>
+                            </div>
+            
+                            <?php fide_list_cats_links($posts_cat_archive[$i]); ?>
+                            <h3 class="title_category"><?php fide_title_link_shortened($posts_cat_archive[$i], 250); ?></h3>
+                            <div class="category">
+                            <span class="gray-9"><?php echo get_the_date("d M 'y", $posts_cat_archive[$i]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                             <span class="line24">
-                            <?php fide_excerpt($posts_cat_archive[2], 700) ?>                           
+                                <?php fide_excerpt($posts_cat_archive[$i], 700) ?>                          
                             </span>
-                        </div> 
-                        <div class="prueba" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
-                        <?php fide_read_more_link($posts_cat_archive[2]); ?>
-                    </div>
-                    <?php endif; ?>   
-
+                            </div>   
+                            <div class="prueba" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
+                            <?php fide_read_more_link($posts_cat_archive[$i]); ?> 
+                        </div>
+                    <?php endif;  } ?>   
                 </div>
             </div>
-
-            <!-- SECONDS 3 NEWS-->
-            <div class="grid-container">
-                <div class="grid">
-
-                	<?php if ($posts_cat_archive[3]) : ?>
-                    <div class="category-first-featured">
-
-                        <div class="article-image">
-                            <a href="<?php echo esc_url(get_permalink($posts_cat_archive[3])); ?>">
-                                <div class="crop">
-                                    <img class="cropped" src="<?php fide_feat_img_url($posts_cat_archive[3]) ?>">
-                                </div>
-                            </a>
-                        </div>
-          
-                        <?php fide_list_cats_links($posts_cat_archive[3]); ?>
-                        <h3 class="title_category"><?php fide_title_link_shortened($posts_cat_archive[3], 250); ?></h3>
-                        <div class="category">
-                            <span class="gray-9"><?php echo get_the_date("d M 'y", $posts_cat_archive[3]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                            <span class="line24">
-                            <?php fide_excerpt($posts_cat_archive[3], 700) ?>                           
-                            </span>
-                        </div> 
-                        <div class="" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
-                        <?php fide_read_more_link($posts_cat_archive[3]); ?>
-                    </div>
-                    <?php endif; ?>   
-
-                	<?php if ($posts_cat_archive[4]) : ?>
-                    <div class="category-second-featured">
-
-                        <div class="article-image">
-                            <a href="<?php echo esc_url(get_permalink($posts_cat_archive[4])); ?>">
-                                <div class="crop">
-                                    <img class="cropped" src="<?php fide_feat_img_url($posts_cat_archive[4]) ?>">
-                                </div>
-                            </a>
-                        </div>
-          
-                        <?php fide_list_cats_links($posts_cat_archive[4]); ?>
-                        <h3 class="title_category"><?php fide_title_link_shortened($posts_cat_archive[4], 200); ?></h3>
-                        <div class="category">
-                            <span class="gray-9"><?php echo get_the_date("d M 'y", $posts_cat_archive[4]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                            <span class="line24">
-                            <?php fide_excerpt($posts_cat_archive[4], 700) ?>                           
-                            </span>
-                        </div> 
-                        <div class="prueba" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
-                        <?php fide_read_more_link($posts_cat_archive[4]); ?>
-                    </div>
-                    <?php endif; ?>   
-
-                	<?php if ($posts_cat_archive[5]) : ?>
-                    <div class="category-third-featured">
-
-                        <div class="article-image">
-                            <a href="<?php echo esc_url(get_permalink($posts_cat_archive[5])); ?>">
-                                <div class="crop">
-                                    <img class="cropped" src="<?php fide_feat_img_url($posts_cat_archive[5]) ?>">
-                                </div>
-                            </a>
-                        </div>
-          
-                        <?php fide_list_cats_links($posts_cat_archive[5]); ?>
-                        <h3 class="title_category"><?php fide_title_link_shortened($posts_cat_archive[5], 250); ?></h3>
-                        <div class="category">
-                            <span class="gray-9"><?php echo get_the_date("d M 'y", $posts_cat_archive[5]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                            <span class="line24">
-                            <?php fide_excerpt($posts_cat_archive[5], 700) ?>                          
-                            </span>
-                        </div> 
-                        <div class="prueba" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
-                        <?php fide_read_more_link($posts_cat_archive[5]); ?>
-                    </div>
-                    <?php endif; ?>   
-
-                </div>
-            </div>
-
-
-            <!-- TERCERAS 3 NEWS-->           
-            <div class="grid-container">
-                <div class="grid">
-
-                	<?php if ($posts_cat_archive[6]) : ?>
-                    <div class="category-first-featured">
-
-                        <div class="article-image">
-                            <a href="<?php echo esc_url(get_permalink($posts_cat_archive[6])); ?>">
-                                <div class="crop">
-                                    <img class="cropped" src="<?php fide_feat_img_url($posts_cat_archive[6]) ?>">
-                                </div>
-                            </a>
-                        </div>
-          
-                        <?php fide_list_cats_links($posts_cat_archive[6]); ?>
-                        <h3 class="title_category"><?php fide_title_link_shortened($posts_cat_archive[6], 250); ?></h3>
-                        <div class="category">
-                            <span class="gray-9"><?php echo get_the_date("d M 'y", $posts_cat_archive[6]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                            <span class="line24">
-                            <?php fide_excerpt($posts_cat_archive[6], 700) ?>                           
-                            </span>
-                         </div> 
-                         <div class="prueba" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
-                         <?php fide_read_more_link($posts_cat_archive[6]); ?>
-                    </div>
-                    <?php endif; ?>   
-
-                	<?php if ($posts_cat_archive[7]) : ?>
-                    <div class="category-second-featured">
-
-                        <div class="article-image">
-                            <a href="<?php echo esc_url(get_permalink($posts_cat_archive[7])); ?>">
-                                <div class="crop">
-                                    <img class="cropped" src="<?php fide_feat_img_url($posts_cat_archive[7]) ?>">
-                                </div>
-                            </a>
-                        </div>
-          
-                        <?php fide_list_cats_links($posts_cat_archive[7]); ?>
-                        <h3 class="title_category"><?php fide_title_link_shortened($posts_cat_archive[7], 250); ?></h3>
-                        <div class="category">
-                            <span class="gray-9"><?php echo get_the_date("d M 'y", $posts_cat_archive[7]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                             <span class="line24">
-                            <?php fide_excerpt($posts_cat_archive[7], 700) ?>                           
-                             </span>
-                        </div> 
-                        <div class="prueba" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
-                        <?php fide_read_more_link($posts_cat_archive[7]); ?>
-                    </div>
-                    <?php endif; ?>   
-
-                	<?php if ($posts_cat_archive[8]) : ?>
-                    <div class="category-third-featured">
-
-                        <div class="article-image">
-                            <a href="<?php echo esc_url(get_permalink($posts_cat_archive[8])); ?>">
-                                <div class="crop">
-                                    <img class="cropped" src="<?php fide_feat_img_url($posts_cat_archive[8]) ?>">
-                                </div>
-                            </a>
-                        </div>
-          
-                        <?php fide_list_cats_links($posts_cat_archive[8]); ?>
-                        <h3 class="title_category"><?php fide_title_link_shortened($posts_cat_archive[8], 250); ?></h3>
-                        <div class="category">
-                            <span class="gray-9"><?php echo get_the_date("d M 'y", $posts_cat_archive[8]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                            <span class="line24">
-                            <?php fide_excerpt($posts_cat_archive[8], 700) ?>                           
-                             </span>
-                        </div> 
-                        <div class="prueba" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
-                        <?php fide_read_more_link($posts_cat_archive[8]); ?>
-                    </div>
-                    <?php endif; ?>   
-
-                </div>
-            </div>
-
 		</main>
 
 
