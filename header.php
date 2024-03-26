@@ -216,7 +216,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
 
                 <div class="left fide-logo">
                     <a href="<?php echo site_url(); ?>" title="fide.es - Inicio">
-                        <img src="<?php print IMAGES; ?>/fide-logo.svg" alt="<?php bloginfo('name'); ?>">
+                        <img src="<?php print IMAGES; ?>/fide-logo-tax.svg" alt="<?php bloginfo('name'); ?>">
                     </a>
                 </div>
 

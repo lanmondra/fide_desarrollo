@@ -159,7 +159,7 @@ header {
 
 .fide-logo a {
     display: block; /* Fix margin on the bottom of the link */
-    height: 120px; /* Fix margin on the bottom of the link */
+    height: 143px; /* Fix margin on the bottom of the link */
 }
 
 ul.rootmenu { /* Main bar */
@@ -186,6 +186,7 @@ ul.rootmenu > li span.hover-border { /* Hover marker */
 	height: 8px;
 	background-color: #111111;
 	margin: -8px auto 0;
+	margin-top: 15px;
 }
 
 ul.rootmenu > li.menu-search,
