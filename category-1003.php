@@ -91,7 +91,7 @@
                         <?php fide_excerpt($noticias_destacadas[0], 700) ?>                       
                     </span>
                     </div>
-                        <div class="difuminado-default"></div>
+                        <div class="difuminado-fide-medios"></div>
                         <?php fide_read_more_link($noticias_destacadas[0]); ?>
 
                 </div>
@@ -113,7 +113,7 @@
                         <?php fide_excerpt($noticias_destacadas[1], 700) ?>                        
                     </span>
                     </div>
-                        <div class="difuminado-default"></div>
+                        <div class="difuminado-fide-medios"></div>
                         <?php fide_read_more_link($noticias_destacadas[1]); ?>
 
                 </div>
@@ -135,7 +135,7 @@
                         <?php fide_excerpt($noticias_destacadas[2], 700) ?>                       
                     </span>
                     </div>
-                        <div class="difuminado-default"></div>
+                        <div class="difuminado-fide-medios"></div>
                         <?php fide_read_more_link($noticias_destacadas[2]); ?>
 
                 </div>
