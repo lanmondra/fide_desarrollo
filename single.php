@@ -196,7 +196,7 @@
                                             <div class="pmc-text-link-pdf">
                                                 <span>' . basename($pdf_url) . '</span>
                                                 <br>
-                                                <span class="pmc-text-small">Archivo PDF vinculado</span>
+                                                <span class="pmc-text-small">Descargar documento</span>
                                             </div>
 
                                         </div>
@@ -363,7 +363,7 @@
             // ELSE and END IF at the end of the page, after the pagination
 
         ?>
-             <!-- JavaScript para degrade de contenido -->
+             <!-- JavaScript para degrade de contenido relacionado -->
             <SCRIPT type="text/javascript">
                 document.addEventListener("DOMContentLoaded", () => {
                     let titleContent = document.getElementsByClassName('title_content');

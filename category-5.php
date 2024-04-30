@@ -88,7 +88,6 @@
 
                 	<?php if ($formacion_eventos_archive[0]) : ?>
                     <div class="category-first-featured">
-
                         <div class="article-image">
                             <a href="<?php echo esc_url(get_permalink($formacion_eventos_archive[0])); ?>">
                                 <div class="crop">

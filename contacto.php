@@ -61,20 +61,20 @@
 						</span>
 
 					</div>
-					<!-- NUEVA DIRRECION SANTIAGO -->
+					<!-- NUEVA DIRRECION VIGO -->
                
 					<div class="address-sant-container">
-						<p class="px20 line36"><b>Santiago</b></p>
+						<p class="px20 line36"><b>Vigo</b></p>
 						<div class="map-img-container">
-							<a class="crop" href="https://goo.gl/maps/QcebDKxWbW7mUjMEA" target="_blank">
-								<img class="cropped" src="<?php print IMAGES; ?>/fide-mapa-sant-2x.jpg">
+							<a class="crop" href="https://maps.app.goo.gl/uE7nnAX5akH2xzdL6" target="_blank">
+								<img class="cropped" src="<?php print IMAGES; ?>/mapa-fide-vigo-2x.jpg">
 							</a>
 						</div>						
-						<a href="https://goo.gl/maps/QcebDKxWbW7mUjMEA" class="google-maps-button px14" target="_blank">VER EN GOOGLE MAPS</a>
+						<a href="https://maps.app.goo.gl/uE7nnAX5akH2xzdL6" class="google-maps-button px14" target="_blank">VER EN GOOGLE MAPS</a>
 						<span class="cf-address">
-							Av. de Montevideo 1, 1º<br>
-							15706 Santiago de Compostela<br>
-							Tel. 881 949 803
+						C/ Marqués de Valladares 14, 6ª <br>
+						36201 Vigo, Oficinas 7 y 8<br>
+						Tel. 886 035 929
 						</span>
 
 					</div>
