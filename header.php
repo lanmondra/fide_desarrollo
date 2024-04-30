@@ -186,20 +186,26 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
 
 
 <body>
+    <style>
+        .description {
+            position: absolute;
+            display: block;
+            text-align: center;
+            width: 100%;
+            margin-top: 88px;
+            padding-right: 230px;
+            font-size: 22px;
+            color: #ac0500;
+        }
 
-
-
-    <!-- Design guide background -->
-    <!-- <div class="mockup-guide"></div> -->
-
-
+        .top-nav-container {
+            position: relative;
+        }
+    </style>
 
     <header class="non-printable">
-
         <nav id="navigation" class="unselectable">
-
-            <div class="hamburger-menu-container">
-
+            <div class="hamburger-menu-container">               
                 <div class="hamburger js-showmenu"> <!-- js-showmenu class targeted from JS -->
                     <img src="<?php print IMAGES; ?>/icons-menu.svg">
                 </div>
@@ -209,19 +215,16 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                         <img class="mobile-menu-search" src="<?php print IMAGES; ?>/icons-search-white.svg">
                     </a>
                 </div>
-
             </div>
 
             <div class="top-nav-container">
-
                 <div class="left fide-logo">
                     <a href="<?php echo site_url(); ?>" title="fide.es - Inicio">
                         <img src="<?php print IMAGES; ?>/fide-logo-tax.svg" alt="<?php bloginfo('name'); ?>">
                     </a>
                 </div>
 
-                <ul class="rootmenu row">
-
+                <ul class="rootmenu row">       
                     <li class="responsive-menu-inicio">
                         <span class="nav-bullet"></span>
                         <a href="<?php echo site_url(); ?>">Inicio</a>
@@ -232,8 +235,8 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                         <span class="nav-bullet"></span>
                         <a href="<?php echo site_url(); ?>/actualidad/fide-medios">Actualidad</a>
                         <span class="hover-border"></span>
-                    </li>
 
+                    </li>
                     <!-- START OF MOBILE NAV SECTIONS -->
                     <!-- START OF MOBILE NAV SECTIONS -->
 
@@ -294,7 +297,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                         <a href="<?php echo site_url(); ?>/actualidad/derechos-de-emision">Derechos de emisión</a>
                         <span class="hover-border"></span>
                     </li>
-                                       
+
                     <!-- END OF MOBILE NAV SECTIONS -->
                     <!-- END OF MOBILE NAV SECTIONS -->
 
@@ -332,6 +335,10 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                         <a href="<?php echo site_url(); ?>/contacto">Contacto</a>
                         <span class="hover-border"></span>
                     </li>
+                    
+                    <li class="description">
+                        Asesores legales y tributarios
+                    </li>
 
                     <li id="js-newsletter" class="js-top-section menu-newsletter">
                         <span class="nav-bullet"></span>
@@ -356,72 +363,16 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
 
                 </ul>
 
+
             </div> <!-- End of top nav container -->
 
 
 
             <div class="bottom-nav-container"> <!-- Full page width and background color -->
-
-                <!--                 <div class="submenu-actualidad">
-                    <div class="grid-container">
-                        <div class="grid">
-
-                            <ul class="col-1-6">
-                                <li><a href="<?php # echo site_url(); 
-                                                ?>/actualidad/aduanas">Aduanas</a></li>
-                                <li><a href="<?php # echo site_url(); 
-                                                ?>/actualidad/aeat">AEAT</a></li>
-                                <li><a href="<?php # echo site_url(); 
-                                                ?>/actualidad/alcohol">Alcohol</a></li>
-                            </ul>
-                            <ul class="col-2-6">
-                                <li><a href="<?php # echo site_url(); 
-                                                ?>/actualidad/cerveza">Cerveza</a></li>
-                                <li><a href="<?php # echo site_url(); 
-                                                ?>/actualidad/depositos">Depósitos</a></li>
-                                <li><a href="<?php # echo site_url(); 
-                                                ?>/actualidad/energia">Energía</a></li>
-                            </ul>
-                            <ul class="col-3-6">
-                                <li><a href="<?php # echo site_url(); 
-                                                ?>/actualidad/eventos">Eventos</a></li>
-                                <li><a href="<?php # echo site_url(); 
-                                                ?>/actualidad/fiscalidad">Fiscalidad</a></li>
-                                <li><a href="<?php # echo site_url(); 
-                                                ?>/actualidad/formacion">Formación</a></li>
-                            </ul>
-                            <ul class="col-4-6">
-                                <li><a href="<?php # echo site_url(); 
-                                                ?>/actualidad/hidrocarburos">Hidrocarburos</a></li>
-                                <li><a href="<?php # echo site_url(); 
-                                                ?>/actualidad/impuestos-especiales">Impuestos E.</a></li>
-                                <li><a href="<?php # echo site_url(); 
-                                                ?>/actualidad/iva-irpf">IVA / IRPF</a></li>
-                            </ul>
-                            <ul class="col-5-6">
-                                <li><a href="<?php # echo site_url(); 
-                                                ?>/actualidad/ivmdh">IVMDH</a></li>
-                                <li><a href="<?php # echo site_url(); 
-                                                ?>/actualidad/medioambiente">Medioambiente</a></li>
-                                <li><a href="<?php # echo site_url(); 
-                                                ?>/actualidad/renovables">Renovables</a></li>
-                            </ul>
-                            <ul class="col-6-6">
-                                <li><a href="<?php # echo site_url(); 
-                                                ?>/actualidad/renta">Renta</a></li>
-                                <li><a href="<?php # echo site_url(); 
-                                                ?>/actualidad/tabaco">Tabaco</a></li>
-                                <li><a href="<?php # echo site_url(); 
-                                                ?>/actualidad/vino">Vino</a></li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </div> -->
-
                 <div class="submenu-actualidad">
                     <div class="grid-container">
                         <div class="grid">
+
 
                             <!-- 3 - 3 - 2 - 2 -->
                             <ul class="col-1-4">
@@ -445,51 +396,6 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
 
                             </ul>
 
-                            <!-- 3 - 2 - 3 - 2 -->
-                            <!-- <ul class="col-1-4">
-                                <li><a href="<?php echo site_url(); ?>/actualidad/aduanas">Aduanas</a></li>
-                                <li><a href="<?php echo site_url(); ?>/actualidad/hidrocarburos-y-energia">Hidrocarburos y energía</a></li>
-                                <li><a href="<?php echo site_url(); ?>/actualidad/alcohol-y-bebidas-alcoholicas">Alcohol y bebidas alcoh.</a></li>
-                            </ul>
-                            <ul class="col-2-4">
-                                <li><a href="<?php echo site_url(); ?>/actualidad/tributacion-indirecta">Tributación indirecta</a></li>
-                                <li><a href="<?php echo site_url(); ?>/actualidad/fiscalidad-general">Fiscalidad general</a></li>
-                                
-
-                            </ul>
-                            <ul class="col-3-4">
-                            <li><a href="<?php echo site_url(); ?>/actualidad/labores-del-tabaco">Labores del tabaco</a></li>
-                                <li><a href="<?php echo site_url(); ?>/actualidad/formacion-y-eventos">Formación y eventos</a></li>
-                                <li><a href="<?php echo site_url(); ?>/actualidad/envases-de-plastico">Envases de plástico</a></li>
-                               
-                            </ul>
-                            <ul class="col-4-4">
-                                <li><a href="<?php echo site_url(); ?>/actualidad/impuestos-medioambientales">Impuestos medioamb.</a></li>
-                                <li><a href="<?php echo site_url(); ?>/actualidad/derechos-de-emision">Derechos de emisión</a></li>                               
-                            </ul> -->
-
-                            <!-- 3 - 2 - 3 - 2 -->
-                            <!-- <ul class="col-1-4">
-                                <li><a href="<?php echo site_url(); ?>/actualidad/aduanas">Aduanas</a></li>
-                                <li><a href="<?php echo site_url(); ?>/actualidad/hidrocarburos-y-energia">Hidrocarburos y energía</a></li>
-                                <li><a href="<?php echo site_url(); ?>/actualidad/alcohol-y-bebidas-alcoholicas">Alcohol y bebidas alcoh.</a></li>
-                            </ul>
-                            <ul class="col-2-4">
-                                <li><a href="<?php echo site_url(); ?>/actualidad/tributacion-indirecta">Tributación indirecta</a></li>
-                                <li><a href="<?php echo site_url(); ?>/actualidad/fiscalidad-general">Fiscalidad general</a></li>
-                                
-                            </ul>
-                            <ul class="col-3-4">
-                            <li><a href="<?php echo site_url(); ?>/actualidad/labores-del-tabaco">Labores del tabaco</a></li>
-                                <li><a href="<?php echo site_url(); ?>/actualidad/formacion-y-eventos">Formación y eventos</a></li>
-                                <li><a href="<?php echo site_url(); ?>/actualidad/envases-de-plastico">Envases de plástico</a></li>
-                               
-                            </ul>
-                            <ul class="col-4-4">
-                                <li><a href="<?php echo site_url(); ?>/actualidad/impuestos-medioambientales">Impuestos medioamb.</a></li>
-                                <li><a href="<?php echo site_url(); ?>/actualidad/derechos-de-emision">Derechos de emisión</a></li>                               
-                            </ul> -->
-
                         </div>
                     </div>
                 </div>
@@ -507,111 +413,67 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                                 </li>
                             </ul>
                             <ul class="col-2-4">
-                            <li>
+                                <li>
                                     <a href="<?php echo site_url(); ?>/economia-forense">
                                         Economía forense
                                         <br><span>Peritaje de procesos judiciales, civiles, penales y contenciosos</span>
                                     </a>
                                 </li>
-                                <!-- <li>
-                                    <a href="<?php echo site_url(); ?>/asesoria-juridica">
-                                        Asesoría jurídica
-                                        <br><span>En consejos de administración y como letrados asesores</span>
-                                    </a>
-                                </li> -->
                             </ul>
                             <ul class="col-3-4">
-                            <li>
+                                <li>
                                     <a href="<?php echo site_url(); ?>/formacion-in-company">
                                         Formación <i>in company</i>
                                         <br><span>Cursos a medida de las necesidades de cada compañía</span>
                                     </a>
                                 </li>
-                                
                             </ul>
-                            <!-- <ul class="col-4-4">
-                                
-                                
-                            </ul> -->
-
                         </div>
                     </div>
                 </div>
 
                 <div class="submenu-especialidades">
                     <div class="grid-container">
-                        <div class="grid-especialidades">                            
+                        <div class="grid-especialidades">
                             <ul class="column-1-4">
-                                <li >
-                                     <a href="<?php echo site_url(); ?>/asesoria-hidrocarburos-y-energia">
+                                <li>
+                                    <a href="<?php echo site_url(); ?>/asesoria-hidrocarburos-y-energia">
                                         Hidrocarburos y energía
                                         <br><br>
                                     </a>
                                     <a href="<?php echo site_url(); ?>/asesoria-alcohol-y-bebidas-alcoholicas">
                                         Alcohol y bebidas alcohólicas
-                                        
-                                    </a>                                   
+
+                                    </a>
                                 </li>
                             </ul>
                             <ul class="column-2-4">
                                 <li>
-                                <a href="<?php echo site_url(); ?>/asesoria-fiscalidad-medioambiental">
+                                    <a href="<?php echo site_url(); ?>/asesoria-fiscalidad-medioambiental">
                                         Fiscalidad medioambiental
-                                        <br> <br>                                       
+                                        <br> <br>
                                     </a>
                                     <a href="<?php echo site_url(); ?>/asesoria-envases-de-plastico">
                                         Envases de plástico
-                                        
-                                      
+
+
                                     </a>
-                                  
+
                                 </li>
                             </ul>
                             <ul class="column-3-4">
                                 <li>
-                                <a href="<?php echo site_url(); ?>/asesoria-derecho-aduanero-tributario">
+                                    <a href="<?php echo site_url(); ?>/asesoria-derecho-aduanero-tributario">
                                         Derecho aduanero tributario
                                         <br> <br>
                                     </a>
 
                                     <a href="<?php echo site_url(); ?>/asesoria-derechos-emision">
                                         Derechos de emisión
-                                        
+
                                     </a>
                                 </li>
                             </ul>
-
-                               <!-- texto comentado es la forma antigua de mostar  -->
-                               <!--
-                             <ul style="margin-left: 5%;" class="col-4-4">
-
-                            <ul style="margin-left: 5%;" class="col-4-4">
-
-                                <li>
-                                    <a href="<?php echo site_url(); ?>/asesoria-fiscalidad-medioambiental">
-                                        Fiscalidad medioambiental
-                                        <br>                                      
-                                    </a>
-                                    <a href="<?php echo site_url(); ?>/asesoria-derechos-emision">
-                                        Derechos de emisión
-                                        
-                                    </a>
-                                </li>
-                            </ul>
-                            
-                            <ul class="col-5-4">
-                                <li>
-                                    <a href="<?php echo site_url(); ?>/asesoria-envases-de-plastico">
-                                        Envases de plástico
-                                        <br><span>Impuesto especial sobre envases<br> de plástico no reutilizables</span>
-                                    </a>
-                                </li>
-
-               </ul> -->
-
-                            
-
-
                         </div>
                     </div>
                 </div>
@@ -828,9 +690,9 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
             fide_breadcrumb_code("Fiscalidad medioambiental", null, "white");
         } elseif (is_page('asesoria-envases-de-plastico')) {
             fide_breadcrumb_code("Envases de plástico", null, "white");
-        } elseif(is_page('asesoria-derechos-emision')){
+        } elseif (is_page('asesoria-derechos-emision')) {
             fide_breadcrumb_code("Derechos de Emision", null, "white");
-        }elseif (is_page('asesoria-fiscalidad-del-tabaco')) {
+        } elseif (is_page('asesoria-fiscalidad-del-tabaco')) {
             fide_breadcrumb_code("Fiscalidad del tabaco", null, "white");
 
             // Is the informes page?
@@ -878,7 +740,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
 
             // Or, is the front-page?
         } elseif (is_front_page()) {
-            print '<!-- // That is home --><span style="display: block; height: 48px;"></span>';
+            print '<!-- // That is home --><span style="display: block; height: 20px;"></span>';
 
             // Or, is the page a single post or a literal page?
         } elseif (!(is_404()) && (is_single()) || (is_page())) {

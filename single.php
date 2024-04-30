@@ -196,7 +196,7 @@
                                             <div class="pmc-text-link-pdf">
                                                 <span>' . basename($pdf_url) . '</span>
                                                 <br>
-                                                <span class="pmc-text-small">Archivo PDF vinculado</span>
+                                                <span class="pmc-text-small">Descargar documento</span>
                                             </div>
 
                                         </div>

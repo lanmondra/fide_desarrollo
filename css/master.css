@@ -588,6 +588,13 @@ EXTRA STUFF
     display: block;
 }
 
+.cropped-img-informes {
+	width: 146px;
+    height: 65px;
+    object-fit: cover;
+    display: block;
+}
+
 img.cropped {
 /*	-webkit-filter: grayscale(100%);
     filter: grayscale(100%);*/
