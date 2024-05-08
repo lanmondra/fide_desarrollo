@@ -740,7 +740,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
 
             // Or, is the front-page?
         } elseif (is_front_page()) {
-            print '<!-- // That is home --><span style="display: block; height: 20px;"></span>';
+            print '<!-- // That is home --><span style="display: block; height: 0px;"></span>';
 
             // Or, is the page a single post or a literal page?
         } elseif (!(is_404()) && (is_single()) || (is_page())) {
