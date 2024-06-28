@@ -483,6 +483,61 @@ BREADCRUMB
     margin: 0 7px;
 }
 
+.additional-text{
+	font-size: 19px;
+    line-height: 24px;  
+	font-style: italic;
+	margin-left: 7%;
+    color: #AC0600;
+	white-space: nowrap;
+	/* color: #222222; */
+	display: block; 
+}
+
+@media (max-width: 768px) {
+    .additional-text {
+        display: block; 
+        margin-top: 2px; 
+		font-size: 14px;
+		font-style: italic;
+		white-space: nowrap;
+		margin-left: 0%;
+    }
+}
+
+/* Dispositivos medianos: tabletas y móviles grandes en modo paisaje */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .additional-text {
+		display: block; 
+        font-size: 19px;
+        font-style: italic;
+        white-space: normal;
+        margin-left: 0%;
+    }
+}
+
+/* Dispositivos grandes: laptops y pantallas de escritorio pequeñas */
+@media (min-width: 1025px) and (max-width: 1366px) {
+    .additional-text {
+		display: block; 
+        font-size: 19px;
+        font-style: italic;
+        white-space: normal;
+        margin-left: 7%;
+    }
+}
+
+/* Dispositivos extra grandes: pantallas de escritorio grandes */
+@media (min-width: 1367px) {
+    .additional-text {
+		display: block; 
+        font-size: 19px;
+        font-style: italic;
+        white-space: normal;
+        margin-left: 7%;
+    }
+}
+
 
 
 @media all and (max-width: 1240px) {

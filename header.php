@@ -604,9 +604,20 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
         $current_tag = single_tag_title("", false);
         $current_category = single_cat_title("", false);
         $current_cat_id = get_cat_id($current_category);
+        $category_description = category_description($category_id);
         $search_title = "Resultados de la búsqueda";
         $single_page_title = get_the_title();
         $error_page_title = "Página no encontrada";
+        
+        if (!empty($category_description)) {  
+            $category_description_short = mb_substr(strip_tags($category_description), 0, 55);
+        if (mb_strlen(strip_tags($category_description)) > 55) {
+            $category_description_short .= '...'; 
+        }
+          //$category_description_short = wp_trim_words($category_description, 9, '...'); 
+        } else {
+          $category_description_short = "";
+        }
 
         $actualidad_sub_sections = array("");
 
@@ -663,80 +674,79 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
 
         // Is the "Actualidad" page?
         if (is_page('actualidad')) {
-            fide_breadcrumb_code("FIDE en los Medios", null, "black");
+            fide_breadcrumb_code("FIDE en los Medios", null, "black","");
 
             // Is the servicios page?
         } elseif (is_page('servicios')) {
-            fide_breadcrumb_code("Servicios", null, "white");
+            fide_breadcrumb_code("Servicios", null, "white", "");
         } elseif (is_page('asesoria-tributaria')) {
-            fide_breadcrumb_code("Asesoría tributaria", null, "white");
+            fide_breadcrumb_code("Asesoría tributaria", null, "white", "");
         } elseif (is_page('asesoria-juridica')) {
-            fide_breadcrumb_code("Asesoría jurídica", null, "white");
+            fide_breadcrumb_code("Asesoría jurídica", null, "white", "");
         } elseif (is_page('economia-forense')) {
-            fide_breadcrumb_code("Economía forense", null, "white");
+            fide_breadcrumb_code("Economía forense", null, "white", "");
         } elseif (is_page('formacion-in-company')) {
-            fide_breadcrumb_code("Formación <i>in company</i>", null, "white");
+            fide_breadcrumb_code("Formación <i>in company</i>", null, "white", "");
 
             // Is the especialidades page?
         } elseif (is_page('especialidades')) {
-            fide_breadcrumb_code("Especialidades", null, "white");
+            fide_breadcrumb_code("Especialidades", null, "white", "");
         } elseif (is_page('asesoria-hidrocarburos-y-energia')) {
-            fide_breadcrumb_code("Hidrocarburos y energía", null, "white");
+            fide_breadcrumb_code("Hidrocarburos y energía", null, "white", "");
         } elseif (is_page('asesoria-alcohol-y-bebidas-alcoholicas')) {
-            fide_breadcrumb_code("Alcohol y bebidas alcohólicas", null, "white");
+            fide_breadcrumb_code("Alcohol y bebidas alcohólicas", null, "white", "");
         } elseif (is_page('asesoria-derecho-aduanero-tributario')) {
-            fide_breadcrumb_code("Derecho aduanero tributario", null, "white");
+            fide_breadcrumb_code("Derecho aduanero tributario", null, "white", "");
         } elseif (is_page('asesoria-fiscalidad-medioambiental')) {
-            fide_breadcrumb_code("Fiscalidad medioambiental", null, "white");
+            fide_breadcrumb_code("Fiscalidad medioambiental", null, "white", "");
         } elseif (is_page('asesoria-envases-de-plastico')) {
-            fide_breadcrumb_code("Envases de plástico", null, "white");
+            fide_breadcrumb_code("Envases de plástico", null, "white", "");
         } elseif (is_page('asesoria-derechos-emision')) {
-            fide_breadcrumb_code("Derechos de Emision", null, "white");
+            fide_breadcrumb_code("Derechos de Emision", null, "white", "");
         } elseif (is_page('asesoria-fiscalidad-del-tabaco')) {
-            fide_breadcrumb_code("Fiscalidad del tabaco", null, "white");
+            fide_breadcrumb_code("Fiscalidad del tabaco", null, "white", "");
 
             // Is the informes page?
             //asesoria-envases_plasticos
             //asesoria-derechos-emision
 
         } elseif (is_page('informes-fide')) {
-            fide_breadcrumb_code("Informes Fide", null, "white");
-
+            fide_breadcrumb_code("FIDE en los Medios", null, "black", "");
             // Is the newsletter archive page?
         } elseif (is_page('newsletter')) {
-            fide_breadcrumb_code("Newsletter", null, "black");
+            fide_breadcrumb_code("Newsletter", null, "black", "");
 
             // Is the contact page?
         } elseif (is_page('contacto')) {
-            fide_breadcrumb_code("Contacto", null, "black");
+            fide_breadcrumb_code("Contacto", null, "black", "");
 
             // Is any of the legal pages?
         } elseif (is_page('politica-de-privacidad')) {
-            fide_breadcrumb_code("Política de privacidad", null, "black");
+            fide_breadcrumb_code("Política de privacidad", null, "black", "");
         } elseif (is_page('politica-de-cookies')) {
-            fide_breadcrumb_code("Política de cookies", null, "black");
+            fide_breadcrumb_code("Política de cookies", null, "black", "");
         } elseif (is_page('aviso-legal')) {
-            fide_breadcrumb_code("Aviso legal", null, "black");
+            fide_breadcrumb_code("Aviso legal", null, "black", "");
 
             // Is a single article page?
         } elseif (is_single()) {
-            fide_breadcrumb_code("Actualidad", null, "white");
+            fide_breadcrumb_code("Actualidad", null, "white", "");
 
             // Is the current page a tag archive page?
         } elseif (function_exists('is_tag') && is_tag()) {
-            fide_breadcrumb_code($current_tag, null, "black");
+            fide_breadcrumb_code($current_tag, null, "black", "");
 
             // Or, is the page an archive page?
         } elseif (is_archive()) {
-            fide_breadcrumb_code($current_category, null, "black");
+            fide_breadcrumb_code($current_category, null, "black", $category_description_short);
 
             // Or, is the page a search page?
         } elseif (is_search()) {
-            fide_breadcrumb_code($search_title, null, "black");
+            fide_breadcrumb_code($search_title, null, "black", "");
 
             // Or, is the page the blank search page?
         } elseif (is_page('buscar')) {
-            fide_breadcrumb_code("Buscar en fide.es", null, "black");
+            fide_breadcrumb_code("Buscar en fide.es", null, "black", "");
 
             // Or, is the front-page?
         } elseif (is_front_page()) {
@@ -744,11 +754,11 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
 
             // Or, is the page a single post or a literal page?
         } elseif (!(is_404()) && (is_single()) || (is_page())) {
-            fide_breadcrumb_code($single_page_title, "Test-sub-cat", "white");
+            fide_breadcrumb_code($single_page_title, "Test-sub-cat", "white", "");
 
             // Or, is the page an error page?
         } elseif (is_404()) {
-            fide_breadcrumb_code($error_page_title, null, "black");
+            fide_breadcrumb_code($error_page_title, null, "black", "");
         }
 
         ?>

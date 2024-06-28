@@ -522,10 +522,10 @@ function fide_de_cerca__shorts($post_id) {
 
 // GET THE BREADCRUMB CODE AND FILL IT WITH PROPER TEXT
 
-function fide_breadcrumb_code($parameter1, $parameter2, $bn) {
+function fide_breadcrumb_code($parameter1, $parameter2, $bn, $additional_text) {
     if ($bn == "black") {
         print '
-            <section> <!-- Just to close the nav submenu on hover -->
+            <section> <!-- Just to close the nav submenu on hover 1 -->
                 <div class="breadcrumb">
                     <hr class="breadcrumb-nav-line">
                     <div class="grid-container">
@@ -533,8 +533,9 @@ function fide_breadcrumb_code($parameter1, $parameter2, $bn) {
                             <div class="breadcrumb-container col-1-1">
                                 <a href="https://www.fide.es"><img src="' . IMAGES . '/icons-home-b.svg" alt="Inicio"></a>
                                 <span class="breadcrumb-separator-1">&#62;</span>
-                                <span>' . $parameter1 . '</span>';
-
+                                <span>' . $parameter1 . '</span>
+                                <span class="additional-text">' . $additional_text . '</span>';
+                                
                                 if (isset($parameter2)) {
                                     print'
                                         <span class="breadcrumb-subsection">
@@ -553,7 +554,7 @@ function fide_breadcrumb_code($parameter1, $parameter2, $bn) {
         '; // End of print
     } elseif ($bn == "white") {
             print '
-            <section> <!-- Just to close the nav submenu on hover -->
+            <section> <!-- Just to close the nav submenu on hover 2-->
                 <div class="breadcrumb">
                     <div class="grid-container">
                         <div class="grid">

@@ -475,8 +475,9 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
         <?php
 
         $current_tag = single_tag_title("", false);
-        $current_category = single_cat_title("", false);
+        $current_category = single_cat_title("", false);   
         $current_cat_id = get_cat_id($current_category);
+        $category_description = category_description($category_id);
         $search_title = "Resultados de la búsqueda";
         $single_page_title = get_the_title();
         $error_page_title = "Error";
@@ -533,27 +534,27 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
 
         // Is the "Actualidad" page?
         if (is_page('actualidad')) {
-            fide_breadcrumb_code("Actualidad", null, "black");
+            fide_breadcrumb_code("Actualidad", null, "black", "");
 
         // Is the newsletter archive page?
         } elseif (is_page('newsletter')) {
-            fide_breadcrumb_code("Newsletter", null, "black");
+            fide_breadcrumb_code("Newsletter", null, "black", "");
 
         // Is a single article page?
         } elseif (is_single()) {
-            fide_breadcrumb_code("Actualidad", null, "white");
+            fide_breadcrumb_code("Actualidad", null, "white", "");
 
         // Is the current page a tag archive page?
         } elseif (function_exists('is_tag') && is_tag()) {
-            fide_breadcrumb_code($current_tag, null, "black");
+            fide_breadcrumb_code($current_tag, null, "black", "");
 
         // Or, is the page an archive page?
         } elseif (is_archive()) {
-            fide_breadcrumb_code($current_category, null, "black");
+            fide_breadcrumb_code($current_category, null, "black", "");
 
         // Or, is the page a search page?
         } elseif (is_search()) { 
-            fide_breadcrumb_code($search_title, null, "black");
+            fide_breadcrumb_code($search_title, null, "black", "");
 
         // Or, is the front-page?
         } elseif (is_front_page()) { 
@@ -561,11 +562,11 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
 
         // Or, is the page a single post or a literal page?
         } elseif (!(is_404()) && (is_single()) || (is_page())) { 
-            fide_breadcrumb_code($single_page_title, "Test-sub-cat", "white");
+            fide_breadcrumb_code($single_page_title, "Test-sub-cat", "white", "");
 
         // Or, is the page an error page?
         } elseif (is_404()) {
-            fide_breadcrumb_code($error_page_title, null, "black");
+            fide_breadcrumb_code($error_page_title, null, "black", "");
 
         }
 
