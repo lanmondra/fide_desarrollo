@@ -34,40 +34,61 @@
             </div>
         </div> <!-- End of grid container -->
 
+       
 
 
-        <div class="grid-container">
-            <div class="grid">
 
-                <div class="service-01">
-                    <h2 class="px28 line36">Der. aduanero tributario</h2>
-                    <p>Calificación de la mercancía, arancel aduanero común, IVA a la importación, regímenes aduaneros y otros regímenes, declaraciones, derechos antidumping, compensatorios y derechos adicionales, valor en aduana, etc...</p>
-                    <a class="service-cta px14 weight600" href="<?php echo site_url(); ?>/asesoria-derecho-aduanero-tributario">VER MÁS</a>
-                </div>
 
-                <div class="service-02">
-                    <h2 class="px28 line36">Alcohol y bebidas alcoh.</h2>
-                    <p>Implementación de procesos y análisis de mermas y rendimientos, declaraciones tributarias, contabilidad (SILICIE), defensa y representación ante la AEAT, recursos administrativos y contenciosos, etc...</p>
-                    <a class="service-cta px14 weight600" href="<?php echo site_url(); ?>/asesoria-alcohol-y-bebidas-alcoholicas">VER MÁS</a>
-                </div>
+        <?php
+// Supongamos que tienes un array de servicios
+$servicios = [
+    [
+        'titulo' => 'Der. aduanero tributario',
+        'descripcion' => 'Calificación de la mercancía, arancel aduanero común, IVA a la importación, regímenes aduaneros y otros ...',
+        'url' => site_url() . '/asesoria-derecho-aduanero-tributario'
+    ],
+    [
+        'titulo' => 'Alcohol y bebidas alcoh.',
+        'descripcion' => 'Implementación de procesos y análisis de mermas y rendimientos, declaraciones tributarias ...',
+        'url' => site_url() . '/asesoria-alcohol-y-bebidas-alcoholicas'
+    ],
+    [
+        'titulo' => 'Hidrocarburos y energía',
+        'descripcion' => 'Biocarburantes (FAME, ETBE, alcohol, biogás, plásticos, etcétera), combustibles y carburantes ...',
+        'url' => site_url() . '/asesoria-hidrocarburos-y-energia'
+    ],
+    [
+        'titulo' => 'Envases de plástico',
+        'descripcion' => 'Envases de plástico no reutilizables, semielaborados, reciclado mecánico y químico, elementos de cierre, ...',
+        'url' => site_url() . '/fides/asesoria-envases-de-plastico'
+    ]
+   
+];
 
-                <div class="service-03">
-                    <h2 class="px28 line36">Hidrocarburos y energía</h2>
-                    <p>Biocarburantes (FAME, ETBE, alcohol, biogás, plásticos, etcétera), combustibles y carburantes líquidos (SINAE), hidrocarburos no energéticos, hidrocarburos gaseosos, gas natural, declaraciones tributarias, etc...</p>
-                    <a class="service-cta px14 weight600" href="<?php echo site_url(); ?>/asesoria-hidrocarburos-y-energia">VER MÁS</a>
-                </div>
+// Definir la cantidad de servicios a mostrar por fila (en este caso 3)
+$servicios_por_fila = 3; 
 
-                <div class="service-04">
-                    <h2 class="px28 line36">Envases de plástico</h2>
-                    <br></br>
-                    <p>Envases de plástico no reutilizables, semielaborados, reciclado mecánico y químico, elementos de cierre, comercialización y presentación, fabricación,
-                        adquisición intracomunitaria e importación, etc...</p>                   
-                    <a class="service-cta px14 weight600" href="<?php echo site_url(); ?>/fides/asesoria-envases-de-plastico">VER MÁS</a>
-                </div>
-              
+echo '<div class="grid-container">';
 
-            </div>
-        </div>
+for ($i = 0; $i < count($servicios); $i += $servicios_por_fila) {
+    echo '<div class="grid">';
+
+    // Mostramos los servicios en bloques de $servicios_por_fila
+    for ($j = 0; $j < $servicios_por_fila && ($i + $j) < count($servicios); $j++) {
+        $servicio = $servicios[$i + $j];
+        $class_suffix = $j + 1; // Para generar la clase service-01, service-02, etc.
+        echo '<div class="service-0' . $class_suffix . '">';
+        echo '<h2 class="px28 line36">' . $servicio['titulo'] . '</h2>';
+        echo '<p>' . $servicio['descripcion'] . '</p>';
+        echo '<a class="service-cta px14 weight600" href="' . $servicio['url'] . '">VER MÁS</a>';
+        echo '</div>';
+    }
+
+    echo '</div>'; // Cierre de la fila
+}
+
+echo '</div>'; // Cierre del contenedor
+?>
 
 
 
@@ -119,7 +140,7 @@
                         <a href="<?php echo site_url(); ?>/contacto" class="newsletter-cta-button ibm-sans">CONTACTAR CON FIDE</a>
                     </div>
 
-                    <p class="services-copy mobile-hide">Como líderes en tributación indirecta y aduanera, <b>la excelencia en el servicio es nuestro principal objetivo,</b> y nuestra mayor recompensa, la satisfacción de nuestros clientes: administraciones, entidades públicas y privadas, grandes empresas, pymes y personas físicas.<br><br>Gracias a la proximidad con el cliente, el dinamismo de respuesta, la anticipación y el máximo respeto a las normas éticas más exigentes, FIDE fue galardonado como <b>Mejor Despacho Profesional de Economistas por el Colegio de Economistas de Cataluña.</b></p>
+                    <p class="services-copy mobile-hide">Como líderes en tributación indirecta y aduanera, <b>la excelencia en el servicio es nuestro principal objetivo,</b> y nuestra mayor recompensa, la satisfacción de nuestros clientes: administraciones, entidades públicas y privadas, grandes empresas, pymes y personas físicas.<br>Gracias a la proximidad con el cliente, el dinamismo de respuesta, la anticipación y el máximo respeto a las normas éticas más exigentes, FIDE fue galardonado como <b>Mejor Despacho Profesional de Economistas por el Colegio de Economistas de Cataluña.</b></p>
 
                 </div>
             </div>

@@ -702,7 +702,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
         } elseif (is_page('asesoria-envases-de-plastico')) {
             fide_breadcrumb_code("Envases de plástico", null, "white", "");
         } elseif (is_page('asesoria-derechos-emision')) {
-            fide_breadcrumb_code("Derechos de Emision", null, "white", "");
+            fide_breadcrumb_code("Derechos de Emisión", null, "white", "");
         } elseif (is_page('asesoria-fiscalidad-del-tabaco')) {
             fide_breadcrumb_code("Fiscalidad del tabaco", null, "white", "");
 

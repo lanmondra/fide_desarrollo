@@ -153,6 +153,10 @@ function fide_news_media_img_url($post_id) {
 		28  => array(
 		    "medio" => "Newtral",
 		    "img" => "medio-neutral.jpg"
+        ),
+        29  => array(
+		    "medio" => "Forbes",
+		    "img" => "medio-forbes.jpg"
 		    )
     );
 
@@ -160,6 +164,7 @@ function fide_news_media_img_url($post_id) {
 
     $check_media_array_position = array_search( $news_media, array_column($news_sources, "medio"), true );
 
+  
     $news_media_image_filename = "https://www.fide.es/wp-content/themes/fide2019/images/" . $news_sources[$check_media_array_position]["img"];
 
     return $news_media_image_filename;
@@ -289,6 +294,10 @@ function fide_news_media_img_alpha_url($post_id) {
 		28  => array(
 		    "medio" => "Newtral",
 		    "img" => "medio-neutral.png"
+        ),
+        29  => array(
+		    "medio" => "Forbes",
+		    "img" => "medio-a-forbes.png"
 		    )
 		
     );

@@ -23,13 +23,18 @@
             <div class="highlighted-tags-container">
 
                 <div class="highlighted-tag px20 line24 weight600">
-                    <span class="tag-text">REGISTRO</span></div>
+                    <span class="tag-text">INSCRIPCIÓN EN EL REGISTRO</span></div>
                 <div class="highlighted-tag px20 line24 weight600">
                     <span class="tag-text">DECLARACIONES TRIBUTARIAS</span></div>
                 <div class="highlighted-tag px20 line24 weight600">
-                    <span class="tag-text">CONTABLIDAD DE FÁBRICA</span></div>
-                <div class="highlighted-tag px20 line24 weight600">
-                    <span class="tag-text">REGISTRO DE ADQUISICIÓN INTRACOMUNITARIAS</span></div>
+                    <span class="tag-text">CONTABILIDAD DE FÁBRICA</span></div>                                 
+                    <div class="highlighted-tag px20 line24 weight600">
+                    <span class="tag-text">LIBRO-REGISTRO DE ADQUISICIONES INTRACOMUNITARIAS</span></div>
+                    <div class="highlighted-tag px20 line24 weight600">
+                    <span class="tag-text">DEVOLUCIONES</span></div>
+
+
+                    
 
             </div>
         </div> <!-- End of grid container -->
@@ -38,7 +43,7 @@
 
         <div class="grid-container">
 
-            <h2 class="servicios-h2 px28 line36 weight600">Impuestos especiales: Envases de plástico no reutilizable</h2>
+            <h2 class="servicios-h2 px28 line36 weight600">Impuesto especial sobre envases de plástico no reutilizables</h2>
 
             <div class="grid">
                 <hr class="generic-hr short-hr-after-breadcrumb ">
@@ -55,7 +60,8 @@
                 <li>Implementación de los procesos y análisis de riesgos y rendimientos</li><br>
                 <li>Asesoramiento continuo en contabilidades , registros y declaraciones</li><br>
                 <li>Defensa y representación ante actuaciones inspectoras de la AEAT</li><br>
-                <li>Recursos administrativos y contenciosos</li>
+                <li>Recursos administrativos y contenciosos</li><br>
+                <li>Devoluciones</li>
             </ul>
             <br/>
 
@@ -73,7 +79,7 @@
                         <a href="<?php echo site_url(); ?>/contacto" class="newsletter-cta-button ibm-sans">CONTACTAR CON FIDE</a>
                     </div>
 
-                    <p class="services-copy mobile-hide">Como líderes en tributación indirecta y aduanera, <b>la excelencia en el servicio es nuestro principal objetivo.</b> Nuestra mayor recompensa es la satisfacción de nuestros clientes: administraciones, entidades públicas y privadas, grandes empresas, pymes y personas físicas.<br><br>Gracias a la proximidad con el cliente, el dinamismo de respuesta, la anticipación y el máximo respeto a las normas éticas más exigentes, FIDE fue galardonado como <b>Mejor Despacho Profesional de Economistas por el Colegio de Economistas de Cataluña.</b></p>
+                    <p class="services-copy mobile-hide">Como líderes en tributación indirecta y aduanera, <b>la excelencia en el servicio es nuestro principal objetivo.</b> Nuestra mayor recompensa es la satisfacción de nuestros clientes: administraciones, entidades públicas y privadas, grandes empresas, pymes y personas físicas.<br>Gracias a la proximidad con el cliente, el dinamismo de respuesta, la anticipación y el máximo respeto a las normas éticas más exigentes, FIDE fue galardonado como <b>Mejor Despacho Profesional de Economistas por el Colegio de Economistas de Cataluña.</b></p>
 
                 </div>
             </div>
