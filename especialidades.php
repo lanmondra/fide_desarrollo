@@ -35,6 +35,51 @@
         </div> <!-- End of grid container -->
 
        
+        <style>
+/* Estilo base para grid */
+.grid-container-new {
+    display: grid;
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 10px;
+   
+}
+
+
+/* Para pantallas grandes: 3 columnas de 2 filas */
+@media (min-width: 1025px) {
+    .grid-container-new {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+       
+    }
+}
+
+/* Para pantallas de tamaño mediano como tablets: 2 columnas */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .grid-container-new {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+
+    .after-img-copy {
+    margin-top: 53px;
+}
+}
+
+/* Para pantallas pequeñas como móviles: 1 columna */
+@media (max-width: 767px) {
+    .grid-container-new{
+        grid-template-columns: 1fr; /* 1 columna */
+    }
+}
+
+/* Estilo de los servicios individuales */
+.service {
+    background-color: #FFFFFF;
+    padding: 20px;
+    text-align: left;
+    border-radius: 5px;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+}
+</style>
 
 
 
@@ -65,29 +110,17 @@ $servicios = [
    
 ];
 
-// Definir la cantidad de servicios a mostrar por fila (en este caso 3)
-$servicios_por_fila = 3; 
+echo '<div class="grid-container grid-container-new">';
 
-echo '<div class="grid-container">';
-
-for ($i = 0; $i < count($servicios); $i += $servicios_por_fila) {
-    echo '<div class="grid">';
-
-    // Mostramos los servicios en bloques de $servicios_por_fila
-    for ($j = 0; $j < $servicios_por_fila && ($i + $j) < count($servicios); $j++) {
-        $servicio = $servicios[$i + $j];
-        $class_suffix = $j + 1; // Para generar la clase service-01, service-02, etc.
-        echo '<div class="service-0' . $class_suffix . '">';
-        echo '<h2 class="px28 line36">' . $servicio['titulo'] . '</h2>';
-        echo '<p>' . $servicio['descripcion'] . '</p>';
-        echo '<a class="service-cta px14 weight600" href="' . $servicio['url'] . '">VER MÁS</a>';
-        echo '</div>';
-    }
-
-    echo '</div>'; // Cierre de la fila
+foreach ($servicios as $index => $servicio) {
+    echo '<div class="service">';
+    echo '<h2 class="px28 line36">' . $servicio['titulo'] . '</h2>';
+    echo '<p>' . $servicio['descripcion'] . '</p>';
+    echo '<a class="service-cta px14 weight600" href="' . $servicio['url'] . '">VER MÁS</a>';
+    echo '</div>';
 }
 
-echo '</div>'; // Cierre del contenedor
+echo '</div>';
 ?>
 
 
