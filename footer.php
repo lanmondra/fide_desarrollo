@@ -125,7 +125,7 @@
                         </ul>
                         <ul class="footer-links-social">
 <li><a href="https://www.linkedin.com/company/fidetaxlegal" target="_blank"><img class="footer-social-icon" src="<?php print IMAGES; ?>/icons-linkedin.svg"></a></li>
-<li><a href="https://twitter.com/fidetax_legal" target="_blank"><img class="footer-social-icon" src="<?php print IMAGES; ?>/icons-twitter.svg"></a></li>
+<li><a href="https://twitter.com/fidetax_legal" target="_blank"><img class="footer-social-icon" src="<?php print IMAGES; ?>/new-icons-twitter.svg"></a></li>
 <li><a href="https://www.youtube.com/channel/UCpYYQd3LNiO3lwTdfd9hXiA" target="_blank"><img class="footer-social-icon" src="<?php print IMAGES; ?>/icons-youtube.svg"></a></li>
                         </ul>
                     </div>
