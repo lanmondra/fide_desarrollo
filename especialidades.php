@@ -77,7 +77,7 @@
     padding: 20px;
     text-align: left;
     border-radius: 5px;
-    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 </style>
 
@@ -106,6 +106,16 @@ $servicios = [
         'titulo' => 'Envases de plástico',
         'descripcion' => 'Envases de plástico no reutilizables, semielaborados, reciclado mecánico y químico, elementos de cierre, ...',
         'url' => site_url() . '/fides/asesoria-envases-de-plastico'
+    ],
+    [
+        'titulo' => 'Fiscalidad medioambiental',
+        'descripcion' => 'Los impuestos medioambientales son tributos con una finalidad extrafiscal que pretenden gravar las externalidades negativas que se producen  ...',
+        'url' => site_url() . '/asesoria-fiscalidad-medioambiental'
+    ],
+    [
+        'titulo' => 'Derechos de Emisión',
+        'descripcion' => 'Los sistemas de comercio de emisiones son instrumentos de mercado establecidos con el objetivo de reducir de las emisiones de gases ...',
+        'url' => site_url() . '/asesoria-derechos-emision'
     ]
    
 ];

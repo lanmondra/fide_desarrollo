@@ -62,14 +62,25 @@
                 <hr class="generic-hr short-hr-after-breadcrumb">
             </div>
 
-            <p class="services-individual-copy">La comercialización de combustibles y carburantes en España está regulada por la Ley 34/98, de 7 de octubre del sector 
-                de hidrocarburos, una norma liberalizadora, de marco amplio y que legaliza una extensa actividad que abarca desde la extracción de un 
-                hidrocarburo en un yacimiento subterráneo hasta su consumo en el motor de un vehículo, en la calefacción de una vivienda o en un proceso 
-                industrial, siendo una actividad calificada de interés económico general sometida a requisitos y obligaciones.<br>
-                <br>En FIDE asesoramos a las empresas comercializadoras y productoras que actúan en cualquier nivel del mercado de los combustibles y carburantes, 
-                esto es operadores, productores, distribuidores, gasolineras y consumidores finales. <b>En concreto con relación a en una misma línea en la columna de la derecha relación a:</b>
-                <br><br>• Autorizaciones<br>• SICBIOS<br>• Eficiencia energética<br>• Reservas estratégicas (CORES)<br>• Declaración emisiones<br>• Importaciones
-                <br>• Anejos<br>• Declaraciones</p>
+            <p class="services-individual-copy">
+    La comercialización de combustibles y carburantes en España está regulada por la Ley 34/98, de 7 de octubre del sector 
+    de hidrocarburos, una norma liberalizadora, de marco amplio y que legaliza una extensa actividad que abarca desde la extracción de un 
+    hidrocarburo en un yacimiento subterráneo hasta su consumo en el motor de un vehículo, en la calefacción de una vivienda o en un proceso 
+    industrial, siendo una actividad calificada de interés económico general sometida a requisitos y obligaciones.
+    <br><br>
+    En FIDE asesoramos a las empresas comercializadoras y productoras que actúan en cualquier nivel del mercado de los combustibles y carburantes, 
+    esto es operadores, productores, distribuidores, gasolineras y consumidores finales.
+    <b style="display: block; margin-top: 10px;">En concreto, en relación con:</b>
+    <br>
+    • Autorizaciones<br>
+    • SICBIOS<br>
+    • Eficiencia energética<br>
+    • Reservas estratégicas (CORES)<br>
+    • Declaración emisiones<br>
+    • Importaciones<br>
+    • Anejos<br>
+    • Declaraciones
+</p>
 
         </div>
 
