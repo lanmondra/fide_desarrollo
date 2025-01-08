@@ -1,58 +1,135 @@
-// COOKIES STUFF
-// COOKIES STUFF
-// COOKIES STUFF
 
-// Creare's 'Implied Consent' EU Cookie Law Banner v:2.4
-// Conceived by Robert Kent, James Bavington & Tom Foyster
- 
-var dropCookie = true;                      // "false" disables the Cookie, allowing you to style the banner
-var cookieDuration = 90;                    // Number of days before the cookie expires, and the banner reappears
-var cookieName = 'fideComplianceCookie';    // Name of our cookie
-var cookieValue = 'on';                     // Value of cookie
- 
-function createDiv(){
-    var bodytag = document.getElementsByTagName('body')[0];
-    var div = document.createElement('div');
-    div.setAttribute('id','cookie-law');
-    div.innerHTML = '<div class="grid-container"><div class="unselectable grid cookie-container"><div class="cookie-text"><img src="https://www.fide.es/wp-content/themes/fide2019/images/icons-info.svg"><span>Fide.es utiliza cookies para mejorar la experiencia de sus usuarios. <a class="cookie-law-link" href="https://www.fide.es/politica-de-cookies/" target="_blank" rel="nofollow" title="Pol&iacute;tica de cookies">Ver política de cookies</a></span></div><a class="cookie-close-button" href="javascript:void(0);" onclick="removeMe();"><span class="cookie-accept">ACEPTAR</span></a></div></div>';    
-    bodytag.insertBefore(div,bodytag.firstChild);
+var dropCookie = true;                      
+var cookieDuration = 90;                   
+var cookieName = 'fideComplianceCookie';    
+var cookieValue = 'on';   
+var accepted = false;           
 
-    // document.getElementsByTagName('body')[0].className+='cookiebanner';
-    // Adds a class to the <body> tag when the banner is visible
+function initCookies() {
+    if (!checkCookie(cookieName)) {
+        showPolicyModal(); // Mostrar modal al cargar
+        blockInteraction(); // Deshabilitar interacción hasta aceptar cookies
+    }
 }
 
-function createCookie(name,value,days) {
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime()+(days*24*60*60*1000)); 
-        var expires = "; expires="+date.toGMTString(); 
-    }
-    else var expires = "";
-    if (window.dropCookie) { 
-        document.cookie = name+"="+value+expires+"; path=/"; 
-    }
+function showPolicyModal() {
+    // Crear overlay para deshabilitar interacción
+    var overlay = document.createElement('div');
+    overlay.setAttribute('id', 'cookie-overlay');
+    overlay.style.position = 'fixed';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.backgroundColor = 'rgba(50, 50, 50, 0.8)'; // Fondo gris semitransparente
+    overlay.style.zIndex = '999'; // Asegurar que esté sobre todo el contenido
+    document.body.appendChild(overlay);
+
+    // Crear modal de configuración de cookies
+    var modal = document.createElement('div');
+    modal.setAttribute('id', 'policy-modal');
+    modal.style.position = 'fixed';
+    modal.style.top = '50%';
+    modal.style.left = '50%';
+    modal.style.borderRadius = '5px';
+    modal.style.transform = 'translate(-50%, -50%)';
+    modal.style.width = '80%';
+    modal.style.maxWidth = '600px';
+    modal.style.backgroundColor = '#fff';
+    modal.style.padding = '20px';
+    modal.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+    modal.style.zIndex = '1000'; // Sobre el overlay
+    modal.style.pointerEvents = 'auto';
+
+    modal.innerHTML = `
+    <h2 style="line-height: 25px; font-family: 'IBM Plex Sans', sans-serif;">Configuración de Cookies</h2>
+    <span style="line-height: 25px; font-family: 'IBM Plex Sans', sans-serif;">
+        En FIDE utilizamos cookies y tecnologías similares para garantizar el correcto funcionamiento de nuestro sitio web, 
+        mejorar tu experiencia de navegación, analizar el uso del sitio y personalizar el contenido. 
+        Puedes configurar tus preferencias de cookies a continuación.
+    </span>
+    <h4 style="line-height: 25px; font-family: 'IBM Plex Sans', sans-serif;">Selecciona las cookies que desea aceptar:</h4>
+    <form id="cookie-form" style="line-height: 25px; font-family: 'IBM Plex Sans', sans-serif;">
+        <label>
+            <input type="checkbox" name="cookie-essentials" checked disabled>
+            Cookies esenciales: necesarias para el funcionamiento del sitio web
+        </label><br>
+        <label>
+            <input type="checkbox" name="cookie-preferences" checked>
+            Cookies de personalización: permiten mostrar contenido relevante y adaptado a tus intereses.
+        </label><br>           
+    </form>
+    <div style="margin-top: 20px; text-align: center;">
+    <a href="https://www.fide.es/politica-de-cookies/" target="_blank" style="display: block; margin-bottom: 15px; color: #AC0600; text-decoration: underline; font-family: 'IBM Plex Sans', sans-serif;">
+        Leer nuestra política de cookies
+    </a>
+    <div style="display: flex; justify-content: space-between;">
+        <button onclick="saveCookiePreferences();" style="padding: 10px 20px; background-color: #AC0600; color: #fff; border-radius: 30px; cursor: pointer; font-family: 'IBM Plex Sans', sans-serif;">Aceptar</button>
+        <button onclick="closePolicyModal();" style="padding: 10px 20px; background-color: #000; color: #fff; border-radius: 30px; cursor: pointer; font-family: 'IBM Plex Sans', sans-serif;">Rechazar</button>
+    </div>
+</div>
+`;
+
+    document.body.appendChild(modal);
+}
+
+function saveCookiePreferences() {
+    var form = document.getElementById('cookie-form');
+    var preferences = {
+        essentials: true, // Siempre activadas
+        preferences: form.elements['cookie-preferences'].checked
+    };
+    document.cookie = `cookiePreferences=${JSON.stringify(preferences)}; path=/; max-age=${cookieDuration * 24 * 60 * 60}`;
+    createCookie(cookieName, cookieValue, cookieDuration); // Guardar cookie principal
+
+    accepted = true; // Establecer accepted en true
+    closePolicyModal(); // Cerrar el modal
+    allowInteraction(); // Habilitar la interacción con la página
+}
+
+function createCookie(name, value, days) {
+    var date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    var expires = "; expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + expires + "; path=/";
 }
 
 function checkCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
-    for (var i=0;i < ca.length;i++) {
+    for (var i = 0; i < ca.length; i++) {
         var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1,c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
     }
     return null;
 }
 
-function eraseCookie(name) {
-    createCookie(name,"",-1);
+function closePolicyModal() {
+    var modal = document.getElementById('policy-modal');
+    if (modal) {
+        modal.parentNode.removeChild(modal);
+    }
+    allowInteraction(); // Permitir interacción con la página
 }
 
-function removeMe() {
-    createCookie(window.cookieName, window.cookieValue, window.cookieDuration); // Create the cookie
-    var element = document.getElementById('cookie-law');
-    element.parentNode.removeChild(element);
+function allowInteraction() {
+    var overlay = document.getElementById('cookie-overlay');
+    if (overlay) {
+        overlay.parentNode.removeChild(overlay); // Eliminar overlay
+    }
+    document.body.style.pointerEvents = 'auto'; // Habilitar interacción
 }
+
+function blockInteraction() {
+    document.body.style.pointerEvents = 'none'; // Deshabilitar interacción inicial
+}
+
+// Inicializar cookies al cargar la página
+window.onload = initCookies;
+
+
+
 
 // END OF COOKIES STUFF
 // END OF COOKIES STUFF

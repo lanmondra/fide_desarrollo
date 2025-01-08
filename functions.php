@@ -730,6 +730,14 @@ function update_adminbar($wp_adminbar) {
 }
 add_action( 'admin_bar_menu', 'update_adminbar', 999 );
 
+add_action('template_redirect', 'redirect_404_to_home');
+
+function redirect_404_to_home() {
+    if (is_404()) {
+        wp_redirect(home_url(), 301);
+        exit;
+    }
+}
 
 
 // REMOVE WP-ADMIN BAR IN THE FRONT-END

@@ -146,7 +146,7 @@ ADDRESS
 	-ms-grid-column: 20;
 	-ms-grid-column-span: 4;
 	-ms-grid-row: 1;
-	grid-column: 19 / span 4;
+	grid-column: 19 / span 5;
 	grid-row: 1 / span 1;
 }
 .address-sant-container {
@@ -229,6 +229,7 @@ ADDRESS
     padding: 10px;
     text-align: center;
     margin: 24px 0;
+	width: 170px;
 }
 
 .google-maps-button:hover {
@@ -238,7 +239,7 @@ ADDRESS
 }
 
 .cf-address {
-    margin: 36px 0;
+    margin: 36px -5;
     display: block;
     line-height: 24px;
 }

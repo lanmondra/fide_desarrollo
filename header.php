@@ -336,7 +336,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                         <span class="hover-border"></span>
                     </li>
                     
-                    <li class="description">
+                    <li class="description display-dispositivos">
                         Asesores legales y tributarios
                     </li>
 
@@ -729,7 +729,14 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
             fide_breadcrumb_code("Aviso legal", null, "black", "");
 
             // Is a single article page?
-        } elseif (is_single()) {
+        } elseif (is_page('Politica de privacidad')) {
+            fide_breadcrumb_code("Política de privacidad", null, "black", "");
+
+        } elseif (is_page('Politicas de cookies')) {
+            fide_breadcrumb_code("Política de cookies", null, "black", "");
+
+            // Is a single article page?
+        }elseif (is_single()) {
             fide_breadcrumb_code("Actualidad", null, "white", "");
 
             // Is the current page a tag archive page?

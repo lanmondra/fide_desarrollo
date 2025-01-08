@@ -884,8 +884,12 @@ TABLET AND MEDIUM SIZES
         float: none;
         border-bottom: solid 1px #111111;
 		background-color: #AC0600;
+		display: none;
     }
 
+	.display-dispositivos{
+		display: none;
+	}
     ul.rootmenu > li:first-child {
         border-top: solid 1px #111111;
     }
@@ -933,6 +937,9 @@ TABLET AND MEDIUM SIZES
 
 	.grid {
 	    grid-template-columns: repeat(11, 1fr 1fr) 1fr;
+	}
+	.display-dispositivos{
+		display: none;
 	}
 
 }

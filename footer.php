@@ -99,7 +99,7 @@
                        <div class="address address-santiago">
                         <p class="footer-city weight600">Vigo</p>
                         <p class="footer-city-address gray-9">
-                            C/ Marqués de Valladares 14, 6ª Oficinas 7 y 8<br>
+                            C/ Marqués de Valladares 14, 6ª<br>
                             36201 Vigo<br>
                             Tel. 886 035 929
                         </p>
@@ -119,14 +119,14 @@
 
                     <div class="footer-links-container">
                         <ul class="footer-links">
-                            <!-- <li><a href="<?php # echo site_url(); ?>/politica-de-privacidad">Política de privacidad</a></li> -->
+                            <li><a href="<?php echo site_url(); ?>/politica-de-privacidad">Política de privacidad</a></li> 
                             <!-- <li><a href="<?php # echo site_url(); ?>/politica-de-cookies">Política de cookies</a></li> -->
                             <li><a href="<?php echo site_url(); ?>/aviso-legal">Aviso legal</a></li>
                         </ul>
                         <ul class="footer-links-social">
-<li><a href="https://www.linkedin.com/company/fidetaxlegal" target="_blank"><img class="footer-social-icon" src="<?php print IMAGES; ?>/icons-linkedin.svg"></a></li>
-<li><a href="https://twitter.com/fidetax_legal" target="_blank"><img class="footer-social-icon" src="<?php print IMAGES; ?>/new-icons-twitter.svg"></a></li>
-<li><a href="https://www.youtube.com/channel/UCpYYQd3LNiO3lwTdfd9hXiA" target="_blank"><img class="footer-social-icon" src="<?php print IMAGES; ?>/icons-youtube.svg"></a></li>
+                        <li><a href="https://www.linkedin.com/company/fidetaxlegal" target="_blank"><img class="footer-social-icon" src="<?php print IMAGES; ?>/icons-linkedin.svg"></a></li>
+                        <li><a href="https://twitter.com/fidetax_legal" target="_blank"><img class="footer-social-icon" src="<?php print IMAGES; ?>/new-icons-twitter.svg"></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCpYYQd3LNiO3lwTdfd9hXiA" target="_blank"><img class="footer-social-icon" src="<?php print IMAGES; ?>/icons-youtube.svg"></a></li>
                         </ul>
                     </div>
             

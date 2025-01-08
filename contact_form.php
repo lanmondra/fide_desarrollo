@@ -133,7 +133,7 @@ function contact_form_code( $atts ) {
         <div>
             <label for="cf_check" class="check-label">
                 <input type="checkbox" name="privacy_check" value="' . $form_data['privacy_check'] . '" name="check" id="cf_check" required title="Es necesario que lea y acepte nuestra política de privacidad para que podamos procesar sus datos">
-                He leído y acepto la <a href="https:www.fide.es/politica-de-privacidad" target="_blank" style="text-decoration:underline;">política de privacidad</a>.
+                He leído y acepto la <a href="https://www.fide.es/politica-de-privacidad/" target="_blank" style="text-decoration:underline;">política de privacidad</a>.
             </label>
         </div>
         <div>
