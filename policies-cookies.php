@@ -18,7 +18,7 @@
         <div class="grid">
             <div class="post-container">
                 <div class="single-post-content px16 line24">
-                <h3>Nuestra Política de Cookies</h3>
+                <h3>Nuestra política de cookies</h3>
                 <p>En <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong> utilizamos cookies para mejorar la experiencia de navegación y analizar estadísticas sobre el uso del sitio.</p>
    
                 <h2>¿Qué son las cookies?</h2>

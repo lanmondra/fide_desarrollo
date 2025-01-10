@@ -884,12 +884,12 @@ TABLET AND MEDIUM SIZES
         float: none;
         border-bottom: solid 1px #111111;
 		background-color: #AC0600;
-		display: none;
+		
     }
 
-	.display-dispositivos{
-		display: none;
-	}
+	.display-dispositivos {
+        display: none !important; /* Asegúrate de usar !important si hay estilos conflictivos */
+    }
     ul.rootmenu > li:first-child {
         border-top: solid 1px #111111;
     }

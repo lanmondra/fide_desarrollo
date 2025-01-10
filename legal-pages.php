@@ -31,7 +31,7 @@
                         
                             <h2>1. Datos identificativos</h2>
                             En cumplimiento con el deber de información recogido en artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del 
-                            Comercio Electrónico, a continuación se reflejan los siguientes datos: la empresa titular de dominio web es FIDE Asesores Legales y Tributarios, 
+                            Comercio Electrónico, a continuación se reflejan los siguientes datos: la empresa titular de dominio web es <strong class="highlight" >FIDE ASESORES LEGALES Y TRIBUTARIOS, S.L.P.</strong> , 
                             con domicilio a estos efectos en Rambla de Catalunya 38, 7ª Planta 08007 Barcelona número de C.I.F.: B-62746847 inscrita en el Registro Mercantil el 15/01/02. 
                             Tomo 34156, Folio: 50, Hoja Registral: 243299, Inscripción 1. Correo electrónico de contacto: <strong>fide@fide.es</strong> del sitio web.
 
@@ -216,7 +216,7 @@
                                 Puedes ejercer tus derechos de acceso, rectificación, supresión y otros escribiendo a <strong>fide@fide.es</strong>.
                             </p>
                             <p>
-                                <a class="font-bold" href="https://www.fide.es/fide/politica-de-privacidad" target="_blank">Leer más sobre nuestra Política de privacidad</a>
+                                <a class="font-bold" href="https://www.fide.es/politica-de-privacidad" target="_blank">Leer más sobre nuestra Política de privacidad</a>
                             </p>
 
                             <h2>15. Política de cookies</h2>
@@ -225,7 +225,7 @@
                                 Puedes configurar tus preferencias en tu navegador en cualquier momento.
                             </p>
                             <p>
-                                <a class="font-bold" href="https://www.fide.es/fide/politica-de-cookies" target="_blank">Leer más sobre nuestra Política de cookies</a>
+                                <a class="font-bold" href="https://www.fide.es/politica-de-cookies" target="_blank">Leer más sobre nuestra Política de cookies</a>
                             </p>
                         </div>
 
