@@ -166,6 +166,7 @@ ul.rootmenu { /* Main bar */
     list-style: none;
     padding: 0;
     margin: 0;
+	
 }
 
 ul.rootmenu > li { /* Sections */
@@ -1073,4 +1074,102 @@ a.cookie-close-button {
 
 }
 
+/* NUEVO ESTILOS PARA MENU HAMBURGUESA DISPOSITIVOS PEQUEÑOS */
+
+#actualidad-dropdown.dropdown-content {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #111111;;
+    background-color: #fff;
+    
+}
+
+/* Estilo para los elementos dentro del dropdown de Actualidad */
+#actualidad-dropdown li {
+    /* padding: 8px 20px;  */
+    margin-left: 20px; 
+    border-bottom: 1px solid #111111;
+    background-color: #AC0600;
+    height: 48px;
+}
+
+/* Último elemento sin borde inferior */
+#actualidad-dropdown li:last-child {
+    border-bottom: none;
+}
+
+/* Estilo para los enlaces dentro de Actualidad */
+#actualidad-dropdown a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: normal;
+    color: #CCCCCC;
+   
+}
+
+/* Hover para las opciones de Actualidad */
+#actualidad-dropdown a:hover {
+    color: #CCCCCC;
+    border-bottom: 1px solid #111111;
+    background-color: #AC0600;
+}
+
+/* Mostrar el dropdown cuando está activo */
+#actualidad-dropdown.show {
+    display: block;
+}
+
+/* Solo para Actualidad, no afecta otros menús */
+.rootmenu li#mobile-nav-sections a[onclick*="actualidad-dropdown"] {
+    margin-left: 60px;   
+    margin-top: -60px;   
+    /* margin-right: 10px; */
+}
+
+/* Íconos específicos solo para opciones de Actualidad */
+#actualidad-dropdown li::before {
+   
+    margin-right: 8px;
+    color: #ac0500;
+    font-weight: bold;
+}
+
+/* Margen exclusivo para las opciones de Actualidad */
+#mobile-nav-sections ul#actualidad-dropdown {
+    /* margin-left: 20px; */
+    background-color: #AC0600;
+}
+
+.nav-bullet-act {
+    font-size: 30px; /* Tamaño del texto */
+    color: #AAAAAA; /* Color del texto */
+    display: inline-block; /* Asegura que esté en línea con el enlace */
+    margin-right: 10px; /* Espaciado del símbolo */   
+    line-height: 1; /* Alineación vertical */
+    vertical-align: middle; /* Asegura alineación con el texto del enlace */
+    margin: 9px 22px 22px 48px;   
+    
+}
+
+.nav-bullet-act.open {
+    color: #a8100b; /* Cambiar color al abrir */
+	
+	
+}
+
+@media (max-width: 575px) {
+    .nav-bullet-act {
+        margin: 7px 15px 22px 12px;
+    }
+
+    /* Solo para Actualidad, no afecta otros menús */
+.rootmenu li#mobile-nav-sections a[onclick*="actualidad-dropdown"] {
+    margin-left: 25px;   
+    margin-top: -60px;   
+    /* margin-right: 10px; */
+    }
+}
 

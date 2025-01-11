@@ -207,8 +207,13 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
         <nav id="navigation" class="unselectable">
             <div class="hamburger-menu-container">               
                 <div class="hamburger js-showmenu"> <!-- js-showmenu class targeted from JS -->
-                    <img src="<?php print IMAGES; ?>/icons-menu.svg">
+                    <img src="<?php print IMAGES; ?>/icons-menu.svg" alt="Menu">
                 </div>
+                <!-- <div class="hamburger"> 
+                <a href="<?php echo site_url(); ?>" title="fide.es - Inicio">
+                    <img class="img-log-movils" src="<?php print IMAGES; ?>/fide-logo.svg" alt="<?php bloginfo('name'); ?>">
+                    </a>
+                </div>  -->
 
                 <div class="hamburger-menu-search-icon">
                     <a class="mobile-link-no-highligth" href="<?php echo site_url(); ?>/buscar">
@@ -241,14 +246,52 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                     <!-- START OF MOBILE NAV SECTIONS -->
 
                     <li id="mobile-nav-sections">
-                        <span class="nav-bullet"></span>
-                        <a href="<?php echo site_url(); ?>/actualidad/fide-medios">FIDE en los Medios</a>
-                        <span class="hover-border"></span>
+                    <span class="nav-bullet-act">+</span>
+                    <a href="javascript:void(0);" onclick="toggleDropdown('actualidad-dropdown')">Actualidad</a>
+                    <span class="hover-border"></span>
+                        <ul id="actualidad-dropdown" class="dropdown-content">
+                            <li id="actualidad-dropdown">
+                                <span class="nav-bullet"></span>
+                                <a href="<?php echo site_url(); ?>/actualidad/aduanas">Aduanas</a>
+                            </li> 
+                            <li id="actualidad-dropdown">
+                                <span class="nav-bullet"></span>
+                                <a href="<?php echo site_url(); ?>/actualidad/hidrocarburos-y-energia">Hidrocarburos y energía</a>
+                            </li>
+                            <li id="actualidad-dropdown">
+                                <span class="nav-bullet"></span>
+                                <a href="<?php echo site_url(); ?>/actualidad/alcohol-y-bebidas-alcoholicas">Alcohol y bebidas alcohólicas</a>
+                            </li>
+                            <li id="actualidad-dropdown">
+                                <span class="nav-bullet"></span>
+                                <a href="<?php echo site_url(); ?>/actualidad/tributacion-indirecta">Tributación indirecta</a>
+                            </li>
+                            <li id="actualidad-dropdown">
+                                <span class="nav-bullet"></span>
+                                <a href="<?php echo site_url(); ?>/actualidad/fiscalidad-general">Fiscalidad general</a>
+                            </li>
+                            <li id="actualidad-dropdown">
+                            <span class="nav-bullet"></span>
+                                <a href="<?php echo site_url(); ?>/actualidad/labores-del-tabaco">Labores del tabaco</a>
+                            </li>
+                            <li id="actualidad-dropdown">
+                                <span class="nav-bullet"></span>
+                                <a href="<?php echo site_url(); ?>/actualidad/impuestos-medioambientales">Impuestos medioambientales</a>
+                            </li>
+                            <li id="actualidad-dropdown">
+                                <span class="nav-bullet"></span>
+                                <a href="<?php echo site_url(); ?>/actualidad/envases-de-plastico">Envases de plástico</a>
+                            </li>
+                            <li id="actualidad-dropdown">
+                                <span class="nav-bullet"></span>
+                                <a href="<?php echo site_url(); ?>/actualidad/derechos-de-emision">Derechos de emisión</a>
+                            </li>                           
+                        </ul>
                     </li>
-
+<!--
                     <li id="mobile-nav-sections">
                         <span class="nav-bullet"></span>
-                        <a href="<?php echo site_url(); ?>/actualidad/aduanas">Aduanas</a>
+                        <a href="<?php echo site_url(); ?>/actualidad/aduanas">Aduanassss</a>
                         <span class="hover-border"></span>
                     </li>
 
@@ -296,7 +339,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                         <span class="nav-bullet"></span>
                         <a href="<?php echo site_url(); ?>/actualidad/derechos-de-emision">Derechos de emisión</a>
                         <span class="hover-border"></span>
-                    </li>
+                    </li>-->
 
                     <!-- END OF MOBILE NAV SECTIONS -->
                     <!-- END OF MOBILE NAV SECTIONS -->
@@ -770,6 +813,39 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
 
         ?>
 
+        <script>
+        function toggleDropdown(id) {
+            const dropdown = document.getElementById(id);
+            const parentLi = dropdown.closest('li'); // Encuentra el contenedor <li>
+            const bullet = parentLi.querySelector('.nav-bullet-act'); // Selecciona el span .nav-bullet-act
 
+            // Alternar la visibilidad del dropdown
+            dropdown.classList.toggle('show');
+
+            // Cambiar el texto del símbolo
+            if (dropdown.classList.contains('show')) {
+                bullet.textContent = '-'; // Cambiar a guion    
+            } else {
+                bullet.textContent = '+'; // Cambiar a más
+            }
+        }
+
+        // Cerrar el menú si se hace clic fuera
+        document.addEventListener('click', function (event) {
+            const dropdown = document.getElementById('actualidad-dropdown');
+            const parentLi = dropdown.closest('li');
+            const bullet = parentLi.querySelector('.nav-bullet-act');
+            const isClickInside = dropdown.contains(event.target) || event.target.closest('[onclick*="toggleDropdown"]');
+
+            if (!isClickInside) {
+                dropdown.classList.remove('show');
+                if (bullet) {
+                bullet.textContent = '+'; // Cambiar al estado cerrado
+                }
+            }
+        });
+
+
+        </script>
 
     </header>
