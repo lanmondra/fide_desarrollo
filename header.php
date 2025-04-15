@@ -647,6 +647,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
         $current_tag = single_tag_title("", false);
         $current_category = single_cat_title("", false);
         $current_cat_id = get_cat_id($current_category);
+        $category_id = get_queried_object_id();
         $category_description = category_description($category_id);
         $search_title = "Resultados de la búsqueda";
         $single_page_title = get_the_title();
