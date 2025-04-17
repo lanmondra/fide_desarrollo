@@ -215,7 +215,9 @@ ul.rootmenu > li.menu-newsletter img.menu-newsletter-img { /* Right icons correc
 }
 
 
-
+.only-mobile{
+	display: none;
+}
 /* --------------------------
 -----------------------------
 NAVIGATION SUB-MENU
@@ -432,6 +434,10 @@ SEARCH IN NAVIGATION
 		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 	}
 
+	.only-mobile {
+        display: block;
+    }
+
 }
 
 
@@ -471,6 +477,10 @@ BREADCRUMB
 	    height: auto;
 	    padding: 24px 0;
 	}
+
+	.only-mobile {
+        display: block;
+    }
 }
 
 .breadcrumb img {
@@ -887,6 +897,7 @@ TABLET AND MEDIUM SIZES
 		background-color: #AC0600;
 		
     }
+	
 
 	.display-dispositivos {
         display: none !important; /* Asegúrate de usar !important si hay estilos conflictivos */
