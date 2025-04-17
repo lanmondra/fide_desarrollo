@@ -166,6 +166,7 @@ ul.rootmenu { /* Main bar */
     list-style: none;
     padding: 0;
     margin: 0;
+	
 }
 
 ul.rootmenu > li { /* Sections */
@@ -214,7 +215,9 @@ ul.rootmenu > li.menu-newsletter img.menu-newsletter-img { /* Right icons correc
 }
 
 
-
+.only-mobile{
+	display: none;
+}
 /* --------------------------
 -----------------------------
 NAVIGATION SUB-MENU
@@ -431,6 +434,10 @@ SEARCH IN NAVIGATION
 		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 	}
 
+	.only-mobile {
+        display: block;
+    }
+
 }
 
 
@@ -470,6 +477,10 @@ BREADCRUMB
 	    height: auto;
 	    padding: 24px 0;
 	}
+
+	.only-mobile {
+        display: block;
+    }
 }
 
 .breadcrumb img {
@@ -481,6 +492,61 @@ BREADCRUMB
 .breadcrumb .breadcrumb-separator-1,
 .breadcrumb .breadcrumb-separator-2 {
     margin: 0 7px;
+}
+
+.additional-text{
+	font-size: 19px;
+    line-height: 24px;  
+	font-style: italic;
+	margin-left: 7%;
+    color: #AC0600;
+	white-space: nowrap;
+	/* color: #222222; */
+	display: block; 
+}
+
+@media (max-width: 768px) {
+    .additional-text {
+        display: block; 
+        margin-top: 2px; 
+		font-size: 14px;
+		font-style: italic;
+		white-space: nowrap;
+		margin-left: 0%;
+    }
+}
+
+/* Dispositivos medianos: tabletas y móviles grandes en modo paisaje */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .additional-text {
+		display: block; 
+        font-size: 19px;
+        font-style: italic;
+        white-space: normal;
+        margin-left: 0%;
+    }
+}
+
+/* Dispositivos grandes: laptops y pantallas de escritorio pequeñas */
+@media (min-width: 1025px) and (max-width: 1366px) {
+    .additional-text {
+		display: block; 
+        font-size: 19px;
+        font-style: italic;
+        white-space: normal;
+        margin-left: 7%;
+    }
+}
+
+/* Dispositivos extra grandes: pantallas de escritorio grandes */
+@media (min-width: 1367px) {
+    .additional-text {
+		display: block; 
+        font-size: 19px;
+        font-style: italic;
+        white-space: normal;
+        margin-left: 7%;
+    }
 }
 
 
@@ -829,8 +895,13 @@ TABLET AND MEDIUM SIZES
         float: none;
         border-bottom: solid 1px #111111;
 		background-color: #AC0600;
+		
     }
+	
 
+	.display-dispositivos {
+        display: none !important; /* Asegúrate de usar !important si hay estilos conflictivos */
+    }
     ul.rootmenu > li:first-child {
         border-top: solid 1px #111111;
     }
@@ -878,6 +949,9 @@ TABLET AND MEDIUM SIZES
 
 	.grid {
 	    grid-template-columns: repeat(11, 1fr 1fr) 1fr;
+	}
+	.display-dispositivos{
+		display: none;
 	}
 
 }
@@ -1011,4 +1085,102 @@ a.cookie-close-button {
 
 }
 
+/* NUEVO ESTILOS PARA MENU HAMBURGUESA DISPOSITIVOS PEQUEÑOS */
+
+#actualidad-dropdown.dropdown-content {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #111111;;
+    background-color: #fff;
+    
+}
+
+/* Estilo para los elementos dentro del dropdown de Actualidad */
+#actualidad-dropdown li {
+    /* padding: 8px 20px;  */
+    margin-left: 20px; 
+    border-bottom: 1px solid #111111;
+    background-color: #AC0600;
+    height: 48px;
+}
+
+/* Último elemento sin borde inferior */
+#actualidad-dropdown li:last-child {
+    border-bottom: none;
+}
+
+/* Estilo para los enlaces dentro de Actualidad */
+#actualidad-dropdown a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: normal;
+    color: #CCCCCC;
+   
+}
+
+/* Hover para las opciones de Actualidad */
+#actualidad-dropdown a:hover {
+    color: #CCCCCC;
+    border-bottom: 1px solid #111111;
+    background-color: #AC0600;
+}
+
+/* Mostrar el dropdown cuando está activo */
+#actualidad-dropdown.show {
+    display: block;
+}
+
+/* Solo para Actualidad, no afecta otros menús */
+.rootmenu li#mobile-nav-sections a[onclick*="actualidad-dropdown"] {
+    margin-left: 60px;   
+    margin-top: -60px;   
+    /* margin-right: 10px; */
+}
+
+/* Íconos específicos solo para opciones de Actualidad */
+#actualidad-dropdown li::before {
+   
+    margin-right: 8px;
+    color: #ac0500;
+    font-weight: bold;
+}
+
+/* Margen exclusivo para las opciones de Actualidad */
+#mobile-nav-sections ul#actualidad-dropdown {
+    /* margin-left: 20px; */
+    background-color: #AC0600;
+}
+
+.nav-bullet-act {
+    font-size: 30px; /* Tamaño del texto */
+    color: #AAAAAA; /* Color del texto */
+    display: inline-block; /* Asegura que esté en línea con el enlace */
+    margin-right: 10px; /* Espaciado del símbolo */   
+    line-height: 1; /* Alineación vertical */
+    vertical-align: middle; /* Asegura alineación con el texto del enlace */
+    margin: 9px 22px 22px 48px;   
+    
+}
+
+.nav-bullet-act.open {
+    color: #a8100b; /* Cambiar color al abrir */
+	
+	
+}
+
+@media (max-width: 575px) {
+    .nav-bullet-act {
+        margin: 7px 15px 22px 12px;
+    }
+
+    /* Solo para Actualidad, no afecta otros menús */
+.rootmenu li#mobile-nav-sections a[onclick*="actualidad-dropdown"] {
+    margin-left: 25px;   
+    margin-top: -60px;   
+    /* margin-right: 10px; */
+    }
+}
 

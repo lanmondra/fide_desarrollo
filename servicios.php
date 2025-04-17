@@ -73,7 +73,9 @@
             <div class="img-fide-office">
                 <img src="<?php print IMAGES; ?>/fide-office.jpg">
             </div>
-            <p class="after-img-copy">FIDE es una firma profesional formada por economistas y juristas especializados en el asesoramiento del derecho de empresa. Desde el año 1990, y con sede en Madrid y Barcelona, asistimos a nuestros clientes aportando un valor añadido a su actividad y competitividad. Nuestro equipo está compuesto por abogados y economistas con una amplia experiencia tanto en el sector público como en el privado, formando una plantilla de prestigio en el que la capacidad técnica y la especialización consituyen su valor profesional.<br><br>En FIDE somos, además, líderes en el ámbito nacional en la gestión integral de la asesoría y administración de la <b>tributación indirecta y aduanera.</b> Debido a esta especialización, nuestra labor de asesoramiento alcanza sectores muy diversos, desde el sector de los hidrocarburos hasta el de elaboración de cerveza o alcohol, en los cuales la fiscalidad es un componente determinante de la competitividad.<br><br>FIDE ha sido galardonado por el Colegio de Economistas de Cataluña como “mejor despacho profesional del año”.</p>
+            <p class="after-img-copy">FIDE es una firma profesional formada por economistas y juristas especializados en el asesoramiento del derecho de empresa. 
+                Desde el año 1990, y con sede en Madrid, Barcelona y Vigo, asistimos a nuestros clientes aportando un valor añadido a su actividad y competitividad. 
+                Nuestro equipo está compuesto por abogados y economistas con una amplia experiencia tanto en el sector público como en el privado, formando una plantilla de prestigio en el que la capacidad técnica y la especialización consituyen su valor profesional.<br><br>En FIDE somos, además, líderes en el ámbito nacional en la gestión integral de la asesoría y administración de la <b>tributación indirecta y aduanera.</b> Debido a esta especialización, nuestra labor de asesoramiento alcanza sectores muy diversos, desde el sector de los hidrocarburos hasta el de elaboración de cerveza o alcohol, en los cuales la fiscalidad es un componente determinante de la competitividad.<br><br>FIDE ha sido galardonado por el Colegio de Economistas de Cataluña como “mejor despacho profesional del año”.</p>
 
         </div>
 
@@ -116,7 +118,7 @@
                         <a href="<?php echo site_url(); ?>/contacto" class="newsletter-cta-button ibm-sans">CONTACTAR CON FIDE</a>
                     </div>
 
-                    <p class="services-copy">Como líderes en tributación indirecta y aduanera, <b>la excelencia en el servicio es nuestro principal objetivo,</b> y nuestra mayor recompensa, la satisfacción de nuestros clientes: administraciones, entidades públicas y privadas, grandes empresas, pymes y personas físicas.<br><br>Gracias a la proximidad con el cliente, el dinamismo de respuesta, la anticipación y el máximo respeto a las normas éticas más exigentes, FIDE fue galardonado como <b>Mejor Despacho Profesional de Economistas por el Colegio de Economistas de Cataluña.</b></p>
+                    <p class="services-copy">Como líderes en tributación indirecta y aduanera, <b>la excelencia en el servicio es nuestro principal objetivo,</b> y nuestra mayor recompensa, la satisfacción de nuestros clientes: administraciones, entidades públicas y privadas, grandes empresas, pymes y personas físicas.<br>Gracias a la proximidad con el cliente, el dinamismo de respuesta, la anticipación y el máximo respeto a las normas éticas más exigentes, FIDE fue galardonado como <b>Mejor Despacho Profesional de Economistas por el Colegio de Economistas de Cataluña.</b></p>
 
                 </div>
             </div>

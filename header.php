@@ -207,8 +207,13 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
         <nav id="navigation" class="unselectable">
             <div class="hamburger-menu-container">               
                 <div class="hamburger js-showmenu"> <!-- js-showmenu class targeted from JS -->
-                    <img src="<?php print IMAGES; ?>/icons-menu.svg">
+                    <img src="<?php print IMAGES; ?>/icons-menu.svg" alt="Menu">
                 </div>
+                <!-- <div class="hamburger"> 
+                <a href="<?php echo site_url(); ?>" title="fide.es - Inicio">
+                    <img class="img-log-movils" src="<?php print IMAGES; ?>/fide-logo.svg" alt="<?php bloginfo('name'); ?>">
+                    </a>
+                </div>  -->
 
                 <div class="hamburger-menu-search-icon">
                     <a class="mobile-link-no-highligth" href="<?php echo site_url(); ?>/buscar">
@@ -241,14 +246,52 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                     <!-- START OF MOBILE NAV SECTIONS -->
 
                     <li id="mobile-nav-sections">
-                        <span class="nav-bullet"></span>
-                        <a href="<?php echo site_url(); ?>/actualidad/fide-medios">FIDE en los Medios</a>
-                        <span class="hover-border"></span>
+                    <span class="nav-bullet-act">+</span>
+                    <a href="javascript:void(0);" onclick="toggleDropdown('actualidad-dropdown')">Actualidad</a>
+                    <span class="hover-border"></span>
+                        <ul id="actualidad-dropdown" class="dropdown-content">
+                            <li id="actualidad-dropdown">
+                                <span class="nav-bullet"></span>
+                                <a href="<?php echo site_url(); ?>/actualidad/aduanas">Aduanas</a>
+                            </li> 
+                            <li id="actualidad-dropdown">
+                                <span class="nav-bullet"></span>
+                                <a href="<?php echo site_url(); ?>/actualidad/hidrocarburos-y-energia">Hidrocarburos y energía</a>
+                            </li>
+                            <li id="actualidad-dropdown">
+                                <span class="nav-bullet"></span>
+                                <a href="<?php echo site_url(); ?>/actualidad/alcohol-y-bebidas-alcoholicas">Alcohol y bebidas alcohólicas</a>
+                            </li>
+                            <li id="actualidad-dropdown">
+                                <span class="nav-bullet"></span>
+                                <a href="<?php echo site_url(); ?>/actualidad/tributacion-indirecta">Tributación indirecta</a>
+                            </li>
+                            <li id="actualidad-dropdown">
+                                <span class="nav-bullet"></span>
+                                <a href="<?php echo site_url(); ?>/actualidad/fiscalidad-general">Fiscalidad general</a>
+                            </li>
+                            <li id="actualidad-dropdown">
+                            <span class="nav-bullet"></span>
+                                <a href="<?php echo site_url(); ?>/actualidad/labores-del-tabaco">Labores del tabaco</a>
+                            </li>
+                            <li id="actualidad-dropdown">
+                                <span class="nav-bullet"></span>
+                                <a href="<?php echo site_url(); ?>/actualidad/impuestos-medioambientales">Impuestos medioambientales</a>
+                            </li>
+                            <li id="actualidad-dropdown">
+                                <span class="nav-bullet"></span>
+                                <a href="<?php echo site_url(); ?>/actualidad/envases-de-plastico">Envases de plástico</a>
+                            </li>
+                            <li id="actualidad-dropdown">
+                                <span class="nav-bullet"></span>
+                                <a href="<?php echo site_url(); ?>/actualidad/derechos-de-emision">Derechos de emisión</a>
+                            </li>                           
+                        </ul>
                     </li>
-
+<!--
                     <li id="mobile-nav-sections">
                         <span class="nav-bullet"></span>
-                        <a href="<?php echo site_url(); ?>/actualidad/aduanas">Aduanas</a>
+                        <a href="<?php echo site_url(); ?>/actualidad/aduanas">Aduanassss</a>
                         <span class="hover-border"></span>
                     </li>
 
@@ -296,7 +339,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                         <span class="nav-bullet"></span>
                         <a href="<?php echo site_url(); ?>/actualidad/derechos-de-emision">Derechos de emisión</a>
                         <span class="hover-border"></span>
-                    </li>
+                    </li>-->
 
                     <!-- END OF MOBILE NAV SECTIONS -->
                     <!-- END OF MOBILE NAV SECTIONS -->
@@ -312,31 +355,35 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                         <a href="<?php echo site_url(); ?>/actualidad/formacion-y-eventos">Formación y eventos</a>
                         <span class="hover-border"></span>
                     </li>
-
-                    <li id="js-servicios" class="js-top-section">
-                        <span class="nav-bullet"></span>
-                        <a href="<?php echo site_url(); ?>/servicios">Servicios</a>
-                        <span class="hover-border"></span>
-                    </li>
-
                     <li id="js-especialidades" class="js-top-section">
                         <span class="nav-bullet"></span>
                         <a href="<?php echo site_url(); ?>/especialidades">Especialidades</a>
                         <span class="hover-border"></span>
                     </li>
+                    <li id="js-presentacion" class="js-top-section">
+                        <span class="nav-bullet"></span>
+                        <a href="<?php echo site_url(); ?>/presentacion">Quienes Somos</a>
+                        <span class="hover-border"></span>
+                    </li>               
+                    <li id="js-servicios" class="js-top-section only-mobile">
+                        <span class="nav-bullet"></span>
+                        <a href="<?php echo site_url(); ?>/servicios">Servicios</a>
+                        <span class="hover-border"></span>
+                    </li>
+
+                    
                     <li>
                         <span class="nav-bullet"></span>
                         <a href="<?php echo site_url(); ?>/actualidad/informes-fide">Informes</a>
-
                     </li>
-
+                  
                     <li id="js-contacto" class="js-top-section">
                         <span class="nav-bullet"></span>
                         <a href="<?php echo site_url(); ?>/contacto">Contacto</a>
                         <span class="hover-border"></span>
                     </li>
                     
-                    <li class="description">
+                    <li class="description display-dispositivos">
                         Asesores legales y tributarios
                     </li>
 
@@ -428,6 +475,29 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                                     </a>
                                 </li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="submenu-presentacion">
+                <div class="grid-container">
+                        <div class="grid-services">
+
+                            <ul class="col-1-4">
+                                <li>
+                                    <a href="<?php echo site_url(); ?>/presentacion">
+                                        Presentacion
+                                        <span>Conoce todo lo que hacemos</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="col-2-4">
+                                <li>
+                                    <a href="<?php echo site_url(); ?>/servicios">
+                                        Servicios
+                                        <span>Asesoría tributaria, Economía forense, Formación <i>in company</i> y mas ...</span>
+                                    </a>
+                                </li>
+                            </ul>                           
                         </div>
                     </div>
                 </div>
@@ -604,9 +674,21 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
         $current_tag = single_tag_title("", false);
         $current_category = single_cat_title("", false);
         $current_cat_id = get_cat_id($current_category);
+        $category_id = get_queried_object_id();
+        $category_description = category_description($category_id);
         $search_title = "Resultados de la búsqueda";
         $single_page_title = get_the_title();
         $error_page_title = "Página no encontrada";
+        
+        if (!empty($category_description)) {  
+            $category_description_short = mb_substr(strip_tags($category_description), 0, 55);
+        if (mb_strlen(strip_tags($category_description)) > 55) {
+            $category_description_short .= '...'; 
+        }
+          //$category_description_short = wp_trim_words($category_description, 9, '...'); 
+        } else {
+          $category_description_short = "";
+        }
 
         $actualidad_sub_sections = array("");
 
@@ -663,96 +745,140 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
 
         // Is the "Actualidad" page?
         if (is_page('actualidad')) {
-            fide_breadcrumb_code("FIDE en los Medios", null, "black");
+            fide_breadcrumb_code("FIDE en los Medios", null, "black","");
+        }
+         // Is the servicios page?   
+         if (is_page('presentacion')) {
+            fide_breadcrumb_code("Presentacion", null, "black","");
 
             // Is the servicios page?
         } elseif (is_page('servicios')) {
-            fide_breadcrumb_code("Servicios", null, "white");
+            fide_breadcrumb_code("Servicios", null, "white", "");
         } elseif (is_page('asesoria-tributaria')) {
-            fide_breadcrumb_code("Asesoría tributaria", null, "white");
+            fide_breadcrumb_code("Asesoría tributaria", null, "white", "");
         } elseif (is_page('asesoria-juridica')) {
-            fide_breadcrumb_code("Asesoría jurídica", null, "white");
+            fide_breadcrumb_code("Asesoría jurídica", null, "white", "");
         } elseif (is_page('economia-forense')) {
-            fide_breadcrumb_code("Economía forense", null, "white");
+            fide_breadcrumb_code("Economía forense", null, "white", "");
         } elseif (is_page('formacion-in-company')) {
-            fide_breadcrumb_code("Formación <i>in company</i>", null, "white");
+            fide_breadcrumb_code("Formación <i>in company</i>", null, "white", "");
 
             // Is the especialidades page?
         } elseif (is_page('especialidades')) {
-            fide_breadcrumb_code("Especialidades", null, "white");
+            fide_breadcrumb_code("Especialidades", null, "white", "");
         } elseif (is_page('asesoria-hidrocarburos-y-energia')) {
-            fide_breadcrumb_code("Hidrocarburos y energía", null, "white");
+            fide_breadcrumb_code("Hidrocarburos y energía", null, "white", "");
         } elseif (is_page('asesoria-alcohol-y-bebidas-alcoholicas')) {
-            fide_breadcrumb_code("Alcohol y bebidas alcohólicas", null, "white");
+            fide_breadcrumb_code("Alcohol y bebidas alcohólicas", null, "white", "");
         } elseif (is_page('asesoria-derecho-aduanero-tributario')) {
-            fide_breadcrumb_code("Derecho aduanero tributario", null, "white");
+            fide_breadcrumb_code("Derecho aduanero tributario", null, "white", "");
         } elseif (is_page('asesoria-fiscalidad-medioambiental')) {
-            fide_breadcrumb_code("Fiscalidad medioambiental", null, "white");
+            fide_breadcrumb_code("Fiscalidad medioambiental", null, "white", "");
         } elseif (is_page('asesoria-envases-de-plastico')) {
-            fide_breadcrumb_code("Envases de plástico", null, "white");
+            fide_breadcrumb_code("Envases de plástico", null, "white", "");
         } elseif (is_page('asesoria-derechos-emision')) {
-            fide_breadcrumb_code("Derechos de Emision", null, "white");
+            fide_breadcrumb_code("Derechos de Emisión", null, "white", "");
         } elseif (is_page('asesoria-fiscalidad-del-tabaco')) {
-            fide_breadcrumb_code("Fiscalidad del tabaco", null, "white");
+            fide_breadcrumb_code("Fiscalidad del tabaco", null, "white", "");
+            
 
             // Is the informes page?
             //asesoria-envases_plasticos
             //asesoria-derechos-emision
 
         } elseif (is_page('informes-fide')) {
-            fide_breadcrumb_code("Informes Fide", null, "white");
-
+            fide_breadcrumb_code("FIDE en los Medios", null, "black", "");
             // Is the newsletter archive page?
         } elseif (is_page('newsletter')) {
-            fide_breadcrumb_code("Newsletter", null, "black");
+            fide_breadcrumb_code("Newsletter", null, "black", "");
 
             // Is the contact page?
         } elseif (is_page('contacto')) {
-            fide_breadcrumb_code("Contacto", null, "black");
+            fide_breadcrumb_code("Contacto", null, "black", "");
 
             // Is any of the legal pages?
         } elseif (is_page('politica-de-privacidad')) {
-            fide_breadcrumb_code("Política de privacidad", null, "black");
+            fide_breadcrumb_code("Política de privacidad", null, "black", "");
         } elseif (is_page('politica-de-cookies')) {
-            fide_breadcrumb_code("Política de cookies", null, "black");
+            fide_breadcrumb_code("Política de cookies", null, "black", "");
         } elseif (is_page('aviso-legal')) {
-            fide_breadcrumb_code("Aviso legal", null, "black");
+            fide_breadcrumb_code("Aviso legal", null, "black", "");
 
             // Is a single article page?
-        } elseif (is_single()) {
-            fide_breadcrumb_code("Actualidad", null, "white");
+        } elseif (is_page('Politica de privacidad')) {
+            fide_breadcrumb_code("Política de privacidad", null, "black", "");
+
+        } elseif (is_page('Politicas de cookies')) {
+            fide_breadcrumb_code("Política de cookies", null, "black", "");
+
+            // Is a single article page?
+        }elseif (is_single()) {
+            fide_breadcrumb_code("Actualidad", null, "white", "");
 
             // Is the current page a tag archive page?
         } elseif (function_exists('is_tag') && is_tag()) {
-            fide_breadcrumb_code($current_tag, null, "black");
+            fide_breadcrumb_code($current_tag, null, "black", "");
 
             // Or, is the page an archive page?
         } elseif (is_archive()) {
-            fide_breadcrumb_code($current_category, null, "black");
+            fide_breadcrumb_code($current_category, null, "black", $category_description_short);
 
             // Or, is the page a search page?
         } elseif (is_search()) {
-            fide_breadcrumb_code($search_title, null, "black");
+            fide_breadcrumb_code($search_title, null, "black", "");
 
             // Or, is the page the blank search page?
         } elseif (is_page('buscar')) {
-            fide_breadcrumb_code("Buscar en fide.es", null, "black");
+            fide_breadcrumb_code("Buscar en fide.es", null, "black", "");
 
             // Or, is the front-page?
         } elseif (is_front_page()) {
-            print '<!-- // That is home --><span style="display: block; height: 20px;"></span>';
+            print '<!-- // That is home --><span style="display: block; height: 0px;"></span>';
 
             // Or, is the page a single post or a literal page?
         } elseif (!(is_404()) && (is_single()) || (is_page())) {
-            fide_breadcrumb_code($single_page_title, "Test-sub-cat", "white");
+            fide_breadcrumb_code($single_page_title, "Test-sub-cat", "white", "");
 
             // Or, is the page an error page?
         } elseif (is_404()) {
-            fide_breadcrumb_code($error_page_title, null, "black");
+            fide_breadcrumb_code($error_page_title, null, "black", "");
         }
 
         ?>
 
+        <script>
+        function toggleDropdown(id) {
+            const dropdown = document.getElementById(id);
+            const parentLi = dropdown.closest('li'); // Encuentra el contenedor <li>
+            const bullet = parentLi.querySelector('.nav-bullet-act'); // Selecciona el span .nav-bullet-act
 
+            // Alternar la visibilidad del dropdown
+            dropdown.classList.toggle('show');
+
+            // Cambiar el texto del símbolo
+            if (dropdown.classList.contains('show')) {
+                bullet.textContent = '-'; // Cambiar a guion    
+            } else {
+                bullet.textContent = '+'; // Cambiar a más
+            }
+        }
+
+        // Cerrar el menú si se hace clic fuera
+        document.addEventListener('click', function (event) {
+            const dropdown = document.getElementById('actualidad-dropdown');
+            const parentLi = dropdown.closest('li');
+            const bullet = parentLi.querySelector('.nav-bullet-act');
+            const isClickInside = dropdown.contains(event.target) || event.target.closest('[onclick*="toggleDropdown"]');
+
+            if (!isClickInside) {
+                dropdown.classList.remove('show');
+                if (bullet) {
+                bullet.textContent = '+'; // Cambiar al estado cerrado
+                }
+            }
+        });
+
+
+        </script>
 
     </header>

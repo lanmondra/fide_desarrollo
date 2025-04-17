@@ -340,25 +340,38 @@
 
             # GET THREE POSTS FROM THE SAME CATEGORY, SAVE THEIR IDs ON "$posts_cat_archive[]"
 
-            $single_post_cat = wp_get_post_categories( get_the_id(), array("exclude" => array( 1, 11, 363, 1002, 1003, 1004, 1041, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019 )));
+            $single_post_cat = wp_get_post_categories( get_the_id(), 
+            array("exclude" => array( 1, 11, 363, 1002, 1003, 1004, 1041, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019 )));
             $exclude_actual_post = array(get_the_id());
 
-            $args_single_post_related = array(
+            $args = array(
                 "post_type" => "post",
-                "category__in" => $single_post_cat[0],
                 "post_status" => "publish",
                 "post__not_in" => $exclude_actual_post,
-                "orderby" => array(
-                    "post_date"     =>  "DESC",
-                    ),
-                "posts_per_page" => 3,
-                );                       
+                "orderby" => array("post_date" => "DESC"),
+                "posts_per_page" => 10,
+            );
 
-            $loop = new WP_Query( $args_single_post_related );
+            if (!empty($single_post_cat)) {
+                $args["category__in"] = [$single_post_cat[0]];
+            }
 
-            while ( $loop->have_posts() ) : $loop->the_post();
-                $related_posts[] = $post->ID;
-            endwhile; wp_reset_postdata();
+            $loop = new WP_Query($args);
+
+            $related_posts = [];
+
+            while ($loop->have_posts() && count($related_posts) < 3):
+                $loop->the_post();
+                if (has_post_thumbnail(get_the_ID())) {
+                    $related_posts[] = get_the_ID();
+                }
+            endwhile;
+            
+            wp_reset_postdata();
+            
+            // Limitar a solo 3
+            $related_posts = array_slice($related_posts, 0, 3);
+            
 
             // ELSE and END IF at the end of the page, after the pagination
 
@@ -400,82 +413,46 @@
 
             <div class="grid">
 
-                <?php if ($related_posts[0]) : ?>
-                <div class="category-first-featured">
+            <?php
+    $featured_classes = [
+    'category-first-featured',
+    'category-second-featured',
+    'category-third-featured'
+    ];
 
-                    <div class="article-image">
-                        <a href="<?php echo esc_url(get_permalink($related_posts[0])); ?>">
-                            <div class="crop">
-                                <img class="cropped" src="<?php fide_feat_img_url($related_posts[0]) ?>">
-                            </div>
-                        </a>
-                    </div>
-      
-                    <?php fide_list_cats_links($related_posts[0]); ?>
-                    <h3 class="title_content"><?php fide_title_link_shortened($related_posts[0], 450); ?></h3>
-                    <div class="content">
-                    <span class="gray-9"><?php echo get_the_date("d M 'y", $related_posts[0]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                    <span class="line24">
-                        <?php fide_excerpt($related_posts[0], 660) ?>
-                        <br>                       
-                    </div>
-                    <div class="difuminacion-informative" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
-                    <?php fide_read_more_link($related_posts[0]); ?>
-                    </span>
+    foreach ($related_posts as $index => $post_id):
+    // Seguridad extra: asegúrate de que tenga imagen
+        if (!has_post_thumbnail($post_id)) continue;
+        ?>
+            <div class="<?php echo $featured_classes[$index]; ?>">
 
+                <div class="article-image">
+                    <a href="<?php echo esc_url(get_permalink($post_id)); ?>">
+                        <div class="crop">
+                            <img class="cropped" src="<?php echo fide_feat_img_url($post_id); ?>">
+                        </div>
+                    </a>
                 </div>
-                <?php endif; ?>   
 
-                <?php if ($related_posts[1]) : ?>
-                <div class="category-second-featured">
+                <?php fide_list_cats_links($post_id); ?>
+                <h3 class="title_content"><?php echo fide_title_link_shortened($post_id, 450); ?></h3>
 
-                    <div class="article-image">
-                        <a href="<?php echo esc_url(get_permalink($related_posts[1])); ?>">
-                            <div class="crop">
-                                <img class="cropped" src="<?php fide_feat_img_url($related_posts[1]) ?>">
-                            </div>
-                        </a>
-                    </div>
-      
-                    <?php fide_list_cats_links($related_posts[1]); ?>
-                    <h3 class="title_content"><?php fide_title_link_shortened($related_posts[1], 450); ?></h3>
-                    <div class="content">
-                    <span class="gray-9"><?php echo get_the_date("d M 'y", $related_posts[1]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <div class="content">
+                    <span class="gray-9"><?php echo get_the_date("d M 'y", $post_id); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                     <span class="line24">
-                        <?php fide_excerpt($related_posts[1], 700) ?>
+                        <?php echo fide_excerpt($post_id, 660 + $index * 120); ?>
                         <br>
-                        
                     </span>
-                    </div>
-                    <div class="difuminacion-informative" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
-                    <?php fide_read_more_link($related_posts[1]); ?>
                 </div>
-                <?php endif; ?>   
 
-                <?php if ($related_posts[2]) : ?>
-                <div class="category-third-featured">
-
-                    <div class="article-image">
-                        <a href="<?php echo esc_url(get_permalink($related_posts[2])); ?>">
-                            <div class="crop">
-                                <img class="cropped" src="<?php fide_feat_img_url($related_posts[2]) ?>">
-                            </div>
-                        </a>
-                    </div>
-      
-                    <?php fide_list_cats_links($related_posts[2]); ?>
-                    <h3 class="title_content"><?php fide_title_link_shortened($related_posts[2], 450);?></h3>
-                    <div class="content">
-                    <span class="gray-9"><?php echo get_the_date("d M 'y", $related_posts[2]); ?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                    <span class="line24">
-                        <?php fide_excerpt($related_posts[2], 900) ?>
-                        <br>                      
-                    </span>
-                    </div>
-                    <div class="difuminacion-informative" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
-                    <?php fide_read_more_link($related_posts[2]); ?>
+                <div class="difuminacion-informative"
+                    style="width: 100%; height: 62px; margin-top: -50px; background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%); filter: blur(1px);">
                 </div>
-                <?php endif; ?>   
+
+                <?php fide_read_more_link($post_id); ?>
+            </div>
+    <?php endforeach; ?>
+
 
             </div>
         </div>

@@ -30,20 +30,39 @@
                         <div class="single-post-content px16 line24">
                         
                             <h2>1. Datos identificativos</h2>
-                            En cumplimiento con el deber de información recogido en artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, a continuación se reflejan los siguientes datos: la empresa titular de dominio web es FIDE Asesores Legales y Tributarios, con domicilio a estos efectos en Rambla de Catalunya 38, 7ª Planta 08007 Barcelona número de C.I.F.: B-62746847 inscrita en el Registro Mercantil el 15/01/02. Tomo 34156, Folio: 50, Hoja Registral: 243299, Inscripción 1. Correo electrónico de contacto: fide@fide.es del sitio web.
+                            En cumplimiento con el deber de información recogido en artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del 
+                            Comercio Electrónico, a continuación se reflejan los siguientes datos: la empresa titular de dominio web es <strong class="highlight" >FIDE ASESORES LEGALES Y TRIBUTARIOS, S.L.P.</strong> , 
+                            con domicilio a estos efectos en Rambla de Catalunya 38, 7ª Planta 08007 Barcelona número de C.I.F.: B-62746847 inscrita en el Registro Mercantil el 15/01/02. 
+                            Tomo 34156, Folio: 50, Hoja Registral: 243299, Inscripción 1. Correo electrónico de contacto: <strong>fide@fide.es</strong> del sitio web.
 
                             <br><br>
                             <h2>2. Usuarios</h2>
-                            El acceso y/o uso de este portal de FIDE asesores Legales y Tributarios atribuye la condición de USUARIO, que acepta, desde dicho acceso y/o uso, las Condiciones Generales de Uso aquí reflejadas. Las citadas Condiciones serán de aplicación independientemente de las Condiciones Generales de Contratación que en su caso resulten de obligado cumplimiento.
+                            El acceso y/o uso de este portal de <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong> atribuye la condición de usuario, que acepta, desde dicho acceso y/o uso, 
+                            las Condiciones Generales de Uso aquí reflejadas. Las citadas Condiciones serán de aplicación independientemente de las Condiciones Generales de Contratación 
+                            que en su caso resulten de obligado cumplimiento.
 
                             <br><br>
                             <h2>3. Uso del portal</h2>
-                            www.fide.es proporciona el acceso a multitud de informaciones, servicios, programas o datos (en adelante, “los contenidos”) en Internet pertenecientes a FIDE asesores Legales y Tributarios o a sus licenciantes a los que el USUARIO pueda tener acceso. El USUARIO asume la responsabilidad del uso del portal. Dicha responsabilidad se extiende al registro que fuese necesario para acceder a determinados servicios o contenidos. En dicho registro el USUARIO será responsable de aportar información veraz y lícita. Como consecuencia de este registro, al USUARIO se le puede proporcionar una contraseña de la que será responsable,comprometiéndose a hacer un uso diligente y confidencial de la misma. El USUARIO se compromete a hacer un uso adecuado de los contenidos y servicios (como por ejemplo servicios de chat, foros de discusión o grupos de noticias) que FIDE asesores Legales y Tributarios ofrece a través de su portal y con carácter enunciativo pero no limitativo, a no emplearlos para (I) incurrir en actividades ilícitas, ilegales o contrarias a la buena fe y al orden público; (II) difundir contenidos o propaganda de carácter racista, xenófobo, pornográfico-ilegal, de apología del terrorismo o atentatorio contra los derechos humanos; (III) provocar daños en los sistemas físicos y lógicos de FIDE Asesores Legales y Tributarios, de sus proveedores o de terceras personas, introducir o difundir en la red virus informáticos o cualesquiera otros sistemas físicos o lógicos que sean susceptibles de provocar los daños anteriormente mencionados; (IV) intentar acceder y, en su caso, utilizar las cuentas de correo electrónico de otros usuarios y modificar o manipular sus mensajes. FIDE asesores Legales y Tributarios se reserva el derecho de retirar todos aquellos comentarios y aportaciones que vulneren el respeto a la dignidad de la persona, que sean discriminatorios, xenófobos, racistas, pornográficos, que atenten contra la juventud o la infancia, el orden o la seguridad pública o que, a su juicio, no resultaran adecuados para su publicación. En cualquier caso, FIDE asesores Legales y Tributarios no será responsable de las opiniones vertidas por los usuarios a través de los foros, chats, u otras herramientas de participación.
+                            www.fide.es proporciona el acceso a multitud de informaciones, servicios, programas o datos (en adelante, “los contenidos”) en Internet pertenecientes a 
+                            <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong> o a sus licenciantes a los que el usuario pueda tener acceso. El usuario asume la responsabilidad del uso del portal. 
+                            Dicha responsabilidad se extiende al registro que fuese necesario para acceder a determinados servicios o contenidos. En dicho registro el usuario será responsable de aportar 
+                            información veraz y lícita. Como consecuencia de este registro, al usuario se le puede proporcionar una contraseña de la que será responsable, comprometiéndose a 
+                            hacer un uso diligente y confidencial de la misma. El usuario se compromete a hacer un uso adecuado de los contenidos y servicios (como por ejemplo servicios de chat, 
+                            foros de discusión o grupos de noticias) que <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong> ofrece a través de su portal y con carácter enunciativo pero no limitativo, 
+                            a no emplearlos para (I) incurrir en actividades ilícitas, ilegales o contrarias a la buena fe y al orden público; (II) difundir contenidos o propaganda de carácter 
+                            racista, xenófobo, pornográfico-ilegal, de apología del terrorismo o atentatorio contra los derechos humanos; (III) provocar daños en los sistemas físicos y 
+                            lógicos de <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong>, de sus proveedores o de terceras personas, introducir o difundir en la red virus informáticos o cualesquiera otros 
+                            sistemas físicos o lógicos que sean susceptibles de provocar los daños anteriormente mencionados; (IV) intentar acceder y, en su caso, utilizar las cuentas de correo 
+                            electrónico de otros usuarios y modificar o manipular sus mensajes. <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong> se reserva el derecho de retirar todos aquellos comentarios y 
+                            aportaciones que vulneren el respeto a la dignidad de la persona, que sean discriminatorios, xenófobos, racistas, pornográficos, que atenten contra la juventud o 
+                            la infancia, el orden o la seguridad pública o que, a su juicio, no resultaran adecuados para su publicación. En cualquier caso, 
+                            <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong> no será responsable de las opiniones vertidas por los usuarios a través de los foros, chats, u otras herramientas de participación.
 
                             <br><br>
                             <h2>4. Protección de datos</h2>
 
-                            Tus datos serán incorporados a ficheros de tratamiento de datos responsabilidad de FIDE Asesores Legales y Tributarios, con domicilio a estos efectos en Rambla de Catalunya 38, 7ª Planta 08007 Barcelona número de C.I.F.: B-62746847
+                            Tus datos serán incorporados a ficheros de tratamiento de datos responsabilidad de <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong>, 
+                            con domicilio a estos efectos en Rambla de Catalunya 38, 7ª Planta 08007 Barcelona número de C.I.F.: B-62746847
 
                             <br><br>
                             <b>4.1. Principios que aplicaremos a tu información personal y derechos que te corresponden</b>
@@ -75,7 +94,10 @@
                             Podrás acceder a tus datos personales, así como a solicitar la rectificación de los datos inexactos o, en su caso, solicitar su supresión cuando, entre otros motivos, los datos ya no sean necesarios para los fines que fueron recogidos. En determinadas circunstancias, podrás solicitar la limitación del tratamiento de tus datos, en cuyo caso únicamente los conservaremos para el ejercicio o la defensa de reclamaciones.
 
                             <br><br>
-                            En determinadas circunstancias y por motivos relacionados con tu situación particular, podrás oponerte al tratamiento de tus datos. FIDE Asesores Legales y Tributarios dejará de tratar los datos, salvo por motivos legales, o el ejercicio o la defensa de posibles reclamaciones. Cómo interesado, tienes derecho a ser informado de tus datos personales y a pedirnos que los transmitamos a otro responsable del tratamiento, cuando sea técnicamente posible.
+                            En determinadas circunstancias y por motivos relacionados con tu situación particular, podrás oponerte al tratamiento de tus datos. 
+                            <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong> dejará de tratar los datos, salvo por motivos legales, o el ejercicio o la defensa de posibles reclamaciones. 
+                            Cómo interesado, tienes derecho a ser informado de tus datos personales y a pedirnos que los transmitamos a otro responsable del tratamiento, 
+                            cuando sea técnicamente posible.
 
                             <br><br>
                             También tienes derecho a presentar una reclamación ante la autoridad de control, en este caso, la Agencia Española de Protección de Datos, si consideras que el tratamiento de tus datos personales infringe la normativa vigente.
@@ -120,57 +142,91 @@
                             <b>4.6. Confidencialidad y seguridad de tus datos</b>
 
                             <br><br>
-                            FIDE ASESORES LEGALES Y TRIBUTARIOS se compromete a respetar la confidencialidad de tus datos, así como a conservarlos de manera segura y adoptar todas las medidas para evitar la alteración, pérdida, tratamiento o acceso no autorizado, de conformidad con lo establecido en la normativa vigente sobre protección de datos.
+                            <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong> se compromete a respetar la confidencialidad de tus datos, así como a conservarlos de manera segura y adoptar todas las medidas para evitar la alteración, pérdida, tratamiento o acceso no autorizado, de conformidad con lo establecido en la normativa vigente sobre protección de datos.
 
                             <br><br>
                             <h2>5. Aceptación y consentimiento</h2>
 
-                            Al proporcionarnos tus datos manifiestas haber sido informado de las condiciones sobre protección de datos de carácter personal, aceptando y consintiendo el tratamiento de los mismos por parte de FIDE ASESORES LEGALES Y TRIBUTARIOS en la forma y para las finalidades indicadas en esta política de privacidad.
+                            Al proporcionarnos tus datos manifiestas haber sido informado de las condiciones sobre protección de datos de carácter personal, aceptando y consintiendo el 
+                            tratamiento de los mismos por parte de <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong> en la forma y para las finalidades indicadas en esta política de privacidad.
 
                             <br><br>
-                            Si tienes dudas sobre esta Política de Privacidad, puedes contactar en el email fide@fide.es.
+                            Si tienes dudas sobre esta Política de Privacidad, puedes contactar en el email <strong >fide@fide.es</strong>.
 
                             <br><br>
                             <h2>6. Propiedad intelectual e industrial</h2>
 
-                            FIDE asesores Legales y Tributarios por sí o como cesionaria, es titular de todos los derechos de propiedad intelectual e industrial de su página web, así como de los elementos contenidos en la misma (a título enunciativo, imágenes, sonido, audio, vídeo, software o textos; marcas o logotipos, combinaciones de colores, estructura y diseño, selección de materiales usados, programas de ordenador necesarios para su funcionamiento, acceso y uso, etc.), titularidad de FIDE asesores Legales y Tributarios o bien de sus licenciantes. Todos los derechos reservados. En virtud de lo dispuesto en los artículos 8 y 32.1, párrafo segundo, de la Ley de Propiedad Intelectual, quedan expresamente prohibidas la reproducción, la distribución y la comunicación pública, incluida su modalidad de puesta a disposición, de la totalidad o parte de los contenidos de esta página web, con fines comerciales, en cualquier soporte y por cualquier medio técnico, sin la autorización de FIDE asesores Legales y Tributarios. El USUARIO se compromete a respetar los derechos de Propiedad Intelectual e Industrial titularidad de FIDE asesores Legales y Tributarios. Podrá visualizar los elementos del portal e incluso imprimirlos, copiarlos y almacenarlos en el disco duro de su ordenador o en cualquier otro soporte físico siempre y cuando sea, única y exclusivamente, para su uso personal y privado. El USUARIO deberá abstenerse de suprimir, alterar, eludir o manipular cualquier dispositivo de protección o sistema de seguridad que estuviera instalado en el las páginas de FIDE asesores Legales y Tributarios.
+                            <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong> por sí o como cesionaria, es titular de todos los derechos de propiedad intelectual e industrial de su página web, 
+                            así como de los elementos contenidos en la misma (a título enunciativo, imágenes, sonido, audio, vídeo, software o textos; marcas o logotipos, 
+                            combinaciones de colores, estructura y diseño, selección de materiales usados, programas de ordenador necesarios para su funcionamiento, acceso y uso, etc.), 
+                            titularidad de <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong> o bien de sus licenciantes. Todos los derechos reservados. En virtud de lo dispuesto en los artículos 8 y 32.1, 
+                            párrafo segundo, de la Ley de Propiedad Intelectual, quedan expresamente prohibidas la reproducción, la distribución y la comunicación pública, incluida su modalidad de 
+                            puesta a disposición, de la totalidad o parte de los contenidos de esta página web, con fines comerciales, en cualquier soporte y por cualquier medio técnico, 
+                            sin la autorización de <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong>. El usuario se compromete a respetar los derechos de Propiedad Intelectual e Industrial titularidad de 
+                            <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong>. Podrá visualizar los elementos del portal e incluso imprimirlos, copiarlos y almacenarlos en el disco duro de su ordenador o en 
+                            cualquier otro soporte físico siempre y cuando sea, única y exclusivamente, para su uso personal y privado. El usuario deberá abstenerse de suprimir, alterar, eludir o 
+                            manipular cualquier dispositivo de protección o sistema de seguridad que estuviera instalado en el las páginas de <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong>.
 
                             <br><br>
                             <h2>7. Exclusión de garantías y responsabilidad</h2>
 
-                            FIDE asesores Legales y Tributarios no se hace responsable, en ningún caso, de los daños y perjuicios de cualquier naturaleza que pudieran ocasionar, a título enunciativo: errores u omisiones en los contenidos, falta de disponibilidad del portal o la transmisión de virus o programas maliciosos o lesivos en los contenidos, a pesar de haber adoptado todas las medidas tecnológicas necesarias para evitarlo.
+                            <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong> no se hace responsable, en ningún caso, de los daños y perjuicios de cualquier naturaleza que pudieran ocasionar, a título enunciativo: errores u omisiones en los contenidos, falta de disponibilidad del portal o la transmisión de virus o programas maliciosos o lesivos en los contenidos, a pesar de haber adoptado todas las medidas tecnológicas necesarias para evitarlo.
 
                             <br><br>
                             <h2>8. Modificaciones</h2>
 
-                            FIDE asesores Legales y Tributarios se reserva el derecho de efectuar sin previo aviso las modificaciones que considere oportunas en su portal, pudiendo cambiar, suprimir o añadir tanto los contenidos y servicios que se presten a través de la misma como la forma en la que éstos aparezcan presentados o localizados en su portal.
+                            <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong> se reserva el derecho de efectuar sin previo aviso las modificaciones que considere oportunas en su portal, 
+                            pudiendo cambiar, suprimir o añadir tanto los contenidos y servicios que se presten a través de la misma como la forma en la que éstos aparezcan presentados o 
+                            localizados en su portal.
 
                             <br><br>
                             <h2>9. Enlaces</h2>
 
-                            En el caso de que en www.fide.es se dispusiesen enlaces o hipervínculos hacía otros sitios de Internet, FIDE asesores Legales y Tributarios no ejercerá ningún tipo de control sobre dichos sitios y contenidos. En ningún caso FIDE asesores Legales y Tributarios asumirá responsabilidad alguna por los contenidos de algún enlace perteneciente a un sitio web ajeno, ni garantizará la disponibilidad técnica, calidad, fiabilidad, exactitud, amplitud, veracidad, validez y constitucionalidad de cualquier material o información contenida en ninguno de dichos hipervínculos u otros sitios de Internet. Igualmente la inclusión de estas conexiones externas no implicará ningún tipo de asociación, fusión o participación con las entidades conectadas.
+                            En el caso de que en <strong>www.fide.es</strong> se dispusiesen enlaces o hipervínculos hacía otros sitios de Internet, <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong> 
+                            no ejercerá ningún tipo de control sobre dichos sitios y contenidos. En ningún caso <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong> asumirá responsabilidad alguna por los contenidos de algún 
+                            enlace perteneciente a un sitio web ajeno, ni garantizará la disponibilidad técnica, calidad, fiabilidad, exactitud, amplitud, veracidad, validez y constitucionalidad de cualquier 
+                            material o información contenida en ninguno de dichos hipervínculos u otros sitios de Internet. Igualmente la inclusión de estas conexiones externas no implicará ningún tipo de asociación, 
+                            fusión o participación con las entidades conectadas.
 
                             <br><br>
                             <h2>10. Derecho de exclusión</h2>
 
-                            FIDE asesores Legales y Tributarios se reserva el derecho a denegar o retirar el acceso a portal y/o los servicios ofrecidos sin necesidad de preaviso, a instancia propia o de un tercero, a aquellos usuarios que incumplan las presentes Condiciones Generales de Uso.
+                            <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong> se reserva el derecho a denegar o retirar el acceso a portal y/o los servicios ofrecidos sin necesidad de preaviso, a instancia propia o de un tercero, a aquellos usuarios que incumplan las presentes Condiciones Generales de Uso.
 
                             <br><br>
                             <h2>11. Generalidades</h2>
 
-                            FIDE asesores Legales y Tributarios perseguirá el incumplimiento de las presentes condiciones así como cualquier utilización indebida de su portal ejerciendo todas las acciones civiles y penales que le puedan corresponder en derecho.
+                            <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong> perseguirá el incumplimiento de las presentes condiciones así como cualquier utilización indebida de su portal ejerciendo todas las acciones civiles y penales que le puedan corresponder en derecho.
 
                             <br><br>
                             <h2>12. Modificación de las presentes condiciones y duración</h2>
 
-                            FIDE asesores Legales y Tributarios podrá modificar en cualquier momento las condiciones aquí determinadas, siendo debidamente publicadas como aquí aparecen. La vigencia de las citadas condiciones irá en función de su exposición y estarán vigentes hasta que sean modificadas por otras.
+                            <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong> podrá modificar en cualquier momento las condiciones aquí determinadas, siendo debidamente publicadas como aquí aparecen. La vigencia de las citadas condiciones irá en función de su exposición y estarán vigentes hasta que sean modificadas por otras.
 
                             <br><br>
                             <h2>13. Legislación aplicable y jurisdicción</h2>
 
-                            La relación entre FIDE asesores Legales y Tributarios y el USUARIO se regirá por la normativa española vigente y cualquier controversia se someterá a los Juzgados y tribunales de la ciudad de Barcelona.
+                            La relación entre <strong  class="highlight" >FIDE <spam class="tax-legal" >Tax & Legal</spam></strong> y el usuario se regirá por la normativa española vigente y cualquier controversia se someterá a los Juzgados y tribunales de la ciudad de Barcelona.
 
+                            <br><br>
+                            <h2>14. Política de privacidad</h2>
+                            <p>
+                                En <strong class="highlight">FIDE <span class="tax-legal">Tax & Legal</span></strong>, tratamos tus datos personales de manera segura y conforme a la normativa vigente. 
+                                Recogemos información para gestionar nuestra relación contigo, enviarte comunicaciones relevantes y mejorar nuestros servicios. 
+                                Puedes ejercer tus derechos de acceso, rectificación, supresión y otros escribiendo a <strong>fide@fide.es</strong>.
+                            </p>
+                            <p>
+                                <a class="font-bold" href="https://www.fide.es/politica-de-privacidad" target="_blank">Leer más sobre nuestra Política de privacidad</a>
+                            </p>
 
+                            <h2>15. Política de cookies</h2>
+                            <p>
+                                Utilizamos cookies propias y de terceros para mejorar tu experiencia de navegación, personalizar contenidos y analizar estadísticas del uso del sitio. 
+                                Puedes configurar tus preferencias en tu navegador en cualquier momento.
+                            </p>
+                            <p>
+                                <a class="font-bold" href="https://www.fide.es/politica-de-cookies" target="_blank">Leer más sobre nuestra Política de cookies</a>
+                            </p>
                         </div>
 
                         <!-- <hr class="generic-hr mobile-hide"> -->
@@ -183,8 +239,18 @@
 
 		</main>
 	</section>
+    <style>
+    .highlight{
+        color: #AC0600;
+    }
 
-
+    .tax-legal{
+    font-style: italic;
+    }
+    .font-bold{
+        font-weight: bold;
+    }
+    </style>
 
 <?php get_footer(); ?>
 

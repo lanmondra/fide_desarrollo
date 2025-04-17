@@ -55,7 +55,7 @@
 						</div>						
 						<a href="https://goo.gl/maps/xBBFuPi1tEt4KyeR7" class="google-maps-button px14" target="_blank">VER EN GOOGLE MAPS</a>
 						<span class="cf-address">
-							C/ Guzmán el Bueno 74, 1º<br>
+							C/ Guzmán el Bueno 74, 1ª<br>
 							28015 Madrid<br>
 							Tel. 910 851 756
 						</span>
@@ -73,7 +73,7 @@
 						<a href="https://maps.app.goo.gl/uE7nnAX5akH2xzdL6" class="google-maps-button px14" target="_blank">VER EN GOOGLE MAPS</a>
 						<span class="cf-address">
 						C/ Marqués de Valladares 14, 6ª <br>
-						36201 Vigo, Oficinas 7 y 8<br>
+						36201 Vigo<br>
 						Tel. 886 035 929
 						</span>
 

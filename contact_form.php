@@ -108,6 +108,10 @@ function contact_form_code( $atts ) {
 
 
     // if there's no $result text (meaning there's no error or success, meaning the user just opened the page and did nothing) there's no need to show the $info variable
+    $result = ""; 
+    $sent = false;
+    $info = '';
+    $form_data = array();
     if ( $result != "" ) {
         $info = '<div class="info">' . $result . '</div>';
     }
@@ -116,24 +120,24 @@ function contact_form_code( $atts ) {
     <form class="contact-form" method="post" action="' . get_permalink() . '">
 
         <div>
-            <input type="text" name="your_name" id="cf_name" placeholder="Nombre" size="50" maxlength="50" value="' . $form_data['your_name'] . '" required title="Introduzca su nombre (campo requerido)">
+            <input type="text" name="your_name" id="cf_name" placeholder="Nombre" size="50" maxlength="50" value="' . ($form_data['your_name'] ?? '') . '" required title="Introduzca su nombre (campo requerido)">
         </div>
         <div>
-            <input type="email" name="email" id="cf_email" placeholder="Email" size="50" maxlength="50" value="' . $form_data['email'] . '" required title="Introduzca su email (campo requerido)">
+            <input type="email" name="email" id="cf_email" placeholder="Email" size="50" maxlength="50" value="'.($phone ?? '') . ($form_data['email'] ?? '') . '" required title="Introduzca su email (campo requerido)">
         </div>
         <div>
-            <input type="text" name="company" id="cf_company" placeholder="Empresa" size="50" maxlength="50" value="' . $company . $form_data['company'] . '" title="Introduzca el nombre de su empresa (opcional)">
+            <input type="text" name="company" id="cf_company" placeholder="Empresa" size="50" maxlength="50" value="' . ($company ?? '') . ($form_data['company'] ?? '') . '" title="Introduzca el nombre de su empresa (opcional)">
         </div>
         <div>
-            <input type="text" name="phone" id="cf_phone" placeholder="Teléfono" size="50" maxlength="50" value="' . $phone . $form_data['phone'] . '" title="Introduzca su número de teléfono (opcional)">
+            <input type="text" name="phone" id="cf_phone" placeholder="Teléfono" size="50" maxlength="50" value="' .($phone ?? '') . ($form_data['phone'] ?? '') . '" title="Introduzca su número de teléfono (opcional)">
         </div>
         <div>
-            <textarea name="message" id="cf_message" placeholder="Mensaje" cols="50" rows="15" required title="Introduzca su mensaje (campo requerido)">' . $form_data['message'] . '</textarea>
+            <textarea name="message" id="cf_message" placeholder="Mensaje" cols="50" rows="15" required title="Introduzca su mensaje (campo requerido)">' . ($form_data['message'] ?? '') . '</textarea>
         </div>
         <div>
             <label for="cf_check" class="check-label">
-                <input type="checkbox" name="privacy_check" value="' . $form_data['privacy_check'] . '" name="check" id="cf_check" required title="Es necesario que lea y acepte nuestra política de privacidad para que podamos procesar sus datos">
-                He leído y acepto la <a href="https:www.fide.es/politica-de-privacidad" target="_blank" style="text-decoration:underline;">política de privacidad</a>.
+                <input type="checkbox" name="privacy_check" value="' . ($form_data['privacy_check'] ?? '') . '" name="check" id="cf_check" required title="Es necesario que lea y acepte nuestra política de privacidad para que podamos procesar sus datos">
+                He leído y acepto la <a href="https://www.fide.es/politica-de-privacidad/" target="_blank" style="text-decoration:underline;">política de privacidad</a>.
             </label>
         </div>
         <div>

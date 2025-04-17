@@ -181,7 +181,7 @@
                 <?php
                 for ($i = 0; $i <= 5; $i++) {
 
-                    if ($info_fide_archive[$i]) : ?>
+                    if (isset($info_fide_archive[$i])) : ?>
                         <hr />
                         <div class="element">
                             <div class="article-images">

@@ -68,7 +68,7 @@
                         <a href="<?php echo site_url(); ?>/contacto" class="newsletter-cta-button ibm-sans">CONTACTAR CON FIDE</a>
                     </div>
 
-                    <p class="services-copy mobile-hide">Como líderes en tributación indirecta y aduanera, <b>la excelencia en el servicio es nuestro principal objetivo.</b> Nuestra mayor recompensa es la satisfacción de nuestros clientes: administraciones, entidades públicas y privadas, grandes empresas, pymes y personas físicas.<br><br>Gracias a la proximidad con el cliente, el dinamismo de respuesta, la anticipación y el máximo respeto a las normas éticas más exigentes, FIDE fue galardonado como <b>Mejor Despacho Profesional de Economistas por el Colegio de Economistas de Cataluña.</b></p>
+                    <p class="services-copy mobile-hide">Como líderes en tributación indirecta y aduanera, <b>la excelencia en el servicio es nuestro principal objetivo.</b> Nuestra mayor recompensa es la satisfacción de nuestros clientes: administraciones, entidades públicas y privadas, grandes empresas, pymes y personas físicas.<br>Gracias a la proximidad con el cliente, el dinamismo de respuesta, la anticipación y el máximo respeto a las normas éticas más exigentes, FIDE fue galardonado como <b>Mejor Despacho Profesional de Economistas por el Colegio de Economistas de Cataluña.</b></p>
 
                 </div>
             </div>

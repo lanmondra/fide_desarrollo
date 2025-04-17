@@ -153,6 +153,10 @@ function fide_news_media_img_url($post_id) {
 		28  => array(
 		    "medio" => "Newtral",
 		    "img" => "medio-neutral.jpg"
+        ),
+        29  => array(
+		    "medio" => "Forbes",
+		    "img" => "medio-forbes.jpg"
 		    )
     );
 
@@ -160,6 +164,7 @@ function fide_news_media_img_url($post_id) {
 
     $check_media_array_position = array_search( $news_media, array_column($news_sources, "medio"), true );
 
+  
     $news_media_image_filename = "https://www.fide.es/wp-content/themes/fide2019/images/" . $news_sources[$check_media_array_position]["img"];
 
     return $news_media_image_filename;
@@ -289,6 +294,10 @@ function fide_news_media_img_alpha_url($post_id) {
 		28  => array(
 		    "medio" => "Newtral",
 		    "img" => "medio-neutral.png"
+        ),
+        29  => array(
+		    "medio" => "Forbes",
+		    "img" => "medio-a-forbes.png"
 		    )
 		
     );
@@ -522,10 +531,10 @@ function fide_de_cerca__shorts($post_id) {
 
 // GET THE BREADCRUMB CODE AND FILL IT WITH PROPER TEXT
 
-function fide_breadcrumb_code($parameter1, $parameter2, $bn) {
+function fide_breadcrumb_code($parameter1, $parameter2, $bn, $additional_text) {
     if ($bn == "black") {
         print '
-            <section> <!-- Just to close the nav submenu on hover -->
+            <section> <!-- Just to close the nav submenu on hover 1 -->
                 <div class="breadcrumb">
                     <hr class="breadcrumb-nav-line">
                     <div class="grid-container">
@@ -533,8 +542,9 @@ function fide_breadcrumb_code($parameter1, $parameter2, $bn) {
                             <div class="breadcrumb-container col-1-1">
                                 <a href="https://www.fide.es"><img src="' . IMAGES . '/icons-home-b.svg" alt="Inicio"></a>
                                 <span class="breadcrumb-separator-1">&#62;</span>
-                                <span>' . $parameter1 . '</span>';
-
+                                <span>' . $parameter1 . '</span>
+                                <span class="additional-text">' . $additional_text . '</span>';
+                                
                                 if (isset($parameter2)) {
                                     print'
                                         <span class="breadcrumb-subsection">
@@ -553,7 +563,7 @@ function fide_breadcrumb_code($parameter1, $parameter2, $bn) {
         '; // End of print
     } elseif ($bn == "white") {
             print '
-            <section> <!-- Just to close the nav submenu on hover -->
+            <section> <!-- Just to close the nav submenu on hover 2-->
                 <div class="breadcrumb">
                     <div class="grid-container">
                         <div class="grid">
@@ -720,6 +730,14 @@ function update_adminbar($wp_adminbar) {
 }
 add_action( 'admin_bar_menu', 'update_adminbar', 999 );
 
+add_action('template_redirect', 'redirect_404_to_home');
+
+function redirect_404_to_home() {
+    if (is_404()) {
+        wp_redirect(home_url(), 301);
+        exit;
+    }
+}
 
 
 // REMOVE WP-ADMIN BAR IN THE FRONT-END
