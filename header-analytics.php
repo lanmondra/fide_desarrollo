@@ -225,7 +225,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
             <div class="top-nav-container">
                 <div class="left fide-logo">
                     <a href="<?php echo site_url(); ?>" title="fide.es - Inicio">
-                        <img src="<?php print IMAGES; ?>/fide-logo-tax.svg" alt="<?php bloginfo('name'); ?>">
+                        <img src="<?php print IMAGES; ?>/fide-logo-ana.svg" alt="<?php bloginfo('name'); ?>">
                     </a>
                 </div>
 
@@ -238,7 +238,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
 
                     <li id="js-actualidad" class="js-top-section mobile-nav-hide">
                         <span class="nav-bullet"></span>
-                        <a href="<?php echo site_url(); ?>/actualidad/fide-medios">Actualidad</a>
+                        <a href="<?php echo site_url(); ?>/actualidad-analytics">Actualidad</a>
                         <span class="hover-border"></span>
 
                     </li>
@@ -252,19 +252,19 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                         <ul id="actualidad-dropdown" class="dropdown-content">
                             <li id="actualidad-dropdown">
                                 <span class="nav-bullet"></span>
-                                <a href="<?php echo site_url(); ?>/actualidad/aduanas">Aduanas</a>
+                                <a href="<?php echo site_url(); ?>/actualidad-analytics/aduanas">Aduanas</a>
                             </li> 
                             <li id="actualidad-dropdown">
                                 <span class="nav-bullet"></span>
-                                <a href="<?php echo site_url(); ?>/actualidad/hidrocarburos-y-energia">Hidrocarburos y energía</a>
+                                <a href="<?php echo site_url(); ?>/actualidad-analytics/hidrocarburos-y-energia">Hidrocarburos y energía</a>
                             </li>
                             <li id="actualidad-dropdown">
                                 <span class="nav-bullet"></span>
-                                <a href="<?php echo site_url(); ?>/actualidad/alcohol-y-bebidas-alcoholicas">Alcohol y bebidas alcohólicas</a>
+                                <a href="<?php echo site_url(); ?>/actualidad-analytics/alcohol-y-bebidas-alcoholicas">Alcohol y bebidas alcohólicas</a>
                             </li>
                             <li id="actualidad-dropdown">
                                 <span class="nav-bullet"></span>
-                                <a href="<?php echo site_url(); ?>/actualidad/tributacion-indirecta">Tributación indirecta</a>
+                                <a href="<?php echo site_url(); ?>/actualidad-analytics/tributacion-indirecta">Tributación indirecta</a>
                             </li>
                             <li id="actualidad-dropdown">
                                 <span class="nav-bullet"></span>
@@ -272,19 +272,19 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                             </li>
                             <li id="actualidad-dropdown">
                             <span class="nav-bullet"></span>
-                                <a href="<?php echo site_url(); ?>/actualidad/labores-del-tabaco">Labores del tabaco</a>
+                                <a href="<?php echo site_url(); ?>/actualidad-analytics/labores-del-tabaco">Labores del tabaco</a>
                             </li>
                             <li id="actualidad-dropdown">
                                 <span class="nav-bullet"></span>
-                                <a href="<?php echo site_url(); ?>/actualidad/impuestos-medioambientales">Impuestos medioambientales</a>
+                                <a href="<?php echo site_url(); ?>/actualidad-analytics/impuestos-medioambientales">Impuestos medioambientales</a>
                             </li>
                             <li id="actualidad-dropdown">
                                 <span class="nav-bullet"></span>
-                                <a href="<?php echo site_url(); ?>/actualidad/envases-de-plastico">Envases de plástico</a>
+                                <a href="<?php echo site_url(); ?>/actualidad-analytics/envases-de-plastico">Envases de plástico</a>
                             </li>
                             <li id="actualidad-dropdown">
                                 <span class="nav-bullet"></span>
-                                <a href="<?php echo site_url(); ?>/actualidad/derechos-de-emision">Derechos de emisión</a>
+                                <a href="<?php echo site_url(); ?>/actualidad-analytics/derechos-de-emision">Derechos de emisión</a>
                             </li>                           
                         </ul>
                     </li>
@@ -294,23 +294,23 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
 
                     <li id="mobile-nav-sections">
                         <span class="nav-bullet"></span>
-                        <a href="<?php echo site_url(); ?>/actualidad/newsletter">Newsletter</a>
+                        <a href="<?php echo site_url(); ?>/actualidad-analytics/newsletter">Newsletter</a>
                         <span class="hover-border"></span>
                     </li>
 
                     <li id="mobile-nav-sections">
                         <span class="nav-bullet"></span>
-                        <a href="<?php echo site_url(); ?>/actualidad/formacion-y-eventos">Formación y eventos</a>
+                        <a href="<?php echo site_url(); ?>/actualidad-analytics/formacion-y-eventos">Formación y eventos</a>
                         <span class="hover-border"></span>
                     </li>
-                    <li id="js-especialidades" class="js-top-section">
+                    <!--<li id="js-especialidades" class="js-top-section">
                         <span class="nav-bullet"></span>
                         <a href="<?php echo site_url(); ?>/especialidades">Especialidades</a>
                         <span class="hover-border"></span>
-                    </li>
+                    </li>-->
                     <li id="js-presentacion" class="js-top-section">
                         <span class="nav-bullet"></span>
-                        <a href="<?php echo site_url(); ?>/presentacion">Quienes Somos</a>
+                        <a href="<?php echo site_url(); ?>/presentacion-analytics">Quienes Somos</a>
                         <span class="hover-border"></span>
                     </li>               
                     <li id="js-servicios" class="js-top-section only-mobile">
@@ -319,17 +319,17 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                         <span class="hover-border"></span>
                     </li>
                     <li>
-                    <a href="<?php echo site_url(); ?>/analytics">Analytics</a>
+                    <a href="<?php echo site_url(); ?>">Fide</a>
                     </li>
                     
-                    <li>
+                    <!--<li>
                         <span class="nav-bullet"></span>
                         <a href="<?php echo site_url(); ?>/actualidad/informes-fide">Informes</a>
-                    </li>
+                    </li>-->
                   
                     <li id="js-contacto" class="js-top-section">
                         <span class="nav-bullet"></span>
-                        <a href="<?php echo site_url(); ?>/contacto">Contacto</a>
+                        <a href="<?php echo site_url(); ?>/contacto-analytics">Contacto</a>
                         <span class="hover-border"></span>
                     </li>
                     
@@ -434,7 +434,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
 
                             <ul class="col-1-4">
                                 <li>
-                                    <a href="<?php echo site_url(); ?>/presentacion">
+                                    <a href="<?php echo site_url(); ?>/presentacion-analytics">
                                         Presentacion
                                         <span>Conoce todo lo que hacemos</span>
                                     </a>
@@ -506,7 +506,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                                 <li>
                                     <!-- THIS LINK WAS DEACTIVATED -->
                                     <!-- <a href="https://goo.gl/maps/dDzoreY5ihHVc7wi9" target="_blank"> -->
-                                    <a href="https://www.fide.es/contacto">
+                                    <a href="https://www.fide.es/contacto-analytics">
                                         Oficinas Barcelona
                                         <br><span>Rambla Cataluña 38, 7ª<br>08007 Barcelona</span>
                                     </a>
@@ -520,7 +520,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                                 <li>
                                     <!-- THIS LINK WAS DEACTIVATED -->
                                     <!-- <a href="https://goo.gl/maps/J1CwnKfhpor4urbeA" target="_blank"> -->
-                                    <a href="https://www.fide.es/contacto">
+                                    <a href="https://www.fide.es/contacto-analytics">
                                         Oficinas Madrid
                                         <br><span>C/ Guzmán el Bueno 74, 1º<br>28015 Madrid</span>
                                     </a>
@@ -536,7 +536,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                             <ul class="col-3-4">
                                 <li>
 
-                                    <a href="https://www.fide.es/contacto">
+                                    <a href="https://www.fide.es/contacto-analytics">
                                         Oficinas Vigo
                                         <br><span>C/ Marqués de Valladares 14, 6ª <br>36201 Vigo, Oficinas 7 y 8</span>
                                     </a>
@@ -565,7 +565,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
 							-->
                             <ul class="col-4-4">
                                 <li>
-                                    <a class="sub-menu-button-48px-red" href="<?php echo site_url(); ?>/contacto">CONTACTAR CON FIDE</a>
+                                    <a class="sub-menu-button-48px-red" href="<?php echo site_url(); ?>/contacto-analytics">CONTACTAR CON FIDE</a>
                                 </li>
                             </ul>
 
@@ -662,13 +662,15 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
 
 
         // Is the "Actualidad" page?
-        if (is_page('actualidad')) {
-            fide_breadcrumb_code("FIDE en los Medios", null, "black","");
-        }  elseif (is_page('presentacion')) {
+        if (is_page('Actualidad')) {
+            fide_breadcrumb_code("Actualidad", null, "black","");
+        }
+         // Is the servicios page?   
+         elseif (is_page('Presentacion')) {
             fide_breadcrumb_code("Presentacion", null, "black","");
             
-         } elseif (is_page('analytics')) {
-            fide_breadcrumb_code("Analytics", null, "black","");
+         } elseif (is_page('Analytics')) {
+            fide_breadcrumb_code("analytics", null, "black","");
 
             // Is the servicios page?
         } elseif (is_page('servicios')) {
@@ -712,7 +714,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
             fide_breadcrumb_code("Newsletter", null, "black", "");
 
             // Is the contact page?
-        } elseif (is_page('contacto')) {
+        } elseif (is_page('contacto-analytics')) {
             fide_breadcrumb_code("Contacto", null, "black", "");
 
             // Is any of the legal pages?
