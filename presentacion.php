@@ -1,4 +1,4 @@
-<?php /* Template Name: Presentacion */ ?>
+<?php /* Template Name: Presentación */ ?>
 
 <?php get_header(); ?>
 
@@ -9,16 +9,20 @@
             <div class="swiper-wrapper">
                 <?php 
                 $slides = [
-                    ['img' => 'img-presentation-1.jpg', 'title' => 'Sobre nosotros', 'text' => ''],
-                    ['img' => 'img-presentation-2.jpg', 'title' => 'Misión', 'text' => ''], 
-                    ['img' => 'img-presentation-3.jpg', 'title' => 'Visión', 'text' => ''],
-                    ['img' => 'img-presentation-4.jpg', 'title' => 'Visión', 'text' => ''],
-                    ['img' => 'img-presentation-5.jpg', 'title' => 'Visión', 'text' => ''],
-                    ['img' => 'img-presentation-6.jpg', 'title' => 'Visión', 'text' => ''],
-                    ['img' => 'img-presentation-7.jpg', 'title' => 'Visión', 'text' => ''],
-                    ['img' => 'img-presentation-8.jpg', 'title' => 'Visión', 'text' => ''],
-                    ['img' => 'img-presentation-9.jpg', 'title' => 'Visión', 'text' => ''],
-                    ['img' => 'img-presentation-10.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'presentation_analytics_1.jpg', 'title' => 'Sobre nosotros', 'text' => ''],
+                    ['img' => 'presentation_analytics_2.jpg', 'title' => 'Misión', 'text' => ''], 
+                    ['img' => 'presentation_analytics_3.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'presentation_analytics_4.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'presentation_analytics_5.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'presentation_analytics_6.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'presentation_analytics_7.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'presentation_analytics_8.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'presentation_analytics_9.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'presentation_analytics_10.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'presentation_analytics_11.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'presentation_analytics_12.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'presentation_analytics_13.jpg', 'title' => 'Visión', 'text' => ''],
+                  
                 ];
 
                 foreach ($slides as $slide) :
@@ -68,10 +72,10 @@
         <script>
             const swiper = new Swiper('.presentation-slider', {
                 loop: true,
-                autoplay: {
-                    delay: 5000, // 5 segundos entre slides
-                    disableOnInteraction: false,
-                },
+                //autoplay: {
+                //    delay: 5000, // 5 segundos entre slides
+                //    disableOnInteraction: false,
+                //},
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true,
