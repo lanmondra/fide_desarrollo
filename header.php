@@ -362,7 +362,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                     </li>
                     <li id="js-presentacion" class="js-top-section">
                         <span class="nav-bullet"></span>
-                        <a href="<?php echo site_url(); ?>/presentación">Quienes Somos</a>
+                        <a href="<?php echo site_url(); ?>/fide-presentacion">Quienes Somos</a>
                         <span class="hover-border"></span>
                     </li>               
                     <li id="js-servicios" class="js-top-section only-mobile">
@@ -748,11 +748,11 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
             fide_breadcrumb_code("FIDE en los Medios", null, "black","");
         }
          // Is the servicios page?   
-         if (is_page('analytics')) {
+         elseif (is_page('analytics')) {
             fide_breadcrumb_code("Presentación", null, "black","");
 
             // Is the servicios page?
-        } if (is_page('fide-presentacion')) {
+        } elseif (is_page('fide-presentacion')) {
             fide_breadcrumb_code("Presentación", null, "black","");
 
             // Is the servicios page?
