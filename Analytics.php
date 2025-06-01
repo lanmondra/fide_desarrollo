@@ -1,4 +1,4 @@
-<?php /* Template Name: Analytics */ ?>
+<?php /* Template Name: AnalyticsPage */ ?>
 
 <?php get_header('analytics'); ?>
 

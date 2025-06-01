@@ -319,7 +319,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                         <span class="hover-border"></span>
                     </li>
                     <li>
-                    <a href="<?php echo site_url(); ?>/analytics">Analytics</a>
+                    <a href="<?php echo site_url(); ?>/fide-analytics">Analytics</a>
                     </li>
                     
                     <li>
