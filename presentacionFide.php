@@ -1,4 +1,4 @@
-<?php /* Template Name: Presentación */ ?>
+<?php /* Template Name: PresentaciónFide */ ?>
 
 <?php get_header(); ?>
 
@@ -9,20 +9,22 @@
             <div class="swiper-wrapper">
                 <?php 
                 $slides = [
-                    ['img' => 'presentation_analytics_1.jpg', 'title' => 'Sobre nosotros', 'text' => ''],
-                    ['img' => 'presentation_analytics_2.jpg', 'title' => 'Misión', 'text' => ''], 
-                    ['img' => 'presentation_analytics_3.jpg', 'title' => 'Visión', 'text' => ''],
-                    ['img' => 'presentation_analytics_4.jpg', 'title' => 'Visión', 'text' => ''],
-                    ['img' => 'presentation_analytics_5.jpg', 'title' => 'Visión', 'text' => ''],
-                    ['img' => 'presentation_analytics_6.jpg', 'title' => 'Visión', 'text' => ''],
-                    ['img' => 'presentation_analytics_7.jpg', 'title' => 'Visión', 'text' => ''],
-                    ['img' => 'presentation_analytics_8.jpg', 'title' => 'Visión', 'text' => ''],
-                    ['img' => 'presentation_analytics_9.jpg', 'title' => 'Visión', 'text' => ''],
-                    ['img' => 'presentation_analytics_10.jpg', 'title' => 'Visión', 'text' => ''],
-                    ['img' => 'presentation_analytics_11.jpg', 'title' => 'Visión', 'text' => ''],
-                    ['img' => 'presentation_analytics_12.jpg', 'title' => 'Visión', 'text' => ''],
-                    ['img' => 'presentation_analytics_13.jpg', 'title' => 'Visión', 'text' => ''],
-                  
+                    ['img' => 'imgPresentation1.jpg', 'title' => 'Sobre nosotros', 'text' => ''],
+                    ['img' => 'imgPresentation2.jpg', 'title' => 'Misión', 'text' => ''], 
+                    ['img' => 'imgPresentation3.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'imgPresentation4.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'imgPresentation5.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'imgPresentation6.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'imgPresentation7.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'imgPresentation8.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'imgPresentation9.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'imgPresentation10.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'imgPresentation11.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'imgPresentation12.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'imgPresentation13.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'imgPresentation14.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'imgPresentation15.jpg', 'title' => 'Visión', 'text' => ''],
+                    ['img' => 'imgPresentation16.jpg', 'title' => 'Visión', 'text' => ''],
                 ];
 
                 foreach ($slides as $slide) :

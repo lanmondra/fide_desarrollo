@@ -63,7 +63,18 @@
                 .main{
                     position: relative;
                     overflow: hidden;                                      
-                }             
+                }   
+                
+                a.weight600 {
+    position: relative !important;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+}
+
+.difuminacion-main {
+    pointer-events: none !important;
+}
+
             </style>
 
 

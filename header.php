@@ -310,7 +310,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                     </li>
                     <li id="js-presentacion" class="js-top-section">
                         <span class="nav-bullet"></span>
-                        <a href="<?php echo site_url(); ?>/presentacion">Quienes Somos</a>
+                        <a href="<?php echo site_url(); ?>/fide-presentacion">Quienes Somos</a>
                         <span class="hover-border"></span>
                     </li>               
                     <li id="js-servicios" class="js-top-section only-mobile">
@@ -434,8 +434,8 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
 
                             <ul class="col-1-4">
                                 <li>
-                                    <a href="<?php echo site_url(); ?>/presentacion">
-                                        Presentacion
+                                    <a href="<?php echo site_url(); ?>/fide-presentacion">
+                                        Presentación
                                         <span>Conoce todo lo que hacemos</span>
                                     </a>
                                 </li>
@@ -664,14 +664,26 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
         // Is the "Actualidad" page?
         if (is_page('actualidad')) {
             fide_breadcrumb_code("FIDE en los Medios", null, "black","");
+<<<<<<< HEAD
         }  elseif (is_page('presentacion')) {
             fide_breadcrumb_code("Presentacion", null, "black","");
             
          } elseif (is_page('analytics')) {
             fide_breadcrumb_code("Analytics", null, "black","");
+=======
+        }
+         // Is the servicios page?   
+         elseif (is_page('analytics')) {
+            fide_breadcrumb_code("Presentación", null, "black","");
+>>>>>>> develop
 
             // Is the servicios page?
-        } elseif (is_page('servicios')) {
+        } elseif (is_page('fide-presentacion')) {
+            fide_breadcrumb_code("Presentación", null, "black","");
+
+            // Is the servicios page?
+        }
+        elseif (is_page('servicios')) {
             fide_breadcrumb_code("Servicios", null, "white", "");
         } elseif (is_page('asesoria-tributaria')) {
             fide_breadcrumb_code("Asesoría tributaria", null, "white", "");
