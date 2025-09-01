@@ -23,8 +23,7 @@
                     ['img' => 'imgPresentation12.jpg', 'title' => 'Visión', 'text' => ''],
                     ['img' => 'imgPresentation13.jpg', 'title' => 'Visión', 'text' => ''],
                     ['img' => 'imgPresentation14.jpg', 'title' => 'Visión', 'text' => ''],
-                    ['img' => 'imgPresentation15.jpg', 'title' => 'Visión', 'text' => ''],
-                    ['img' => 'imgPresentation16.jpg', 'title' => 'Visión', 'text' => ''],
+                   
                 ];
 
                 foreach ($slides as $slide) :

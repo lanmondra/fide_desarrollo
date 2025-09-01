@@ -70,8 +70,9 @@
                     <div class="footer-sections">
                         <ul>
                             <li><a href="<?php echo site_url(); ?>/actualidad">Actualidad</a></li>
-                            <li><a href="<?php echo site_url(); ?>/servicios">Servicios</a></li>
                             <li><a href="<?php echo site_url(); ?>/especialidades">Especialidades</a></li>
+                            <li><a href="<?php echo site_url(); ?>/actualidad/informes-fide">Informes</a></li>
+                            <li><a href="<?php echo site_url(); ?>/fide-presentacion">Quiénes somos</a></li>
                             <li><a href="<?php echo site_url(); ?>/contacto">Contacto</a></li>
                         </ul>
                     </div>

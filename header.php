@@ -288,58 +288,6 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                             </li>                           
                         </ul>
                     </li>
-<!--
-                    <li id="mobile-nav-sections">
-                        <span class="nav-bullet"></span>
-                        <a href="<?php echo site_url(); ?>/actualidad/aduanas">Aduanassss</a>
-                        <span class="hover-border"></span>
-                    </li>
-
-                    <li id="mobile-nav-sections">
-                        <span class="nav-bullet"></span>
-                        <a href="<?php echo site_url(); ?>/actualidad/hidrocarburos-y-energia">Hidrocarburos y energía</a>
-                        <span class="hover-border"></span>
-                    </li>
-
-                    <li id="mobile-nav-sections">
-                        <span class="nav-bullet"></span>
-                        <a href="<?php echo site_url(); ?>/actualidad/alcohol-y-bebidas-alcoholicas">Alcohol y bebidas alcohólicas</a>
-                        <span class="hover-border"></span>
-                    </li>
-
-                    <li id="mobile-nav-sections">
-                        <span class="nav-bullet"></span>
-                        <a href="<?php echo site_url(); ?>/actualidad/tributacion-indirecta">Tributación indirecta</a>
-                        <span class="hover-border"></span>
-                    </li>
-
-                    <li id="mobile-nav-sections">
-                        <span class="nav-bullet"></span>
-                        <a href="<?php echo site_url(); ?>/actualidad/fiscalidad-general">Fiscalidad general</a>
-                        <span class="hover-border"></span>
-                    </li>
-
-                    <li id="mobile-nav-sections">
-                        <span class="nav-bullet"></span>
-                        <a href="<?php echo site_url(); ?>/actualidad/labores-del-tabaco">Labores del tabaco</a>
-                        <span class="hover-border"></span>
-                    </li>
-
-                    <li id="mobile-nav-sections">
-                        <span class="nav-bullet"></span>
-                        <a href="<?php echo site_url(); ?>/actualidad/impuestos-medioambientales">Impuestos medioambientales</a>
-                        <span class="hover-border"></span>
-                    </li>
-                    <li id="mobile-nav-sections">
-                        <span class="nav-bullet"></span>
-                        <a href="<?php echo site_url(); ?>/actualidad/envases-de-plastico">Envases de plástico</a>
-                        <span class="hover-border"></span>
-                    </li>
-                    <li id="mobile-nav-sections">
-                        <span class="nav-bullet"></span>
-                        <a href="<?php echo site_url(); ?>/actualidad/derechos-de-emision">Derechos de emisión</a>
-                        <span class="hover-border"></span>
-                    </li>-->
 
                     <!-- END OF MOBILE NAV SECTIONS -->
                     <!-- END OF MOBILE NAV SECTIONS -->
@@ -360,11 +308,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                         <a href="<?php echo site_url(); ?>/especialidades">Especialidades</a>
                         <span class="hover-border"></span>
                     </li>
-                    <li id="js-presentacion" class="js-top-section">
-                        <span class="nav-bullet"></span>
-                        <a href="<?php echo site_url(); ?>/fide-presentacion">Quienes Somos</a>
-                        <span class="hover-border"></span>
-                    </li>               
+                                  
                     <li id="js-servicios" class="js-top-section only-mobile">
                         <span class="nav-bullet"></span>
                         <a href="<?php echo site_url(); ?>/servicios">Servicios</a>
@@ -376,6 +320,11 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
                         <span class="nav-bullet"></span>
                         <a href="<?php echo site_url(); ?>/actualidad/informes-fide">Informes</a>
                     </li>
+                    <li id="js-presentacion" class="js-top-section">
+                        <span class="nav-bullet"></span>
+                        <a href="<?php echo site_url(); ?>/fide-presentacion">Quiénes somos</a>
+                        <span class="hover-border"></span>
+                    </li> 
                   
                     <li id="js-contacto" class="js-top-section">
                         <span class="nav-bullet"></span>
@@ -484,23 +433,22 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
 
                             <ul class="col-1-4">
                                 <li>
-                                    <a href="<?php echo site_url(); ?>/fide-presentacion">
-                                        Presentación
-                                        <span>Conoce todo lo que hacemos</span>
+                                    <a  class="presentation-header" href="<?php echo site_url(); ?>/fide-presentacion">
+                                        Presentación                                       
                                     </a>
                                 </li>
                             </ul>
                             <ul class="col-2-4">
                                 <li>
-                                    <a href="<?php echo site_url(); ?>/servicios">
+                                    <a class="presentation-header"  href="<?php echo site_url(); ?>/servicios">
                                         Servicios
-                                        <span>Asesoría tributaria, Economía forense, Formación <i>in company</i> y mas ...</span>
                                     </a>
                                 </li>
                             </ul>                           
                         </div>
                     </div>
                 </div>
+
 
                 <div class="submenu-especialidades">
                     <div class="grid-container">
@@ -588,7 +536,7 @@ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\_
 
                                     <a href="https://www.fide.es/contacto">
                                         Oficinas Vigo
-                                        <br><span>C/ Marqués de Valladares 14, 6ª <br>36201 Vigo, Oficinas 7 y 8</span>
+                                        <br><span>C/ Marqués de Valladares 14, 6ª <br>36201 Vigo</span>
                                     </a>
 
                                     <img class="sub-menu-icons" src="<?php print IMAGES; ?>/icons-phone.svg">
