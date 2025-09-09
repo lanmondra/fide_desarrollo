@@ -63,7 +63,18 @@
                 .main{
                     position: relative;
                     overflow: hidden;                                      
-                }             
+                }   
+                
+                a.weight600 {
+    position: relative !important;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+}
+
+.difuminacion-main {
+    pointer-events: none !important;
+}
+
             </style>
 
 
@@ -117,35 +128,6 @@
             endwhile; wp_reset_postdata();
 
         ?>
-        <!-- Jaava Script-->
-         <!-- <SCRIPT type="text/javascript">
-                window.addEventListener("resize", () => {
-                    resizeText();
-                })
-                document.addEventListener("DOMContentLoaded", () => {
-                    resizeText();
-                });
-                function resizeText() {
-                    let titleNoteInformat = document.getElementsByClassName('title_note_informative');
-                    let notaInfo = document.getElementsByClassName('nota-info');  
-                                                 
-                    for(let i = 0; i < titleNoteInformat.length; i++) {                      
-                        const size = titleNoteInformat[i].clientHeight;   
-                        const sizeTextBody = 280 - size;                                       
-                        notaInfo[i].style.height = `${ sizeTextBody }px`;  
-                        console.log('Notas informativas : ' ,sizeTextBody)
-                                          
-                    }
-                }
-
-            </SCRIPT>
-
-            <style>
-                .nota-info {
-                    position: relative;
-                    overflow: hidden;                                       
-                }              
-            </style> -->
     <?php
         # GET THE LAST THREE NOTAS INFORMATIVAS
         $args_notas_informativas = array(
@@ -1161,7 +1143,6 @@
 
         </div>
     </section>
-
 
 
     <?php get_footer(); ?>

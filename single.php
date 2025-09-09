@@ -269,7 +269,7 @@
                                 $author = array('Julimer Márquez', 'Departamento jurídico', 'fide-team-julimer-marquez.png', '');
 
                             elseif (in_array(1039, $author_cat_checklist)):
-                                $author = array('Arturo Sánchez', 'Departamento jurídico', 'fide-team-arturo-sanchez.png', '');
+                                $author = array('Arturo Sánchez', 'Departamento jurídico', 'fide-team-arturo-sanchez-new.png', '');
 
                             elseif (in_array(1042, $author_cat_checklist)):
                                 $author = array('Ignacio Ciutad', 'Departamento jurídico', 'fide-team-blank.png', '');

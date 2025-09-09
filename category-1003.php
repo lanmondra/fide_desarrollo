@@ -196,31 +196,25 @@
 
         <section>
             <div class="grid-container">
-                <div class="newsletter-table-title">
-                    
+                <div class="newsletter-table-title">                   
                     <?php 
                         $noticias_counter = get_category(1003)->category_count;
-                        print $noticias_counter . ' noticias publicadas';
+                        print $noticias_counter . ' noticias publicadasss';
                         if ($loop->max_num_pages != 1) { print ', página ' . $paged . ' de ' . $loop->max_num_pages; } else {}
                     ?>
 
                 </div>
 
                     <?php 
-
                         foreach ($noticias_archive as $id) {
-
                             $noticias_medio_logo = get_post_meta( $id, 'medio', false );
                             $noticias_date = get_the_date("M. 'y", $id);
                             $noticias_link = get_post_meta( $id, 'link', false );
-
                             print '
-                                <div class="grid table-row-padding table-row-padding-news">
-
+                                <div class="grid table-row-padding">
                                     <span class="table-category-link table-news-media-logo">
                                         <img src="' . fide_news_media_img_alpha_url($id) . '">
                                     </span>
-
                                     <div class="table-article-date table-article-date-news gray-9">' . $noticias_date . '</div>
 
                                     <div class="table-article-container table-article-container-news">
@@ -228,7 +222,6 @@
                                     </div>
                                 </div>
                             ';
-
                             if ($id==end($noticias_archive)) { print '<div class="table-bottom-margin"></div>'; } else { print '<hr class="table-hr-line">';}
 
                         }

@@ -84,7 +84,6 @@
                 filter: blur(1px);
             }
 
-
             a {
                 font-size: medium;
                 color: #AC0600;
@@ -99,6 +98,13 @@
                 font-weight: bold;
                 margin-left: 49px;
             }
+            .informes-hr-line{   
+                border: 0;
+                height: 0;
+                border-top: 1px solid #CCCCCC;
+               
+              
+              }
 
             @media (min-width: 980px) {
                 .content-wrap {
@@ -171,7 +177,6 @@
                 font-size: 13px;
                 color: #AC0600;
                     }
-                
             }
         </style>
 
@@ -182,7 +187,7 @@
                 for ($i = 0; $i <= 5; $i++) {
 
                     if (isset($info_fide_archive[$i])) : ?>
-                        <hr />
+                       <hr class="informes-hr-line" />
                         <div class="element">
                             <div class="article-images">
                                 <a href="<?php echo esc_url(get_permalink($info_fide_archive[$i])); ?>">
@@ -203,7 +208,7 @@
 
                 <?php endif;
                 } ?>
-                <hr />
+                <hr class="informes-hr-line"/>
             </div>
         </div>
 
