@@ -271,6 +271,9 @@
                             elseif (in_array(1039, $author_cat_checklist)):
                                 $author = array('Arturo Sánchez', 'Departamento jurídico', 'fide-team-arturo-sanchez-new.png', '');
 
+                            elseif (in_array(1051, $author_cat_checklist)):
+                                $author = array('Ricard Estrada', 'Departamento jurídico', 'fide-team-ricard-estrada.png', '');
+
                             elseif (in_array(1042, $author_cat_checklist)):
                                 $author = array('Ignacio Ciutad', 'Departamento jurídico', 'fide-team-blank.png', '');
 
