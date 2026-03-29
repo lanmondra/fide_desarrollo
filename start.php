@@ -109,47 +109,9 @@
         <div class="main-bottom-margin"></div>
     <!-- Fin Primera columna de la HOME-->
 
-
-        <?php
-            # GET THE LAST THREE NOTAS INFORMATIVAS
-            $args_notas_informativas = array(
-                "post_type" => "post",
-                "category__and" => array( 1004, 1041 ),
-                "post_status" => "publish",
-                "orderby" => array(
-                    "menu_order"    => "ASC",
-                    "post_date"     =>  "DESC",
-                    ),
-                "posts_per_page" => 3,
-                );
-            $loop = new WP_Query( $args_notas_informativas );
-            while ( $loop->have_posts() ) : $loop->the_post();
-            $notas_informativas[] = $post->ID;
-            endwhile; wp_reset_postdata();
-
-        ?>
-    <?php
-        # GET THE LAST THREE NOTAS INFORMATIVAS
-        $args_notas_informativas = array(
-        "post_type" => "post",
-        "category__and" => array(1004, 1041),
-        "post_status" => "publish",
-        "orderby" => array(
-            "menu_order"    => "ASC",
-            "post_date"     =>  "DESC",
-        ),
-        "posts_per_page" => 3,
-        );
-        $loop = new WP_Query($args_notas_informativas);
-        while ($loop->have_posts()) : $loop->the_post();
-            $notas_informativas[] = $post->ID;
-        endwhile;
-        wp_reset_postdata();
-    ?>
-
-
      <?php
     # GET THE LAST 6 DE CERCA POSTS
+    $to_near = [];
     $args_to_near = array(
         "post_type" => "post",
         "category__in" => array(1049),
@@ -170,11 +132,42 @@
     endwhile;
     wp_reset_postdata();
 
-    $to_near_lent = $to_near;
-    $posts_already_shown = array_merge($posts_already_shown, $to_near);
-    $to_near_img = wp_get_attachment_image_src(get_post_thumbnail_id($to_near[0]), array('1049', '576'));
+
+    $to_near_lent = $to_near ?? [];
+    if (!empty($to_near)) {
+     $posts_already_shown = array_merge($posts_already_shown, $to_near);
+    }
+ 
+    $to_near_img = null;
+    if (!empty($to_near) && isset($to_near[0])) {
+        $to_near_img = wp_get_attachment_image_src(
+            get_post_thumbnail_id($to_near[0]),
+            array('1049', '576')
+        );
+    }
 
     ?>
+
+    <?php
+     # GET THE LAST THREE NOTAS INFORMATIVAS
+     $notas_informativas = [];
+     $args_notas_informativas = array(
+        "post_type" => "post",
+        "category__and" => array( 1004, 1041 ),
+        "post_status" => "publish",
+        "orderby" => array(
+        "menu_order"    => "ASC",
+        "post_date"     =>  "DESC",
+        ),
+        "posts_per_page" => 3,
+        );
+        $loop = new WP_Query( $args_notas_informativas );
+        while ( $loop->have_posts() ) : $loop->the_post();
+        $notas_informativas[] = $post->ID;
+        endwhile; wp_reset_postdata();
+            
+        ?>
+
 
     <!-- Jaava Script Notas informativas -->
     <SCRIPT type="text/javascript">
@@ -202,6 +195,15 @@
             position: relative;
             overflow: hidden;
         }
+        .section-title-red {
+            display: block;
+            text-align: center;
+            background-color: #AC0600;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 8px;
+        }
     </style>
 
     <!-- NOTAS INFORMATIVAS -->
@@ -212,83 +214,82 @@
    
     ?>
 
+    <!-- LOGIA DE NEGOCIO -->
+    <?php
+        $de_cerca_count = count($to_near ?? []);
+        $notas_count = count($notas_informativas ?? []);
+
+        $show_de_cerca = 0;
+        $show_notas = 0;
+
+        if ($de_cerca_count >= 2 && $notas_count >= 1) {
+            $show_de_cerca = 2;
+            $show_notas = 1;
+
+        } elseif ($de_cerca_count === 1 && $notas_count >= 2) {
+            $show_de_cerca = 1;
+            $show_notas = 2;
+
+        } elseif ($de_cerca_count === 0) {
+            $show_notas = min(3, $notas_count);
+
+        } elseif ($notas_count === 0) {
+            $show_de_cerca = min(3, $de_cerca_count);
+
+        } else {
+            $show_de_cerca = min(1, $de_cerca_count);
+            $show_notas = min(2, $notas_count);
+        }
+        // 🔥 EVITAR DUPLICADOS ENTRE DE CERCA Y NOTAS (SEGURO)
+        if (!empty($to_near) && !empty($notas_informativas)) {
+            $notas_informativas = array_values(
+                array_diff(
+                    $notas_informativas,
+                    array_slice($to_near, 0, $show_de_cerca)
+                )
+            );
+        }
+    ?>
+    
+
     <section>
         <div class="grid-container">
-            <div class="grid">       
-                
-            <?php if(count($to_near_lent) == 0 ) :?>                      
-                <div class="actualidad-notas-informativas">                                    
-                    <br/>
-                    <hr class="generic-hr">
-                    <a class="px14 weight600" style="text-align: center; background-color: #AC0600; color: white; white; font-size: 20px; font-weight: bold;" href="<?php echo site_url(); ?>/actualidad/notas-informativas">NOTAS INFORMATIVAS</a>
-                    <hr class="generic-hr">
-                    <div class="breves" style="height: 150px; overflow: hidden;">
-                        <p><?php fide_notas_title_and_excerpt($notas_informativas[0], 350) ?></p>                       
-                    </div>
-                    <div class="difuminacion-informative"></div> 
-                     
-                    <hr class="generic-hr">
-                    <div class="breves" style="height: 150px; overflow: hidden;">
-                        <p><?php fide_notas_title_and_excerpt($notas_informativas[1], 350) ?></p> 
-                    </div>
-                     <div class="difuminacion-informative" ></div> 
-                    <hr class="generic-hr">
-                    <div class="breves" style="height: 150px; overflow: hidden;">
-                        <p><?php fide_notas_title_and_excerpt($notas_informativas[2], 340) ?></p> 
-                    </div>
-                    <div class="difuminacion-informative" ></div> 
+            <div class="grid">                       
+                <div class="actualidad-notas-informativas">
+                    <!-- DE CERCA -->
+                    <?php if ($show_de_cerca > 0): ?>
+                        <hr class="generic-hr">
+                        <a class="px14 weight600 section-title-red" href="<?php echo site_url(); ?>/actualidad/de-cerca">
+                        DE CERCA
+                        </a>
+                        <hr class="generic-hr">
+
+                        <?php for ($i = 0; $i < $show_de_cerca; $i++): ?>
+                        <?php if (!isset($to_near[$i])) break; ?>
+                        <div class="breves" style="height:150px; overflow:hidden;">
+                            <p><?php fide_notas_title_and_excerpt($to_near[$i], 460) ?></p>
+                        </div>
+                        <div class="difuminacion-informative"></div>
+                        <?php endfor; ?>
+                    <?php endif; ?>
+                    <!-- NOTAS INFORMTIVAS -->
+                    <?php if ($show_notas > 0): ?>
+                        <hr class="generic-hr">
+                        <a class="px14 weight600 section-title-red" href="<?php echo site_url(); ?>/actualidad/notas-informativas">
+                        NOTAS INFORMATIVAS
+                        </a>
+                        <hr class="generic-hr">
+
+                        <?php for ($i = 0; $i < $show_notas; $i++): ?>
+                        <?php if (!isset($notas_informativas[$i])) break; ?>
+                        <div class="breves" style="height:150px; overflow:hidden;">
+                            <p><?php fide_notas_title_and_excerpt($notas_informativas[$i], 350) ?></p>
+                        </div>
+                        <div class="difuminacion-informative"></div>
+                        <?php endfor; ?>
+                    <?php endif; ?>
+
                 </div>
-            <?php elseif(count($to_near_lent) == 1 ) :?>  
-                <div class="actualidad-notas-informativas">                 
-                    <hr class="generic-hr">
-                    <a class="px14 weight600" style="text-align: center; background-color: #AC0600; color: white; font-size: 20px; font-weight: bold;" href="<?php echo site_url(); ?>/actualidad/notas-informativas">DE CERCA</a>
-                    <hr class="generic-hr">
-                    <div class="breves" style="height: 151px; overflow: hidden;">
-                        <p><?php fide_notas_title_and_excerpt($to_near[0], 460) ?></p>                       
-                    </div>     
-                    <div class="difuminacion-informative" ></div> 
-                    <br/>
-                    <hr class="generic-hr">
-                    <a class="px14 weight600" style="text-align: center; background-color: #AC0600; color: white; font-size: 20px; font-weight: bold;" href="<?php echo site_url(); ?>/actualidad/notas-informativas">NOTAS INFORMATIVAS</a>
-                    <hr class="generic-hr">
-
-                    <div class="breves" style="height: 150px; overflow: hidden;">
-                        <p><?php fide_notas_title_and_excerpt($notas_informativas[0], 460) ?></p>                        
-                    </div>
-                    <div class="difuminacion-informative" ></div> 
-                    <div class="breves" style="height: 150px; overflow: hidden;">
-                        <p><?php fide_notas_title_and_excerpt($notas_informativas[1], 460) ?></p>                        
-                    </div>
-                    <div class="difuminacion-informative" ></div> 
-                </div>
-            <?php elseif(count($to_near_lent) >= 2 ) :?> 
-                <div class="actualidad-notas-informativas">                 
-                    <hr class="generic-hr">
-                    <a class="px14 weight600" style="text-align: center; background-color: #AC0600; color: white; white; font-size: 20px; font-weight: bold;" href="<?php echo site_url(); ?>/actualidad/notas-informativas">DE CERCA</a>
-                    <hr class="generic-hr">
-
-                    <div class="breves" style="height: 150px; overflow: hidden;">
-                        <p><?php fide_notas_title_and_excerpt($to_near[0], 460) ?></p>                       
-                    </div>     
-                    <div class="difuminacion-informative" ></div> 
-
-                    <div class="breves" style="height: 150px; overflow: hidden;">
-                        <p><?php fide_notas_title_and_excerpt($to_near[1], 460) ?></p>                       
-                    </div>     
-                    <div class="difuminacion-informative" ></div> 
-                    <br/>
-                    <hr class="generic-hr">
-                    <a class="px14 weight600" style="text-align: center; background-color: #AC0600; color: white; white; font-size: 20px; font-weight: bold;" href="<?php echo site_url(); ?>/actualidad/notas-informativas">NOTAS INFORMATIVAS</a>
-                    <hr class="generic-hr">
-                    <div class="breves" style="height: 150px; overflow: hidden;">
-                        <p><?php fide_notas_title_and_excerpt($notas_informativas[0], 460) ?></p>
-                    </div>
-                    <div class="difuminacion-informative" ></div>                    
-                </div>
-            <?php endif; ?> 
-
-               
-
                 <div class="actualidad-second-featured article-module-padding">
                     <div class="article-image">
                         <a href="<?php echo esc_url(get_permalink($actualidad_featured[1])); ?>">
@@ -312,8 +313,7 @@
                 </div>
 
                 <div class="actualidad-third-featured article-module-padding">
-
-                     <div class="article-image">
+                    <div class="article-image">
                         <a href="<?php echo esc_url(get_permalink($actualidad_featured[2])); ?>">
                             <div class="crop">
                                 <img class="cropped" src="<?php echo $actualidad_featured_image_3[0] ?>">
@@ -332,12 +332,7 @@
                     </div>
                     <div class="difuminacion-informative" style="width: 100%;height: 62px;margin-top: -50px;background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 253 253 / 61%) 100%);filter: blur(1px);"></div>
                     <?php fide_read_more_link($actualidad_featured[2]); ?> 
-
-                    
-                </div>
-               
-                </div>
-
+                </div>              
             </div>
         </div>
     </section>
@@ -359,6 +354,7 @@
         "posts_per_page" => 5,
         );
 
+        $informes = [];
         $loop = new WP_Query($args_informes);
         while ($loop->have_posts()) : $loop->the_post();
             $informes[] = $post->ID;
@@ -519,6 +515,7 @@
         "posts_per_page" => 1,
         );
 
+        $normativa = [];
         $loop = new WP_Query($args_normativa);
         while ($loop->have_posts()) : $loop->the_post();
             $normativa[] = $post->ID;
@@ -737,6 +734,7 @@
         "posts_per_page" => 5,
         );
 
+        $jurisprudencia = [];
         $loop = new WP_Query($args_jurisprudencia);
         while ($loop->have_posts()) : $loop->the_post();
             $jurisprudencia[] = $post->ID;
@@ -841,6 +839,7 @@
         "posts_per_page" => 5,
         );
 
+        $legislacion = [];
         $loop = new WP_Query($args_legislacion);
         while ($loop->have_posts()) : $loop->the_post();
             $legislacion[] = $post->ID;
@@ -997,6 +996,7 @@
         "posts_per_page" => 1,
         );
 
+        $internacional = [];
         $loop = new WP_Query($args_internacional);
         while ($loop->have_posts()) : $loop->the_post();
             $internacional[] = $post->ID;
@@ -1089,6 +1089,7 @@
         "posts_per_page" => 10,
         );
 
+        $last_news = [];
         $loop = new WP_Query($args_last_news);
         while ($loop->have_posts()) : $loop->the_post();
             $last_news[] = $post->ID;

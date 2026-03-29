@@ -75,30 +75,6 @@
                 });
             </script>
 
-            <!-- <style>
-                .category {
-                    position: relative;
-                    overflow: hidden;
-
-                }
-                .g-container {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr 1fr;
-                    gap: 100px 30px;
-                }
-
-                @media all and (max-width: 980px) {
-                    .g-container {
-                        grid-template-columns: 1fr 1fr;
-                    }
-                }
-
-                @media all and (max-width: 575px) {
-                    .g-container {
-                        grid-template-columns: 1fr;
-                    }
-                }
-            </style> -->
             <div class="grid-container">
                 <div class="g-container">
                     <?php
