@@ -22,15 +22,9 @@
     <main>
 
         <div class="grid-container">
-            <div class="grid">
                 <div class="post-container">
-
-
-
                     <div class="single-post-content px16 line24">
-
                         <h2>Introducción</h2>
-
                         <p>
                             En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE),
                             FIDE ASESORES LEGALES Y TRIBUTARIOS, S.L.P informa que es titular del sitio web.
@@ -206,12 +200,6 @@
                                 <strong>Última actualización:</strong> 30 de marzo de 2026
                             </p>
                         </div>
-
-                        <!-- <hr class="generic-hr mobile-hide"> -->
-
-
-
-                    </div>
                 </div>
             </div>
 
@@ -327,6 +315,10 @@
 
             .privacy-policy h1 { font-size: 1.8em; }
             .privacy-policy h2 { font-size: 1.4em; }
+
+            .single-post-content {
+                padding: 0px 0; 
+            }
         }
 
         /* --- Media Query for Smaller Tablets and Large Phones --- */

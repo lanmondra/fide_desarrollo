@@ -13,7 +13,6 @@
 </section>
 <main>
     <div class="grid-container">
-        <div class="grid">
             <div class="post-container">
                 <div class="single-post-content px16 line24">
                     <div class="privacy-policy">
@@ -158,10 +157,6 @@
                         <p><strong>Última actualización:</strong> 30 de marzo de 2026</p>
 
                     </div>
-
-
-
-                </div>
             </div>
         </div>
     </div>
