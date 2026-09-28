@@ -122,6 +122,7 @@
                         <ul class="footer-links">
                             <li><a href="<?php echo site_url(); ?>/politica-de-privacidad">Política de privacidad</a></li> 
                             <!-- <li><a href="<?php # echo site_url(); ?>/politica-de-cookies">Política de cookies</a></li> -->
+                             <li><a href="<?php echo site_url(); ?>/politica-de-privacidad-rrss">Política de privacidad RRSS</a></li> 
                             <li><a href="<?php echo site_url(); ?>/aviso-legal">Aviso legal</a></li>
                         </ul>
                         <ul class="footer-links-social">

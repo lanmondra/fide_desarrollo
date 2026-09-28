@@ -1,10 +1,6 @@
-<?php /* Template Name: Legal pages */ ?>
-
-
+<?php /* Template Name: Politica de privacidad RRSS*/ ?>
 
 <?php get_header(); ?>
-
-
 
 <section>
 
@@ -15,31 +11,19 @@
     </div>
 
 </section>
-
-
-
-<section>
-    <main>
-
-        <div class="grid-container">
-            <div class="grid">
-                <div class="post-container">
-
-
-
-                    <div class="single-post-content px16 line24">
-
-                        <h2>Introducción</h2>
-
+<main>
+    <div class="grid-container">
+        <div class="grid">
+            <div class="post-container">
+                <div class="single-post-content px16 line24">
+                    <div class="privacy-policy">
+                        <h2>Política de Privacidad Redes Sociales</h2>
                         <p>
-                            En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE),
-                            FIDE ASESORES LEGALES Y TRIBUTARIOS, S.L.P informa que es titular del sitio web.
-                            De acuerdo con la exigencia del artículo 10 de la citada Ley, informa de los siguientes datos:
+                            FIDE ASESORES LEGALES Y TRIBUTARIOS, S.L.P informa a los usuarios que dispone de perfiles
+                            en Facebook, Instagram y LinkedIn con la finalidad de publicitar sus servicios.
                         </p>
-
-                        <div class="privacy-policy">
-                            <h2>Datos del propietario de la web</h2>
-                            <div class="fide-contact-card">
+                        <h2>Datos del responsable</h2>
+                         <div class="fide-contact-card">
                                 <div class="fide-row">
                                     <div class="fide-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -110,168 +94,111 @@
 
                             </div>
 
-                            <h2>Usuario y régimen de responsabilidades</h2>
+                        <h2>Tratamiento de datos en redes sociales</h2>
 
-                            <p>
-                                La navegación, acceso y uso del sitio web de <strong class="highlight">FIDE ASESORES LEGALES Y TRIBUTARIOS, S.L.P</strong>
-                                confiere la condición de usuario.
-                            </p>
+                        <p>
+                            El usuario que siga o interactúe con los perfiles sociales de FIDE facilita el tratamiento
+                            de aquellos datos públicos disponibles en su perfil.
+                        </p>
 
-                            <p>
-                                El sitio web proporciona gran diversidad de información, servicios y datos. El usuario asume su responsabilidad
-                                en el uso correcto del sitio web.
-                            </p>
+                        <p>
+                            FIDE únicamente trata la información pública disponible dentro de la propia red social.
+                            Los datos no son incorporados a sistemas de tratamiento distintos de la plataforma social
+                            correspondiente.
+                        </p>
 
-                            <ul>
-                                <li>La veracidad y licitud de las informaciones aportadas en los formularios del sitio web.</li>
-                                <li>El uso de la información, servicios y datos conforme a la ley, la moral, las buenas costumbres y el orden público.</li>
-                            </ul>
+                        <h2>Derechos de los interesados</h2>
 
-                            <h2>Política de enlaces y exenciones de responsabilidad</h2>
+                        <ul>
+                            <li>Acceso</li>
+                            <li>Rectificación</li>
+                            <li>Limitación del tratamiento</li>
+                            <li>Supresión</li>
+                            <li>Portabilidad</li>
+                            <li>Oposición</li>
+                        </ul>
 
-                            <p>
-                                FIDE ASESORES LEGALES Y TRIBUTARIOS, S.L.P no se hace responsable del contenido de los sitios web a los que el usuario pueda acceder mediante enlaces incluidos en este sitio, siempre que no tenga conocimiento efectivo de que la actividad o información enlazada sea ilícita.
-                            </p>
+                        <h2>Actuaciones realizadas por FIDE</h2>
 
-                            <p>
-                                La entidad declara haber adoptado todas las medidas necesarias para evitar daños derivados de la navegación por su sitio web.
-                            </p>
+                        <ul>
+                            <li>Acceso a la información pública del perfil.</li>
+                            <li>Publicación de información en la página corporativa.</li>
+                            <li>Actualizaciones del estado de la página.</li>
+                        </ul>
 
-                            <p>
-                                No garantiza la disponibilidad técnica, exactitud, veracidad, validez o legalidad de sitios ajenos a su propiedad accesibles mediante enlaces.
-                            </p>
+                        <h2>Publicaciones realizadas por los usuarios</h2>
 
-                            <h2>Modificaciones</h2>
+                        <p>
+                            Los usuarios podrán publicar comentarios, imágenes o contenidos siempre que sean titulares
+                            de los derechos correspondientes y respeten la normativa aplicable.
+                        </p>
 
-                            <p>
-                                FIDE ASESORES LEGALES Y TRIBUTARIOS, S.L.P se reserva el derecho de efectuar modificaciones y actualizaciones de la información contenida en su sitio web, así como de su configuración y presentación, en cualquier momento y sin necesidad de previo aviso.
-                            </p>
+                        <h2>Concursos y promociones</h2>
 
-                            <h2>Indicación de precios</h2>
+                        <p>
+                            FIDE podrá realizar promociones o concursos a través de las redes sociales.
+                        </p>
 
-                            <p>
-                                En caso de mostrarse precios de productos o servicios, los indicados en pantalla serán los vigentes en cada momento.
-                            </p>
+                        <h2>Publicidad</h2>
 
-                            <p>
-                                Los precios se expresarán en euros e incluirán el IVA cuando resulte aplicable.
-                            </p>
+                        <p>
+                            FIDE podrá utilizar las redes sociales para publicitar sus servicios conforme a la normativa
+                            vigente.
+                        </p>
 
-                            <p>
-                                Cuando proceda, se indicarán también otros impuestos, incrementos, descuentos o gastos adicionales repercutibles al consumidor o usuario.
-                            </p>
+                        <h2>Políticas de privacidad de las plataformas</h2>
 
-                            <h2>Propiedad intelectual e industrial</h2>
+                        
+                        <ul>
+                            <li><a href="https://es-es.facebook.com/privacy/explanation" target="_blank">Facebook</a></li>
+                            <li><a href="http://instagram.com/about/legal/privacy/" target="_blank">Instagram</a></li>
+                            <li><a href="https://es.linkedin.com/legal/privacy-policy" target="_blank">LinkedIn</a></li>
+                        </ul>
 
-                            <p><strong>FIDE ASESORES LEGALES Y TRIBUTARIOS, S.L.P</strong> es titular de todos los derechos de propiedad intelectual e industrial de su sitio web y de los elementos contenidos en el mismo.</p>
-                                FIDE ASESORES LEGALES Y TRIBUTARIOS, S.L.P es titular de todos los derechos de propiedad intelectual e industrial de su sitio web y de los elementos contenidos en el mismo.
-                            </p>
-
-                            <p>
-                                Quedan expresamente prohibidas la reproducción, distribución y comunicación pública de los contenidos de esta página web con fines comerciales sin autorización expresa de su titular.
-                            </p>
-
-                            <p>
-                                El usuario podrá visualizar, imprimir y almacenar los contenidos únicamente para uso personal y privado.
-                            </p>
-
-                            <p>
-                                El usuario deberá abstenerse de eliminar, alterar o manipular cualquier sistema de protección o seguridad instalado en el sitio web.
-                            </p>
-
-                            <h2>Acciones legales, legislación aplicable y jurisdicción</h2>
-
-                            <p>
-                                Si el usuario desea presentar una reclamación podrá hacerlo mediante correo electrónico a:
-                                <strong>fide@fide.es</strong>.
-                            </p>
-
-                            <p>
-                                FIDE ASESORES LEGALES Y TRIBUTARIOS, S.L.P dispone de hojas oficiales de reclamación a disposición de consumidores y usuarios.
-                            </p>
-
-                            <p>
-                                La entidad se reserva la facultad de ejercitar las acciones civiles o penales que considere oportunas por la utilización indebida del sitio web o por el incumplimiento de las presentes condiciones.
-                            </p>
-
-                            <p>
-                                La relación entre el usuario y el prestador se regirá por la normativa española vigente.
-                            </p>
-
-                            <p>
-                                Las partes podrán someter sus conflictos a arbitraje o acudir a la jurisdicción ordinaria conforme a las normas de competencia aplicables.
-                            </p>
-
-                            <p>
-                                <strong>Última actualización:</strong> 30 de marzo de 2026
-                            </p>
-                        </div>
-
-                        <!-- <hr class="generic-hr mobile-hide"> -->
-
-
+                        <p><strong>Última actualización:</strong> 30 de marzo de 2026</p>
 
                     </div>
+
+
+
                 </div>
             </div>
+        </div>
+    </div>
 
-    </main>
-</section>
-<style>
-    .highlight {
-        color: #AC0600;
-        font-weight: bold;
-    }
-
-    .tax-legal {
-        font-style: italic;
-    }
-
-    .font-bold {
-        font-weight: bold;
-    }
-
-    .legal-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 20px 0 30px;
-    }
-
-    .legal-table th,
-    .legal-table td {
-        border: 1px solid #dcdcdc;
-        padding: 12px;
-        text-align: left;
-    }
-
-    .legal-table th {
-        background: #f5f5f5;
-        width: 35%;
-        font-weight: 600;
-    }
-
-    .single-post-content ul {
-        margin: 15px 0 15px 25px;
-    }
-
-    .single-post-content li {
-        margin-bottom: 10px;
-    }
-
-     .fide-contact-card {
+    <style>
+        .privacy-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 30px;
+        }
+        .privacy-table th,
+        .privacy-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .privacy-table th {
+            background: #f5f5f5;
+            width: 35%;
+            font-weight: 600;
+        }
+        .privacy-policy h3 {
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+        .fide-contact-card {
             background: #fafbfd;
             padding: 0px 21px;
             border: none;
             width: 80%;
         }
-
         .fide-row {
             display: grid;
             grid-template-columns: 50px 1fr;
             align-items: center;
             min-height: 72px;
         }
-
         .fide-row:not(:last-child) .fide-content {
             border-bottom: 1px solid #e3e6eb;
         }
@@ -348,6 +275,13 @@
                 padding: 0 12px;
                 box-sizing: border-box;
             }
+            .post-container {
+                width: 100%;                          
+            }
+            .grid-template-columns{
+                    grid-template-columns: repeat(8, 4fr 40px) 1fr;
+            }
+
 
             .fide-content { font-size: 16px; }
         }
@@ -371,9 +305,16 @@
                 padding: 0 8px;
                 box-sizing: border-box;
             }
-                .single-post-content {
+  
+            .single-post-content {
                 padding: 0px 0 24px;
             }
+            .fide-content { font-size: 15px; }
+
+            .fide-row {
+                grid-template-columns: 36px 1fr;
+            }
+
             .breadcrumb-container {
                 font-size: 30px;
             }
@@ -381,13 +322,15 @@
             footer {
                 margin: 0px 0 0 0;
             }
-
-            .fide-content { font-size: 15px; }
-
-            .fide-row {
-                grid-template-columns: 36px 1fr;
-            }
         }
-</style>
+    </style>
 
-<?php get_footer(); ?>
+
+</main>
+<section>
+
+
+
+
+
+    <?php get_footer(); ?>

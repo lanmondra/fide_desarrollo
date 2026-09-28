@@ -747,7 +747,10 @@ HEADER FIDE
         } elseif (is_page('Politica de privacidad')) {
             fide_breadcrumb_code("Política de privacidad", null, "black", "");
 
-        } elseif (is_page('Politicas de cookies')) {
+        } elseif (is_page('Politica de privacidad RRSS')) {
+            fide_breadcrumb_code("Política de privacidad Redes Sociales", null, "black", "");
+
+        }elseif (is_page('Politicas de cookies')) {
             fide_breadcrumb_code("Política de cookies", null, "black", "");
 
             // Is a single article page?
